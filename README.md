@@ -1,4 +1,11 @@
-# Windows Forensic Artifacts Guide
+<p align="center">
+  <h2 align="center">Windows Forensic Artifacts Guide</h2>
+</p>
+<p align="center">
+  <img src="https://img.shields.io/github/license/Psmths/windows-forensic-artifacts.svg">
+  <img src="https://www.repostatus.org/badges/latest/wip.svg">
+</p>
+<hr>
 
 This repository serves as a guide to a variety of Windows forensic artifacts that may be levereaged during an investigation. It is meant to offer succint information regarding these artifacts, such as their location, parsers that are available for them, and how to interpret the results of a forensic acquisition of these artifacts. 
 
