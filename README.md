@@ -7,7 +7,13 @@
 </p>
 <hr>
 
-This repository serves as a guide to a variety of Windows forensic artifacts that may be levereaged during an investigation. It is meant to offer succint information regarding these artifacts, such as their location, parsers that are available for them, and how to interpret the results of a forensic acquisition of these artifacts. 
+This repository serves as a guide to a variety of Windows forensic artifacts that may be levereaged during an investigation. It is meant to offer succint information regarding these artifacts, such as their location, parsers that are available for them, and how to interpret the results of a forensic acquisition of these artifacts.
+
+With each new major version of the Windows operating system, forensic artifacts may be added, modified, or removed. Because of this, their applicability to an investigation may depend on what version of windows an endpoint has installed. 
+
+Such cases are identified in this repository as follows:
+ - ⚠️ Denotes that a forensic artifact may have certain information available that depends on the operating system version.
+ - ❌ Denotes that a forensic artifact is not present on a certain operating system version.
 
 ## Contents
 The forensic artifacts described in this repository are split into the following categories:
