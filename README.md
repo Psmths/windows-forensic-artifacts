@@ -1,5 +1,5 @@
 <p align="center">
-  <h2 align="center">Windows Forensic Artifacts Guide</h2>
+  <h1 align="center">Windows Forensic Artifacts Guide</h2>
 </p>
 <p align="center">
   <img src="https://img.shields.io/github/license/Psmths/windows-forensic-artifacts.svg">
