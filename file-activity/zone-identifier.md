@@ -33,6 +33,8 @@ The following Zone IDs are available:
 | 3 | Internet |
 | 4 | Untrusted |
 
+A Zone Identifier of 4 indicates that Microsoft SmartScreen has determined a file is suspicious.
+
 As an example, a Zone.Identifier file may look like this:
 
 ```
