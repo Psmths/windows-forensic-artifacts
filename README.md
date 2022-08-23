@@ -4,4 +4,4 @@
 | Filesystem | [Prefetch](execution/prefetch.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Eventlog | [4688: A new process has been created](execution/evtx-process-created.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Registry/Memory | [ShimCache](execution/shimcache.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Registry | [AmCache.hve](execution/shimcache.md) | ✅ | ✅ | ✅ | ⚠️ | ❌ | ❌ |
+| Registry | [AmCache.hve](execution/amcache.md) | ✅ | ✅ | ✅ | ⚠️ | ❌ | ❌ |
