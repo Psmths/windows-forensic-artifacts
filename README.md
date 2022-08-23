@@ -6,6 +6,7 @@ The forensic artifacts described in this repository are split into the following
  - [Account Usage and Modification](#account-usage-and-modification)
  - [Browser Activity](#browser-activity)
  - [File Activity](#file-activity)
+ - [Persistence](#persistence)
 
 ## Execution
 | Arifact Type | Artifact | Windows 11 | Windows 10 | Windows 8 | Windows 7 | Windows Vista | Windows XP |
@@ -26,3 +27,8 @@ The forensic artifacts described in this repository are split into the following
 | Arifact Type | Artifact | Windows 11 | Windows 10 | Windows 8 | Windows 7 | Windows Vista | Windows XP |
 | - | - | - | - | - | - | - | - |
 | Filesystem | [Zone.Identifier](file-activity/zone-identifier.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+
+## Persistence
+| Arifact Type | Artifact | Windows 11 | Windows 10 | Windows 8 | Windows 7 | Windows Vista | Windows XP |
+| - | - | - | - | - | - | - | - |
+| Registry | [Registry Autostarts](persistence/reg-autostarts.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
