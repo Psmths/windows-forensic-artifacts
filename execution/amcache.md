@@ -9,7 +9,7 @@ The Amcache hive can be used to determine:
 ## Operating System Availability
  - Windows 10
  - Windows 8
- - Windows 7 (Most recent service packs)
+ - Windows 7 (⚠️ Most recent service packs)
 
 ## Artifact Location(s)
 - `C:\Windows\AppCompat\Programs\Amcache. hve`
