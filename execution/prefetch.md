@@ -1,5 +1,9 @@
 # Prefetch
-Windows Prefetch is utilized to improve application performance by pre-loading resources when an application is launched. 
+Windows Prefetch is utilized to improve application performance by pre-loading resources when an application is launched. It can be used to determine:
+
+ - Evidence of execution
+ - Most recent execution
+ - (Potential) first execution
 
 ## Operating System Availability
  - Windows 10
