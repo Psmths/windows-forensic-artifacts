@@ -1,5 +1,10 @@
 # 4688: A new process has been created
-This event, logged to the Security channel, indicates a process was created on the system. 
+This event, logged to the Security channel, indicates a process was created on the system. It can be used to determine:
+
+ - Evidence of execution
+ - Executing account
+ - Process command line
+ - Process permissions
 
 ## Operating System Availability
  - Windows 10
