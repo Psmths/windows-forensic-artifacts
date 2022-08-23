@@ -1,4 +1,4 @@
-# Security Event ID 4688
+# 4688: A new process has been created
 This event, logged to the Security channel, indicates a process was created on the system. 
 
 ## Operating System Availability
