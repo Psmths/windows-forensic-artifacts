@@ -1,3 +1,6 @@
+# Windows Forensic Artifacts Guide
+
+This repository serves as a guide to a variety of Windows forensic artifacts that may be levereaged during an investigation. It is meant to offer succint information regarding these artifacts, such as their location, parsers that are available for them, and how to interpret the results of a forensic acquisition of these artifacts. 
 
 ## Contents
 The forensic artifacts described in this repository are split into the following categories:
