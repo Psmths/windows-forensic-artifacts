@@ -19,12 +19,24 @@ Such cases are identified in this repository as follows:
 The forensic artifacts described in this repository are split into the following categories:
 
  - [Execution](#execution)
- - [Account Usage and Modification](#account-usage-and-modification)
- - [Browser Activity](#browser-activity)
+ - [Account Activity](#account-activity)
  - [File Activity](#file-activity)
- - [Persistence](#persistence)
+
+Additionally, these artifacts may be roughly mapped to the MITRE ATT&CK framework to perform analysis on a behavioral basis:
+
+ - [TA0003 - Persistence](#ta0003-persistence)
 
 ## Execution
+Execution artifacts may provide the following information:
+
+ - Execution - Command Line Options
+ - Execution - Count
+ - Execution - First Executed
+ - Execution - Last Executed
+ - Execution - Permissions / Account
+ - Execution - Process Tree
+ - Execution - Time
+
 | Arifact Type | Artifact | Windows 11 | Windows 10 | Windows 8 | Windows 7 | Windows Vista | Windows XP |
 | - | - | - | - | - | - | - | - |
 | Filesystem | [Prefetch](execution/prefetch.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
@@ -32,20 +44,40 @@ The forensic artifacts described in this repository are split into the following
 | Registry/Memory | [ShimCache](execution/shimcache.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Registry | [AmCache.hve](execution/amcache.md) | ✅ | ✅ | ✅ | ⚠️ | ❌ | ❌ |
 
-## Account Usage and Modification
+## Account Activity
+Account activity artifacts may provide the following information:
+ - Account - Creation Time
+ - Account - Group Membership
+ - Account - Last Login
+ - Account - Relative Identifier (RID)
+ - Account - Security Identifier (SID)
+
 | Arifact Type | Artifact | Windows 11 | Windows 10 | Windows 8 | Windows 7 | Windows Vista | Windows XP |
 | - | - | - | - | - | - | - | - |
 | Registry | [SAM Hive](account/sam-hive.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
-## Browser Activity
-
 ## File Activity
+File activity artifacts may provide the following information:
+
+ - File - Deletion
+ - File - Hash
+ - File - Last Modified
+ - File - Origin
+ - File - Path
+ - File - Size
+
 | Arifact Type | Artifact | Windows 11 | Windows 10 | Windows 8 | Windows 7 | Windows Vista | Windows XP |
 | - | - | - | - | - | - | - | - |
 | Filesystem | [Zone.Identifier](file-activity/zone-identifier.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Filesystem | [USN Journal](file-activity/usn-journal.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
-## Persistence
+## TA0003 Persistence
+The below artifacts are related to [persistence activities](https://attack.mitre.org/tactics/TA0003/). Persistence is defined by MITRE as:
+
+> Persistence consists of techniques that adversaries use to keep access to systems across restarts, changed credentials, and other interruptions that could cut off their access. 
+
+The below artifacts may prove useful in identifying instances of persistence on an endpoint:
+
 | Arifact Type | Artifact | Windows 11 | Windows 10 | Windows 8 | Windows 7 | Windows Vista | Windows XP |
 | - | - | - | - | - | - | - | - |
 | Registry | [Registry Autostarts](persistence/reg-autostarts.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
