@@ -47,7 +47,7 @@ Execution artifacts may provide the following information:
  - Execution - Process Tree
  - Execution - Time
 
-| Arifact Type | Artifact | Windows 11 | Windows 10 | Windows 8 | Windows 7 | Windows Vista | Windows XP |
+| Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
 | - | - | - | - | - | - | - | - |
 | Filesystem | [Prefetch](execution/prefetch.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Eventlog | [Security/4688: A new process has been created](execution/evtx-process-created.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
@@ -63,7 +63,7 @@ Account activity artifacts may provide the following information:
  - Account - Relative Identifier (RID)
  - Account - Security Identifier (SID)
 
-| Arifact Type | Artifact | Windows 11 | Windows 10 | Windows 8 | Windows 7 | Windows Vista | Windows XP |
+| Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
 | - | - | - | - | - | - | - | - |
 | Registry | [SAM Hive](account/sam-hive.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Eventlog | [Security/4720: A user account was created](account/evtx-account-created.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
@@ -78,7 +78,7 @@ File activity artifacts may provide the following information:
  - File - Path
  - File - Size
 
-| Arifact Type | Artifact | Windows 11 | Windows 10 | Windows 8 | Windows 7 | Windows Vista | Windows XP |
+| Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
 | - | - | - | - | - | - | - | - |
 | Filesystem | [Zone.Identifier](file-activity/zone-identifier.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Filesystem | [USN Journal](file-activity/usn-journal.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
@@ -90,7 +90,7 @@ Network activity artifacts may provide the following information:
  - Network Activity - Destination Identification
  - Network Activity - Source Identification
 
-| Arifact Type | Artifact | Windows 11 | Windows 10 | Windows 8 | Windows 7 | Windows Vista | Windows XP |
+| Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
 | - | - | - | - | - | - | - | - |
 | Eventlog | [Security/4778: Session reconnected](network/evtx-session-reconnected.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Eventlog | [TerminalServices-RDPClient/Operational/1102](network/evtx-rdp-activex-1102.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
@@ -110,7 +110,7 @@ The below artifacts are related to [execution](https://attack.mitre.org/tactics/
 
 The below artifacts may prove useful in identifying instances of execution on an endpoint:
 
-| Arifact Type | Artifact | Windows 11 | Windows 10 | Windows 8 | Windows 7 | Windows Vista | Windows XP |
+| Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
 | - | - | - | - | - | - | - | - |
 | Filesystem | [Prefetch](execution/prefetch.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Eventlog | [4688: A new process has been created](execution/evtx-process-created.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
@@ -124,7 +124,7 @@ The below artifacts are related to [persistence activities](https://attack.mitre
 
 The below artifacts may prove useful in identifying instances of persistence on an endpoint:
 
-| Arifact Type | Artifact | Windows 11 | Windows 10 | Windows 8 | Windows 7 | Windows Vista | Windows XP |
+| Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
 | - | - | - | - | - | - | - | - |
 | Registry | [Registry Autostarts](persistence/reg-autostarts.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
@@ -138,7 +138,7 @@ The below artifacts are related to [lateral movement activities](https://attack.
 
 The below artifacts may prove useful in identifying instances of lateral movement to or from an endpoint:
 
-| Arifact Type | Artifact | Windows 11 | Windows 10 | Windows 8 | Windows 7 | Windows Vista | Windows XP |
+| Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
 | - | - | - | - | - | - | - | - |
 | Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
