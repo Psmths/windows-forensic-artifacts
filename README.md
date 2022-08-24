@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 <p align="center">
-  ![Windows Forensic Artifacts Guide](https://raw.githubusercontent.com/Psmths/windows-forensic-artifacts/main/media/title.png)
+  <h1 align="center">Windows Forensic Artifacts Guide</h2>
 </p>
 <p align="center">
   <img src="https://img.shields.io/github/license/Psmths/windows-forensic-artifacts.svg">
