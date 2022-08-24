@@ -19,6 +19,7 @@ Such cases are identified in this repository as follows:
    * [Execution](#execution)
    * [Account Activity](#account-activity)
    * [File Activity](#file-activity)
+   * [Network Activity](#network-activity)
  - [Artifact Behavioral Mappings](#artifact-behavioral-mappings) 
    * [TA0002 - Execution](#ta0002-execution)
    * [TA0003 - Persistence](#ta0003-persistence)
@@ -33,6 +34,7 @@ The forensic artifacts described in this repository are split into the following
  - [Execution](#execution)
  - [Account Activity](#account-activity)
  - [File Activity](#file-activity)
+ - [Network Activity](#network-activity)
 
 ## Execution
 Execution artifacts may provide the following information:
@@ -57,6 +59,7 @@ Account activity artifacts may provide the following information:
  - Account - Creation Time
  - Account - Group Membership
  - Account - Last Login
+ - Account - Login History
  - Account - Relative Identifier (RID)
  - Account - Security Identifier (SID)
 
@@ -80,6 +83,16 @@ File activity artifacts may provide the following information:
 | Filesystem | [Zone.Identifier](file-activity/zone-identifier.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Filesystem | [USN Journal](file-activity/usn-journal.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Network Activity
+Network activity artifacts may provide the following information:
+
+ - Network Activity - Destination Identification
+ - Network Activity - Source Identification
+
+| Arifact Type | Artifact | Windows 11 | Windows 10 | Windows 8 | Windows 7 | Windows Vista | Windows XP |
+| - | - | - | - | - | - | - | - |
+| Eventlog | [Security/4778: Session reconnected](network/evtx-session-reconnected.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 
 # Artifact Behavioral Mappings
 
@@ -128,4 +141,7 @@ The below artifacts may prove useful in identifying instances of lateral movemen
 | - | - | - | - | - | - | - | - |
 | Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Eventlog | [Security/4778: Session reconnected](network/evtx-session-reconnected.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
