@@ -1,15 +1,21 @@
 # Amcache.hve
-The Amcache hive can be used to determine:
- - Evidence of execution
- - Executable file path
- - File last modification time
- - Executable hash
- - First execution time
+The Amcache hive stores metadata regarding launched executables on an endpoint. 
+
+### Behavioral Indications
+ - [x] Behavioral - Execution (TA0002)
+
+### Analysis Value
+ - [x] Execution - First Executed
+ - [x] Execution - Evidence of Execution
+ - [x] File - Hash
+ - [x] File - Last Modified
+ - [x] File - Path
 
 ## Operating System Availability
- - Windows 10
- - Windows 8
- - Windows 7 (⚠️ Most recent service packs)
+ - [x] Windows 11
+ - [x] Windows 10
+ - [x] Windows 8
+ - [x] Windows 7 (⚠️ Most recent service packs)
 
 ## Artifact Location(s)
 - `C:\Windows\AppCompat\Programs\Amcache. hve`

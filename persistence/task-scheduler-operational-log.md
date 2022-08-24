@@ -1,20 +1,27 @@
 # TaskScheduler/Operational Log
-The TaskScheduler/Operational event log channel provides detailed tracing of scheduled tasks on an endpoint. It can be used to audit:
+The TaskScheduler/Operational event log channel provides detailed tracing of scheduled tasks on an endpoint. 
 
- - Scheduled task creation
- - Scheduled task modification
- - Scheduled task deletion
- - Scheduled task execution
- - Executable file path for the scheduled task
- - Scheduled task originating account/user
+### Behavioral Indications
+ - [x] Behavioral - Persistence (TA0003)
+ - [x] Behavioral - Lateral Movement (TA0008)
+
+### Analysis Value
+ - [x] Execution - Command Line Options
+ - [x] Execution - First Executed
+ - [x] Execution - Last Executed
+ - [x] Execution - Evidence of Execution
+ - [x] Execution - Time
+ - [x] File - Path
+
 
 ## Operating System Availability
- - Windows 10
- - Windows 8
- - Windows 7
+ - [x] Windows 11
+ - [x] Windows 10
+ - [x] Windows 8
+ - [x] Windows 7
 
 ## Artifact Location(s)
-- `%SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-TaskScheduler%4Operational.evtx`
+ - `%SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-TaskScheduler%4Operational.evtx`
 
 ## Artifact Interpretation
 The following event IDs are useful to hunt for persistent implants on an endpoint:

@@ -1,16 +1,20 @@
 # USN Journal
-The USN Journal is an artifact present on NTFS volumes that functions as the filesystem's journal. 
+The USN Journal is an artifact present on NTFS volumes that functions as the filesystem's journal. This artifact contains high-level records of operations taken on the filesystem. This artifact is present in volume shadow copies which may provide additional historical data. 
 
-This artifact contains high-level records of operations taken on the filesystem and can provide an analyst with evidence of file/directory creation, modification, deletion, and more.
+### Analysis Value
+ - [x] File - Deletion
+ - [x] File - Last Modified
+ - [x] File - Path
+ - [x] File - Size
 
-This artifact is present in volume shadow copies which may provide additional historical data. 
 
 ## Operating System Availability
- - Windows 10
- - Windows 8
- - Windows 7
- - Windows Vista
- - Windows XP
+ - [x] Windows 11
+ - [x] Windows 10
+ - [x] Windows 8
+ - [x] Windows 7
+ - [x] Windows Vista
+ - [x] Windows XP
 
 ## Artifact Location(s)
  - `$Extend\$UsnJrnl\$J`

@@ -1,15 +1,21 @@
 # 4688: A new process has been created
-This event, logged to the Security channel, indicates a process was created on the system. It can be used to determine:
+This event, logged to the Security channel, indicates a process was created on the system.
 
- - Evidence of execution
- - Executing account
- - Process command line
- - Process permissions
+### Behavioral Indications
+ - [x] Behavioral - Execution (TA0002)
+
+### Analysis Value
+ - [x] Execution - Command Line Options
+ - [x] Execution - Permissions / Account
+ - [x] Execution - Process Tree
+ - [x] Execution - Evidence of Execution
+ - [x] Execution - Time
 
 ## Operating System Availability
- - Windows 10
- - Windows 8
- - Windows 7
+ - [x] Windows 11
+ - [x] Windows 10
+ - [x] Windows 8
+ - [x] Windows 7
 
 ## Artifact Location(s)
 - `%SystemRoot%\System32\Winevt\Logs\Security.evtx`

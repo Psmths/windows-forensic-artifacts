@@ -1,16 +1,22 @@
 # ShimCache / Application Compatibility Cache
-ShimCache is a registry artifact that may be used to determine:
- - Evidence of execution
- - File last modification time
- - File size
- - File path
+ShimCache is a registry artifact of the application compatibility database to provide backwards-compatibility between operating system versions.
+
+### Behavioral Indications
+ - [x] Behavioral - Execution (TA0002)
+
+### Analysis Value
+ - [x] Execution - Evidence of Execution
+ - [x] File - Last Modified
+ - [x] File - Path
+ - [x] File - Size
 
 ## Operating System Availability
- - Windows 10
- - Windows 8
- - Windows 7
- - Windows Vista
- - Windows XP
+ - [x] Windows 11
+ - [x] Windows 10
+ - [x] Windows 8
+ - [x] Windows 7
+ - [x] Windows Vista
+ - [x] Windows XP
 
 ## Artifact Location(s)
 - Windows XP: `SYSTEM\CurrentControlSet\Control\SessionManager\AppCompatibility\AppCompatCache`

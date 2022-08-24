@@ -1,18 +1,18 @@
 # NTFS Zone Identifiers
-Zone Identifiers are an artifact that reside in alternate data streams within an NTFS volume. This artifact is used to determine the origins of a file on a disk, and can differentiate between files from the following origins:
-
- - Downloaded from the internet (potentially, the source URL as well)
- - Downloaded from an intranet
- - Downloaded from a trusted resource
+Zone Identifiers are an artifact that reside in alternate data streams within an NTFS volume. This artifact is used to determine the origins of a file on a disk.
 
 ⚠️ In Windows XP, only executable files will be tagged with a Zone Identifier. Later operating systems will tag all files.
 
+### Analysis Value
+ - [x] File - Origin
+
 ## Operating System Availability
- - Windows 10
- - Windows 8
- - Windows 7
- - Windows Vista
- - Windows XP
+ - [x] Windows 11
+ - [x] Windows 10
+ - [x] Windows 8
+ - [x] Windows 7
+ - [x] Windows Vista
+ - [x] Windows XP
 
 ## Artifact Location(s)
 This artifact is present in an alternate data stream (ADS) of the file of interest for analysis. 

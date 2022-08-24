@@ -1,26 +1,30 @@
 # Task Scheduler Files
-Task Scheduler Files are XML files that provide information regarding scheduled tasks on an endpoint. They contain information such as:
+Task Scheduler Files are XML files that provide information regarding scheduled tasks on an endpoint. These files are created when a new task is scheduled on the endpoint. This artifact is similar to and replaces `.job` files on Windows XP, but provides more information. 
 
- - Scheduled task name
- - Scheduled task registration timestamp
- - Scheduled task conditions
- - Scheduled task command line arguments
- - Scheduled task author
- - Scheduled task designated execution account/user
+### Behavioral Indications
+ - [x] Behavioral - Persistence (TA0003)
+ - [x] Behavioral - Lateral Movement (TA0008)
 
-These files are created when a new task is scheduled on the endpoint. 
+### Analysis Value
+ - [x] Execution - Command Line Options
+ - [x] Execution - First Executed
+ - [x] Execution - Last Executed
+ - [x] Execution - Permissions / Account
+ - [x] Execution - Evidence of Execution
+ - [x] Execution - Time
+ - [x] File - Path
 
-This artifact is similar to and replaces `.job` files on Windows XP, and provides more information. 
 
 ## Operating System Availability
- - Windows 10
- - Windows 8
- - Windows 7
- - Windows Vista
+ - [x] Windows 11
+ - [x] Windows 10
+ - [x] Windows 8
+ - [x] Windows 7
+ - [x] Windows Vista
 
 ## Artifact Location(s)
-- `%SystemRoot%\System32\Tasks` for tasks scheduled by 64-bit processes
-- `%SystemRoot%\SysWOW64\Tasks` for tasks scheduled by 32-bit processes
+ - `%SystemRoot%\System32\Tasks` for tasks scheduled by 64-bit processes
+ - `%SystemRoot%\SysWOW64\Tasks` for tasks scheduled by 32-bit processes
 
 ## Artifact Interpretation
 | XML Path | Interpretation |

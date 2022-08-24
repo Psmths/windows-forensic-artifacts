@@ -1,19 +1,22 @@
 # SAM Hive
-The SAM hive contains a wealth of information that can be used to profile an endpoint's accounts and collect data such as:
+The SAM hive contains a wealth of information that can be used to profile an endpoint's accounts. For domain-joined endpoints, the SAM hive will be present on the domain controller. Non-domain joined endpoints will have a resident SAM hive. 
 
- - When an account was created
- - Account Last successful / failed login time
- - Account last password change time
- - Account group membership
+### Behavioral Indications
+ - [x] Behavioral - Persistence (TA0003)
 
-For domain-joined endpoints, the SAM hive will be present on the domain controller. Non-domain joined endpoints will have a resident SAM hive. 
+### Analysis Value
+ - [x] Account - Creation Time
+ - [x] Account - Group Membership
+ - [x] Account - Last Login
+ - [x] Account - Relative Identifier (RID)
 
 ## Operating System Availability
- - Windows 10
- - Windows 8
- - Windows 7
- - Windows Vista
- - Windows XP
+ - [x] Windows 11
+ - [x] Windows 10
+ - [x] Windows 8
+ - [x] Windows 7
+ - [x] Windows Vista
+ - [x] Windows XP
 
 ## Artifact Location(s)
 - `C:\Windows\System32\config\SAM`

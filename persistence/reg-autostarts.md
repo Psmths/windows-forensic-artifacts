@@ -1,20 +1,25 @@
 # Registry Autostart Keys
-There are several registry keys on a Windows system that allow for programs to execute during user logon events or a system boot. Evidence of persistence may be gathered from these forensic artifacts. These keys are located in both the NTUSER.dat hive as well as the SOFTWARE and SYSTEM hives.
+There are several registry keys on a Windows system that allow for programs to execute during user logon events or a system boot. These keys are located in both the NTUSER.dat hive as well as the SOFTWARE and SYSTEM hives.
+
+### Behavioral Indications
+ - [x] Behavioral - Persistence (TA0003)
+
+### Analysis Value
+ - [x] File - Path
 
 ## Operating System Availability
- - Windows 10
- - Windows 8
- - Windows 7
- - Windows Vista
- - Windows XP
+ - [x] Windows 11
+ - [x] Windows 10
+ - [x] Windows 8
+ - [x] Windows 7
+ - [x] Windows Vista
+ - [x] Windows XP
 
 ## Artifact Location(s)
 
 #### NTUSER.dat
-- `C:\Documents and Settings\{username}\NTUSER.dat` (Windows XP)
 - `C:\Users\{username}\NTUSER.dat` (Windows Vista - 10)
-
-***NOTE:** On a live system, the HKEY_CURRENT_USER registry hive is the loaded NTUSER.dat hive.*
+- `C:\Documents and Settings\{username}\NTUSER.dat` (Windows XP)
 
 #### SOFTWARE
  - `C:\Windows\System32\Config\SOFTWARE`
@@ -34,6 +39,8 @@ The following keys will contain full paths to the executables that will start on
 - `NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\RunOnce`
 
 Disabled autoruns will appear in a sub-key named "AutorunsDisabled."
+
+***NOTE:** On a live system, the HKEY_CURRENT_USER registry hive is the loaded NTUSER.dat hive.*
 
 ### SOFTWARE
 The following keys will contain full paths to the executables that will start on **logon**:
