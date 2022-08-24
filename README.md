@@ -93,6 +93,7 @@ Network activity artifacts may provide the following information:
 | Arifact Type | Artifact | Windows 11 | Windows 10 | Windows 8 | Windows 7 | Windows Vista | Windows XP |
 | - | - | - | - | - | - | - | - |
 | Eventlog | [Security/4778: Session reconnected](network/evtx-session-reconnected.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+| Eventlog | [TerminalServices-RDPClient/Operational/1102](network/evtx-rdp-activex-1102.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 
 # Artifact Behavioral Mappings
 
@@ -142,6 +143,7 @@ The below artifacts may prove useful in identifying instances of lateral movemen
 | Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Eventlog | [Security/4778: Session reconnected](network/evtx-session-reconnected.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+| Eventlog | [TerminalServices-RDPClient/Operational/1102](network/evtx-rdp-activex-1102.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
