@@ -24,7 +24,9 @@ The forensic artifacts described in this repository are split into the following
 
 Additionally, these artifacts may be roughly mapped to the MITRE ATT&CK framework to perform analysis on a behavioral basis:
 
+ - [TA0002 - Execution](#ta0002-execution)
  - [TA0003 - Persistence](#ta0003-persistence)
+ - [TA0008 - Lateral Movement](#ta0008-lateral-movement)
 
 ## Execution
 Execution artifacts may provide the following information:
@@ -71,6 +73,20 @@ File activity artifacts may provide the following information:
 | Filesystem | [Zone.Identifier](file-activity/zone-identifier.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Filesystem | [USN Journal](file-activity/usn-journal.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
+## TA0002 Execution
+The below artifacts are related to [execution](https://attack.mitre.org/tactics/TA0002/). Execution is defined by MITRE as:
+
+> ...techniques that result in adversary-controlled code running on a local or remote system. 
+
+The below artifacts may prove useful in identifying instances of execution on an endpoint:
+
+| Arifact Type | Artifact | Windows 11 | Windows 10 | Windows 8 | Windows 7 | Windows Vista | Windows XP |
+| - | - | - | - | - | - | - | - |
+| Filesystem | [Prefetch](execution/prefetch.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Eventlog | [4688: A new process has been created](execution/evtx-process-created.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
+| Registry/Memory | [ShimCache](execution/shimcache.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Registry | [AmCache.hve](execution/amcache.md) | ✅ | ✅ | ✅ | ⚠️ | ❌ | ❌ |
+
 ## TA0003 Persistence
 The below artifacts are related to [persistence activities](https://attack.mitre.org/tactics/TA0003/). Persistence is defined by MITRE as:
 
@@ -81,5 +97,17 @@ The below artifacts may prove useful in identifying instances of persistence on 
 | Arifact Type | Artifact | Windows 11 | Windows 10 | Windows 8 | Windows 7 | Windows Vista | Windows XP |
 | - | - | - | - | - | - | - | - |
 | Registry | [Registry Autostarts](persistence/reg-autostarts.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
+| Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+
+## TA0008 Lateral Movement
+The below artifacts are related to [lateral movement activities](https://attack.mitre.org/tactics/TA0008/). Lateral movement is defined by MITRE as:
+
+> techniques that adversaries use to enter and control remote systems on a network.
+
+The below artifacts may prove useful in identifying instances of lateral movement to or from an endpoint:
+
+| Arifact Type | Artifact | Windows 11 | Windows 10 | Windows 8 | Windows 7 | Windows Vista | Windows XP |
+| - | - | - | - | - | - | - | - |
 | Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
