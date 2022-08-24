@@ -1,8 +1,5 @@
 <a name="readme-top"></a>
-<p align="center">
-  <h1 align="center">Windows Forensic Artifacts Guide</h2>
-  ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
-</p>
+![Windows Forensic Artifacts Guide](/media/title.png)
 <p align="center">
   <img src="https://img.shields.io/github/license/Psmths/windows-forensic-artifacts.svg">
   <img src="https://www.repostatus.org/badges/latest/wip.svg">
