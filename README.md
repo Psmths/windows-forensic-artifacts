@@ -1,3 +1,4 @@
+<a name="readme-top"></a>
 <p align="center">
   <h1 align="center">Windows Forensic Artifacts Guide</h2>
 </p>
@@ -5,7 +6,6 @@
   <img src="https://img.shields.io/github/license/Psmths/windows-forensic-artifacts.svg">
   <img src="https://www.repostatus.org/badges/latest/wip.svg">
 </p>
-<hr>
 
 This repository serves as a guide to a variety of Windows forensic artifacts that may be levereaged during an investigation. It is meant to offer succint information regarding these artifacts, such as their location, parsers that are available for them, and how to interpret the results of a forensic acquisition of these artifacts.
 
@@ -15,18 +15,26 @@ Such cases are identified in this repository as follows:
  - ⚠️ Denotes that a forensic artifact may have certain information available that depends on the operating system version.
  - ❌ Denotes that a forensic artifact is not present on a certain operating system version.
 
-## Contents
+# Contents
+
+ - [Artifacts by Category](#artifacts-by-category)
+   * [Execution](#execution)
+   * [Account Activity](#account-activity)
+   * [File Activity](#file-activity)
+ - [Artifact Behavioral Mappings](#artifact-behavioral-mappings) 
+   * [TA0002 - Execution](#ta0002-execution)
+   * [TA0003 - Persistence](#ta0003-persistence)
+   * [TA0008 - Lateral Movement](#ta0008-lateral-movement)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# Artifacts by Category
+
 The forensic artifacts described in this repository are split into the following categories:
 
  - [Execution](#execution)
  - [Account Activity](#account-activity)
  - [File Activity](#file-activity)
-
-Additionally, these artifacts may be roughly mapped to the MITRE ATT&CK framework to perform analysis on a behavioral basis:
-
- - [TA0002 - Execution](#ta0002-execution)
- - [TA0003 - Persistence](#ta0003-persistence)
- - [TA0008 - Lateral Movement](#ta0008-lateral-movement)
 
 ## Execution
 Execution artifacts may provide the following information:
@@ -72,6 +80,15 @@ File activity artifacts may provide the following information:
 | - | - | - | - | - | - | - | - |
 | Filesystem | [Zone.Identifier](file-activity/zone-identifier.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Filesystem | [USN Journal](file-activity/usn-journal.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# Artifact Behavioral Mappings
+
+Additionally, these artifacts may be roughly mapped to the MITRE ATT&CK framework to perform analysis on a behavioral basis:
+
+ - [TA0002 - Execution](#ta0002-execution)
+ - [TA0003 - Persistence](#ta0003-persistence)
+ - [TA0008 - Lateral Movement](#ta0008-lateral-movement)
 
 ## TA0002 Execution
 The below artifacts are related to [execution](https://attack.mitre.org/tactics/TA0002/). Execution is defined by MITRE as:
@@ -111,3 +128,4 @@ The below artifacts may prove useful in identifying instances of lateral movemen
 | - | - | - | - | - | - | - | - |
 | Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
