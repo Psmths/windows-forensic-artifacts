@@ -1,5 +1,5 @@
 <a name="readme-top"></a>
-![Windows Forensic Artifacts Guide](/media/title.png)
+![Windows Forensic Artifacts Guide](/media/title-2.png)
 <p align="center">
   <img src="https://img.shields.io/github/license/Psmths/windows-forensic-artifacts.svg">
   <img src="https://www.repostatus.org/badges/latest/wip.svg">
