@@ -53,6 +53,8 @@ Execution artifacts may provide the following information:
 | Eventlog | [Security/4688: A new process has been created](execution/evtx-4688-process-created.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Registry/Memory | [ShimCache](execution/shimcache.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Registry | [AmCache.hve](execution/amcache.md) | ✅ | ✅ | ✅ | ⚠️ | ❌ | ❌ |
+| Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 
 ## Account Activity
 Account activity artifacts may provide the following information:
@@ -69,6 +71,7 @@ Account activity artifacts may provide the following information:
 | Registry | [SAM Hive](account/sam-hive.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Eventlog | [Security/4720: A user account was created](account/evtx-4720-account-created.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Eventlog | [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+| Eventlog | [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 
 ## File Activity
 File activity artifacts may provide the following information:
@@ -97,6 +100,8 @@ Network activity artifacts may provide the following information:
 | - | - | - | - | - | - | - | - |
 | Eventlog | [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Eventlog | [TerminalServices-RDPClient/Operational/1102](network/evtx-1102-rdp-activex.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 
 # Artifact Behavioral Mappings
 
@@ -119,6 +124,8 @@ The below artifacts may prove useful in identifying instances of execution on an
 | Eventlog | [Security/4688: A new process has been created](execution/evtx-4688-process-created.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Registry/Memory | [ShimCache](execution/shimcache.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Registry | [AmCache.hve](execution/amcache.md) | ✅ | ✅ | ✅ | ⚠️ | ❌ | ❌ |
+| Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 
 ## TA0003 Persistence
 The below artifacts are related to [persistence activities](https://attack.mitre.org/tactics/TA0003/). Persistence is defined by MITRE as:
@@ -148,6 +155,7 @@ The below artifacts may prove useful in identifying instances of lateral movemen
 | Eventlog | [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Eventlog | [TerminalServices-RDPClient/Operational/1102](network/evtx-1102-rdp-activex.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Eventlog | [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+| Eventlog | [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

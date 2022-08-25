@@ -12,6 +12,7 @@ The TaskScheduler/Operational event log channel provides detailed tracing of sch
  - [x] Execution - Evidence of Execution
  - [x] Execution - Time
  - [x] File - Path
+ - [x] Network Activity - Source Identification
 
 
 ## Operating System Availability

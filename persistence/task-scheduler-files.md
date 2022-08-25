@@ -13,7 +13,7 @@ Task Scheduler Files are XML files that provide information regarding scheduled 
  - [x] Execution - Evidence of Execution
  - [x] Execution - Time
  - [x] File - Path
-
+ - [x] Network Activity - Source Identification
 
 ## Operating System Availability
  - [x] Windows 11
