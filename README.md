@@ -67,6 +67,7 @@ Account activity artifacts may provide the following information:
 | - | - | - | - | - | - | - | - |
 | Registry | [SAM Hive](account/sam-hive.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Eventlog | [Security/4720: A user account was created](account/evtx-account-created.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+| Eventlog | [Security/4648: Logon using explicit credentials](account/evtx-explicit-credentials.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 
 ## File Activity
 File activity artifacts may provide the following information:
@@ -144,6 +145,7 @@ The below artifacts may prove useful in identifying instances of lateral movemen
 | Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Eventlog | [Security/4778: Session reconnected](network/evtx-session-reconnected.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Eventlog | [TerminalServices-RDPClient/Operational/1102](network/evtx-rdp-activex-1102.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Eventlog | [Security/4648: Logon using explicit credentials](account/evtx-explicit-credentials.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
