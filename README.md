@@ -10,11 +10,14 @@ This repository serves as a guide to a variety of Windows forensic artifacts tha
 With each new major version of the Windows operating system, forensic artifacts may be added, modified, or removed. Because of this, their applicability to an investigation may depend on what version of windows an endpoint has installed. 
 
 Such cases are identified in this repository as follows:
- - ⚠️ Denotes that a forensic artifact may have certain information available that depends on the operating system version.
- - ❌ Denotes that a forensic artifact is not present on a certain operating system version.
+| Icon | Interpretation |
+| - | - |
+| ✅ | Denotes that the forensic artifact is fully supported on this operating system version |
+| ⚠️ | Denotes that a forensic artifact may have certain information available that depends on the operating system version |
+| ❌ | Denotes that a forensic artifact is not present on a certain operating system version |
 
 # Contents
-
+ - [Types of Windows Artifacts](#types-of-windows-artifacts)
  - [Artifacts by Category](#artifacts-by-category)
    * [Execution](#execution)
    * [Account Activity](#account-activity)
@@ -24,6 +27,26 @@ Such cases are identified in this repository as follows:
    * [TA0002 - Execution](#ta0002-execution)
    * [TA0003 - Persistence](#ta0003-persistence)
    * [TA0008 - Lateral Movement](#ta0008-lateral-movement)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# Types of Windows Artifacts
+Forensic artifacts on the Windows operatying system can generally be split into four main categories:
+
+ 1. Registry 
+ 2. Filesystem
+ 3. Event Log
+ 4. Memory
+
+**Registry** artifacts are found in the Windows registry, which is loaded into memory while a system is in operation and written to disk during shutdown. The registry stores low-level configuration settings for the operating system and contains a wealth of forensic artifacts of interest to an analyst.
+
+**Filesystem** artifacts are artifacts that arise due to the operation of Windows' filesystem - NTFS (New Technology File System).
+
+**Event log** artifacts are found in the Windows event log and consist primarily of audit logs from the operating system and its applications. 
+
+**Memory** artifacts are those artifacts found in the endpoint's memory while it is operational. These artifacts must be collected from a live system, and are generally not applicable to dead disk forensics with certain exceptions such as page files and hibernation files that consist of memory that has been written to the disk. 
+
+A complete forensic analysis of a Windows endpoint will consist of one or all of these artifacts. They may be collected and parsed individually at the analyst's discretion, or consolidated into "super timelines" with forensic software such as [log2timeline](https://github.com/log2timeline).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -40,12 +63,20 @@ The forensic artifacts described in this repository are split into the following
 Execution artifacts may provide the following information:
 
  - Execution - Command Line Options
+   - What command line was used to spawn this process?
  - Execution - Count
+   - How many times was this executable run?
  - Execution - First Executed
+   - When was this executable furst run?
  - Execution - Last Executed
+   - When was the last time this executable was run?
  - Execution - Permissions / Account
+   - What permissions does the process have?
+   - What account launced the process?
  - Execution - Process Tree
+   - How did this process come to be? What spawned this process?
  - Execution - Time
+   - When was this process spawned?
 
 | Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
 | - | - | - | - | - | - | - | - |
@@ -59,12 +90,18 @@ Execution artifacts may provide the following information:
 ## Account Activity
 Account activity artifacts may provide the following information:
  - Account - Creation Time
+   - When was this account created?
  - Account - Group Membership
+   - What groups is the account a member of?
  - Account - Last Login
+   - When did this account last log in?
  - Account - Login History
  - Account - Logon ID
+   - Certain activity can be tied to login sessions by means of a `Logon ID`
  - Account - Relative Identifier (RID)
+   - What is the account's [Relative Identifier](https://en.wikipedia.org/wiki/Relative_identifier)?
  - Account - Security Identifier (SID)
+   - What is the account's [Security Identifier](https://en.wikipedia.org/wiki/Security_Identifier)?
 
 | Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
 | - | - | - | - | - | - | - | - |
@@ -77,12 +114,19 @@ Account activity artifacts may provide the following information:
 File activity artifacts may provide the following information:
 
  - File - Creation
+   - When was the file created?
  - File - Deletion
+   - When was the file deleted?
  - File - Hash
+   - What is the hash of this file?
  - File - Last Modified
+   - When was the file last modified?
  - File - Origin
+   - Where did the file come from?
  - File - Path
+   - Where is the file located?
  - File - Size
+   - What is the file's size on disk?
 
 | Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
 | - | - | - | - | - | - | - | - |
@@ -94,7 +138,9 @@ File activity artifacts may provide the following information:
 Network activity artifacts may provide the following information:
 
  - Network Activity - Destination Identification
+   - Can the destination for this activity be identified?
  - Network Activity - Source Identification
+   - Can the source of this activity be identified?
 
 | Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
 | - | - | - | - | - | - | - | - |
