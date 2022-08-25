@@ -8,6 +8,7 @@ This event, logged to the Security channel, indicates a new user account was cre
 
 ### Analysis Value
  - [x] Account - Creation Time
+ - [x] Account - Logon ID
  - [x] Account - Security Identifier (SID)
 
 ## Operating System Availability

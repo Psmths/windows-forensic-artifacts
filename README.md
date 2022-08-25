@@ -60,6 +60,7 @@ Account activity artifacts may provide the following information:
  - Account - Group Membership
  - Account - Last Login
  - Account - Login History
+ - Account - Logon ID
  - Account - Relative Identifier (RID)
  - Account - Security Identifier (SID)
 
@@ -72,6 +73,7 @@ Account activity artifacts may provide the following information:
 ## File Activity
 File activity artifacts may provide the following information:
 
+ - File - Creation
  - File - Deletion
  - File - Hash
  - File - Last Modified

@@ -4,6 +4,7 @@ Zone Identifiers are an artifact that reside in alternate data streams within an
 ⚠️ In Windows XP, only executable files will be tagged with a Zone Identifier. Later operating systems will tag all files.
 
 ### Analysis Value
+ - [x] File - Creation
  - [x] File - Origin
 
 ## Operating System Availability

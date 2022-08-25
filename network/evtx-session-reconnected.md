@@ -7,8 +7,9 @@ This event, logged to the Security channel, is logged when an RDP session is rec
  - [x] Behavioral - Lateral Movement (TA0008)
 
 ### Analysis Value
- - [x] Network Activity - Source Identification
  - [x] Account - Login History
+ - [x] Account - Logon ID
+ - [x] Network Activity - Source Identification
 
 ## Operating System Availability
  - [x] Windows 11

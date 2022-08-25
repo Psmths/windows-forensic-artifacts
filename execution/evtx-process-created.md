@@ -5,6 +5,8 @@ This event, logged to the Security channel, indicates a process was created on t
  - [x] Behavioral - Execution (TA0002)
 
 ### Analysis Value
+ - [x] Account - Logon ID
+ - [x] Account - Security Identifier (SID)
  - [x] Execution - Command Line Options
  - [x] Execution - Permissions / Account
  - [x] Execution - Process Tree
@@ -34,7 +36,7 @@ The following fields can be used to determine what account spawned the process:
   
 ### Correlation to Logon Sessions
 The `Logon ID` field may be used to correlate this activity with a logon session recorded by event IDs such as:
- - `4624: An account was successfully logged on`
+ - [`4624: An account was successfully logged on`](/account/evtx-successful-logon.md)
  - `4647: User initiated logoff `
  - `4634: An account was logged off `
 
