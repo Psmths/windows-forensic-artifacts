@@ -9,6 +9,7 @@ This event, logged to the Security channel, indicates a logon was completed usin
 ### Analysis Value
  - [x] Account - Login History
  - [x] Account - Logon ID
+ - [x] Account - Security Identifier (SID)
  - [x] Network Activity - Destination Identification
 
 ## Operating System Availability
@@ -27,6 +28,7 @@ The following fields may be interpreted from this artifact:
 
 | Field Name | Interpretation |
 | - | - |
+| Subject / Security ID | SID of account that used the explicit credentials |
 | Subject / Account Name | Name of account that used the explicit credentials |
 | Subject / Logon ID | Logon ID of session for account that used the explicit credentials |
 | Account Whose Credentials Were Used / Account Name | Account name for the explicit credentials |
