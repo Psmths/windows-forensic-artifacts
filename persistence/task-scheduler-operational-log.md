@@ -34,7 +34,15 @@ The following event IDs are useful to hunt for persistent implants on an endpoin
 | 200 | Scheduled Task Executed | Executable file path |
 | 201 | Scheduled Task Execution Completed | Executable file path |
 
-Deleted scheduled tasks provide a high-fidelity indicator of suspicious activity as scheduled task deletion is a rare event on Windows endpoints. 
+This activity is also logged in the Security channel with more granular information, as follows:
+| Event ID | Description |
+| - | - |
+| 4698 | Scheduled Task Created |
+| 4702 | Scheduled Task Updated |
+| 4699 | Scheduled Task Deleted |
+
+
+In the event that tasks are remotely scheduled, as is commonly seen during lateral movement attempts, this activity may be identified by observing Type 3 logons via `Security/4624: Successful Logon` events in close proximity to task creation.
 
 ## Caveats
 Logging for these events is disabled by default and must be enabled to provide these artifacts. 
