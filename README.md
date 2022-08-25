@@ -67,8 +67,8 @@ Account activity artifacts may provide the following information:
 | Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
 | - | - | - | - | - | - | - | - |
 | Registry | [SAM Hive](account/sam-hive.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Eventlog | [Security/4720: A user account was created](account/evtx-account-created.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
-| Eventlog | [Security/4648: Logon using explicit credentials](account/evtx-explicit-credentials.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+| Eventlog | [Security/4720: A user account was created](account/evtx-4720-account-created.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+| Eventlog | [Security/4648: Logon using explicit credentials](account/evtx-4648--explicit-credentials.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 
 ## File Activity
 File activity artifacts may provide the following information:
@@ -95,8 +95,8 @@ Network activity artifacts may provide the following information:
 
 | Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
 | - | - | - | - | - | - | - | - |
-| Eventlog | [Security/4778: Session reconnected](network/evtx-session-reconnected.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
-| Eventlog | [TerminalServices-RDPClient/Operational/1102](network/evtx-rdp-activex-1102.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Eventlog | [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+| Eventlog | [TerminalServices-RDPClient/Operational/1102](network/evtx-1102-rdp-activex.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 
 # Artifact Behavioral Mappings
 
@@ -116,7 +116,7 @@ The below artifacts may prove useful in identifying instances of execution on an
 | Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
 | - | - | - | - | - | - | - | - |
 | Filesystem | [Prefetch](execution/prefetch.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Eventlog | [4688: A new process has been created](execution/evtx-process-created.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
+| Eventlog | [4688: A new process has been created](execution/evtx-4688-process-created.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Registry/Memory | [ShimCache](execution/shimcache.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Registry | [AmCache.hve](execution/amcache.md) | ✅ | ✅ | ✅ | ⚠️ | ❌ | ❌ |
 
@@ -132,7 +132,7 @@ The below artifacts may prove useful in identifying instances of persistence on 
 | Registry | [Registry Autostarts](persistence/reg-autostarts.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| Eventlog | [Security/4720: A user account was created](account/evtx-account-created.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+| Eventlog | [Security/4720: A user account was created](account/evtx-4720-account-created.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 
 ## TA0008 Lateral Movement
 The below artifacts are related to [lateral movement activities](https://attack.mitre.org/tactics/TA0008/). Lateral movement is defined by MITRE as:
@@ -145,9 +145,9 @@ The below artifacts may prove useful in identifying instances of lateral movemen
 | - | - | - | - | - | - | - | - |
 | Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| Eventlog | [Security/4778: Session reconnected](network/evtx-session-reconnected.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
-| Eventlog | [TerminalServices-RDPClient/Operational/1102](network/evtx-rdp-activex-1102.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| Eventlog | [Security/4648: Logon using explicit credentials](account/evtx-explicit-credentials.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+| Eventlog | [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+| Eventlog | [TerminalServices-RDPClient/Operational/1102](network/evtx-1102-rdp-activex.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Eventlog | [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
