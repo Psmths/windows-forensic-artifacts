@@ -68,7 +68,7 @@ Account activity artifacts may provide the following information:
 | - | - | - | - | - | - | - | - |
 | Registry | [SAM Hive](account/sam-hive.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Eventlog | [Security/4720: A user account was created](account/evtx-4720-account-created.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
-| Eventlog | [Security/4648: Logon using explicit credentials](account/evtx-4648--explicit-credentials.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+| Eventlog | [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 
 ## File Activity
 File activity artifacts may provide the following information:
