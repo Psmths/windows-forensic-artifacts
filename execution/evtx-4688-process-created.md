@@ -36,7 +36,7 @@ The following fields can be used to determine what account spawned the process:
   
 ### Correlation to Logon Sessions
 The `Logon ID` field may be used to correlate this activity with a logon session recorded by event IDs such as:
- - [`4624: An account was successfully logged on`](/account/evtx-successful-logon.md)
+ - [`4624: An account was successfully logged on`](/account/evtx-4624-successful-logon.md)
  - `4647: User initiated logoff `
  - `4634: An account was logged off `
 
