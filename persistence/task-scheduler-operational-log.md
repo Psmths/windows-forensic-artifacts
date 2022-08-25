@@ -42,7 +42,7 @@ This activity is also logged in the Security channel with more granular informat
 | 4699 | Scheduled Task Deleted |
 
 
-In the event that tasks are remotely scheduled, as is commonly seen during lateral movement attempts, this activity may be identified by observing Type 3 logons via [`4624: An account was successfully logged on`](/account/evtx-successful-logon.md) events in close proximity to task creation.
+In the event that tasks are remotely scheduled, as is commonly seen during lateral movement attempts, this activity may be identified by observing Type 3 logons via [`4624: An account was successfully logged on`](/account/evtx-4624-successful-logon.md) events in close proximity to task creation.
 
 ## Caveats
 Logging for these events is disabled by default and must be enabled to provide these artifacts. 

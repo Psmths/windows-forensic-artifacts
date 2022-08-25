@@ -35,4 +35,4 @@ The following fields may be interpreted from this artifact:
 | Process Information / Process Name | The command line of the process that used the explicit credentials |
 | Network Information / Network Address | IP address of **source** endpoint |
 
-This event may be correlated with events found on the destination endpoint, such as event [`4624: An account was successfully logged on`](/account/evtx-successful-logon.md). In the case of runas activity, a 4624 event will be registered with Logon type 9.
+This event may be correlated with events found on the destination endpoint, such as event [`4624: An account was successfully logged on`](/account/evtx-4624-successful-logon.md). In the case of runas activity, a 4624 event will be registered with Logon type 9.
