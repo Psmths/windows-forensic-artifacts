@@ -46,4 +46,12 @@ This activity is also logged in the Security channel with more granular informat
 In the event that tasks are remotely scheduled, as is commonly seen during lateral movement attempts, this activity may be identified by observing Type 3 logons via [`4624: An account was successfully logged on`](/account/evtx-4624-successful-logon.md) events in close proximity to task creation.
 
 ## Caveats
-Logging for these events is disabled by default and must be enabled to provide these artifacts. 
+Logging for these events is disabled by default and must be enabled to provide these artifacts.
+
+## Analysis Tips
+
+### Deleted Scheduled Tasks
+Scheduled task deletion is a rare event on Windows systems and provides an easy to query, high-fidelity indicator of suspicious activity. The following event IDs may be queried:
+
+ - `Windows-TaskScheduler\Operational Event 141: Scheduled Task Deleted`
+ - `Security Event 4699: Scheduled Task Deleted`

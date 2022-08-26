@@ -62,92 +62,149 @@ The forensic artifacts described in this repository are split into the following
 ## Execution
 Execution artifacts may provide the following information:
 
- - Execution - Command Line Options
-   - What command line was used to spawn this process?
- - Execution - Count
-   - How many times was this executable run?
- - Execution - First Executed
-   - When was this executable furst run?
- - Execution - Last Executed
-   - When was the last time this executable was run?
- - Execution - Permissions / Account
-   - What permissions does the process have?
-   - What account launced the process?
- - Execution - Process Tree
-   - How did this process come to be? What spawned this process?
- - Execution - Time
-   - When was this process spawned?
+### Execution - Command Line Options
+>What command line was used to spawn this process?
 
-| Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
-| - | - | - | - | - | - | - | - |
-| Filesystem | [Prefetch](execution/prefetch.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Eventlog | [Security/4688: A new process has been created](execution/evtx-4688-process-created.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Registry/Memory | [ShimCache](execution/shimcache.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Registry | [AmCache.hve](execution/amcache.md) | ✅ | ✅ | ✅ | ⚠️ | ❌ | ❌ |
-| Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
+- [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
+- [Scheduled Task Files](persistence/task-scheduler-files.md)
+- [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
+
+### Execution - First Executed
+>When was this executable furst run?
+ - [Prefetch](execution/prefetch.md)
+ - [AmCache.hve](execution/amcache.md)
+ - [Scheduled Task Files](persistence/task-scheduler-files.md)
+ - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
+
+### Execution - Last Executed
+>When was the last time this executable was run?
+ - [Prefetch](execution/prefetch.md)
+ - [Scheduled Task Files](persistence/task-scheduler-files.md)
+ - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
+
+### Execution - Permissions / Account
+>What permissions does the process have?
+>What account launced the process?
+ - [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
+ - [Scheduled Task Files](persistence/task-scheduler-files.md)
+
+### Execution - Process Tree
+>How did this process come to be? What spawned this process?
+ - [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
+
+### Execution - Time
+>When was this process spawned?
+ - [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
+ - [Scheduled Task Files](persistence/task-scheduler-files.md)
+ - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Account Activity
 Account activity artifacts may provide the following information:
- - Account - Creation Time
-   - When was this account created?
- - Account - Group Membership
-   - What groups is the account a member of?
- - Account - Last Login
-   - When did this account last log in?
- - Account - Login History
- - Account - Logon ID
-   - Certain activity can be tied to login sessions by means of a `Logon ID`
- - Account - Relative Identifier (RID)
-   - What is the account's [Relative Identifier](https://en.wikipedia.org/wiki/Relative_identifier)?
- - Account - Security Identifier (SID)
-   - What is the account's [Security Identifier](https://en.wikipedia.org/wiki/Security_Identifier)?
+### Account - Creation Time
+> When was this account created?
+ - [SAM Hive](account/sam-hive.md)
+ - [Security/4720: A user account was created](account/evtx-4720-account-created.md)
 
-| Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
-| - | - | - | - | - | - | - | - |
-| Registry | [SAM Hive](account/sam-hive.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Eventlog | [Security/4720: A user account was created](account/evtx-4720-account-created.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
-| Eventlog | [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
-| Eventlog | [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+### Account - Group Membership
+> What groups is the account a member of?
+ - [SAM Hive](account/sam-hive.md)
+
+### Account - Last Login
+> When did this account last log in?
+ - [SAM Hive](account/sam-hive.md)
+
+### Account - Login History
+> Identification of specific instances of account logins
+ - [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md)
+ - [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md)
+ - [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md)
+
+### Account - Logon ID
+> Certain activity can be tied to login sessions by means of a `Logon ID`
+ - [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
+ - [Security/4720: A user account was created](account/evtx-4720-account-created.md)
+ - [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md)
+ - [TerminalServices-RDPClient/Operational/1102](network/evtx-1102-rdp-activex.md)
+ - [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md)
+ - [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md)
+
+### Account - Relative Identifier (RID)
+> What is the account's [Relative Identifier](https://en.wikipedia.org/wiki/Relative_identifier)?
+ - [SAM Hive](account/sam-hive.md)
+
+### Account - Security Identifier (SID)
+> What is the account's [Security Identifier](https://en.wikipedia.org/wiki/Security_Identifier)?
+ - [SAM Hive](account/sam-hive.md)
+ - [Security/4720: A user account was created](account/evtx-4720-account-created.md)
+ - [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md)
+ - [TerminalServices-RDPClient/Operational/1102](network/evtx-1102-rdp-activex.md)
+ - [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md)
+ - [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## File Activity
 File activity artifacts may provide the following information:
 
- - File - Creation
-   - When was the file created?
- - File - Deletion
-   - When was the file deleted?
- - File - Hash
-   - What is the hash of this file?
- - File - Last Modified
-   - When was the file last modified?
- - File - Origin
-   - Where did the file come from?
- - File - Path
-   - Where is the file located?
- - File - Size
-   - What is the file's size on disk?
+### File - Creation
+> When was the file created?
+ - [Zone.Identifier](file-activity/zone-identifier.md)
+ - [USN Journal](file-activity/usn-journal.md)
 
-| Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
-| - | - | - | - | - | - | - | - |
-| Filesystem | [Zone.Identifier](file-activity/zone-identifier.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
-| Filesystem | [USN Journal](file-activity/usn-journal.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+### File - Deletion
+> When was the file deleted?
+ - [USN Journal](file-activity/usn-journal.md)
+
+### File - Hash
+> What is the hash of this file?
+ - [AmCache.hve](execution/amcache.md)
+
+### File - Last Modified
+> When was the file last modified?
+ - [ShimCache](execution/shimcache.md)
+ - [AmCache.hve](execution/amcache.md)
+ - [USN Journal](file-activity/usn-journal.md)
+
+### File - Origin
+> Where did the file come from?
+ - [Zone.Identifier](file-activity/zone-identifier.md)
+
+### File - Path
+> Where is the file located?
+ - [ShimCache](execution/shimcache.md)
+ - [AmCache.hve](execution/amcache.md)
+ - [Registry Autostarts](persistence/reg-autostarts.md)
+ - [USN Journal](file-activity/usn-journal.md)
+ - [Scheduled Task Files](persistence/task-scheduler-files.md)
+ - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
+
+### File - Size
+> What is the file's size on disk?
+ - [ShimCache](execution/shimcache.md)
+ - [USN Journal](file-activity/usn-journal.md)
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Network Activity
 Network activity artifacts may provide the following information:
 
- - Network Activity - Destination Identification
-   - Can the destination for this activity be identified?
- - Network Activity - Source Identification
-   - Can the source of this activity be identified?
+### Network Activity - Destination Identification
+> Can the destination for this activity be identified?
+ - [TerminalServices-RDPClient/Operational/1102](network/evtx-1102-rdp-activex.md)
+ - [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md)
 
-| Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
-| - | - | - | - | - | - | - | - |
-| Eventlog | [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
-| Eventlog | [TerminalServices-RDPClient/Operational/1102](network/evtx-1102-rdp-activex.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
+### Network Activity - Source Identification
+> Can the source of this activity be identified?
+ - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
+ - [Scheduled Task Files](persistence/task-scheduler-files.md)
+ - [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md)
+ - [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # Artifact Behavioral Mappings
 

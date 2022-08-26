@@ -29,12 +29,32 @@ The following key structure can be used to interpret this artifact. Note that th
 
 | Key | Interpretation | 
 | - | - |
-| 0x006 | File Size |
-| 0x011 | Last Modified Timestamp |
-| 0x012 | Created Timestamp |
-| 0x015 | File Path |
-| 0x101 | File SHA-1 Hash |
+| 1 | Publisher Name |
+| 6 | File Size |
+| 11 | Last Modified Timestamp |
+| 12 | Created Timestamp |
+| 15 | File Path |
+| 101 | File SHA-1 Hash |
 
 For the SHA-1 hash, remove the leading 4 zeroes. 
 
 For each numeric key, the last write time represents the first execution timestamp for the application. 
+
+## Caveats
+This artifact alone does not absolutely indicate program execution. There are some instances where an item may be found in the Amcache hive that has not been executed. Consider enriching analysis with other execution artifacts to positively identify execution.
+
+## Analysis Tips
+
+### Executables in Suspicious Locations
+Search for amcache hive entries for executables that reside in suspicious locations, such as:
+
+ - User `Downloads` directories
+ - Other user profile directories such as `Desktop` or `Documents`
+ - `C:\Temp`
+ - `C:\PerfLogs`
+
+### Suspicious Publishers
+Typically, executables running under system directories such as `C:\Windows\System32` or `C:\Windows\SysWOW64` should have `microsoft` listed as the publisher. Because the Amcache hive provides publisher information, search for executables in these paths that were not published by Microsoft.
+
+### IOC Queries
+Assuming IOCs for malicious software are available, searching the Amcache hive for such indicators (SHA-1 hashes, executable name, publisher, etc.) may provide quick wins.

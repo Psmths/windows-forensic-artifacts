@@ -38,3 +38,8 @@ The most recent execution is indicated by the modification timestamp of the pref
 
 ## Caveats
 Prefetch files are written approximately 10 seconds after execution. Subtract 10 seconds from the timestamp to get an approximate time.
+
+## Analysis Tips
+
+### Evidence of Deleted Files
+Because the Prefetch artifact stores files referenced by a program, it may be used to identify deleted files as they will persist in this artifact.
