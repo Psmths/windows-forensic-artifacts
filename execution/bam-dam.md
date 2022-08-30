@@ -26,7 +26,7 @@ On older version of Windows 10, this artifact has a different path:
  - RegistryExplorer (Eric Zimmerman)
 
 ## Artifact Interpretation
-The `Execution Time` as seen in RegistryExplorer represents the most recent time of execution for the binary. The `Program` field represents the full path the the binary. 
+The `Execution Time` as seen in RegistryExplorer represents the most recent time of execution for the binary. **Based on testing, this execution time is written upon process termination.** The `Program` field represents the full path the the binary. 
 
 In the event that you are parsing or interpreting this artifact manually, the following CyberChef recipe can be used to convert Windows FILETIME timestamps to a date and time:
 

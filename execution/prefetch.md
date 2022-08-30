@@ -1,6 +1,8 @@
 # Prefetch
 Windows Prefetch is utilized to improve application performance by pre-loading resources when an application is launched.
 
+In addition to providing evidence of execution, the prefetch artifact provides a list of modules/files that have been accessed by the process in the 10 seconds following spawning. 
+
 ### Behavioral Indications
  - [x] Behavioral - Execution (TA0002)<sup>[1](#earliest-execution)</sup>
 
