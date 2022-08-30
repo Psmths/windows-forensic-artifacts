@@ -37,9 +37,9 @@ In the event that you are parsing or interpreting this artifact manually, the fo
   { "op": "To Hex",
     "args": ["None", 0] },
   { "op": "Windows Filetime to UNIX Timestamp",
-    "args": ["Seconds (s)", "Hex (little endian)"] },
+    "args": ["Milliseconds (ms)", "Hex (little endian)"] },
   { "op": "From UNIX Timestamp",
-    "args": ["Seconds (s)"] }
+    "args": ["Milliseconds (ms)"] }
 ]
 ```
 
