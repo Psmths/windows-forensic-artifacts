@@ -168,6 +168,7 @@ Account activity artifacts may provide the following information:
  - [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md)
  - [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md)
  - [Security/4625: An account failed to log on](account/evtx-4625-failed-logon.md)
+ - [WMI-Activity/Operational/5861: New WMI Event Consumer](persistence/evtx-5861-event-consumer-created.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -271,6 +272,8 @@ The below artifacts may prove useful in identifying instances of persistence on 
 | Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Eventlog | [Security/4720: A user account was created](account/evtx-4720-account-created.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+| Eventlog | [WMI-Activity/Operational/5861: New WMI Event Consumer](persistence/evtx-5861-event-consumer-created.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+
 
 ## TA0008 Lateral Movement
 The below artifacts are related to [lateral movement activities](https://attack.mitre.org/tactics/TA0008/). Lateral movement is defined by MITRE as:
