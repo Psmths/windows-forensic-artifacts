@@ -1,8 +1,6 @@
 # Security/4625: An account failed to log on 
 This event indicates an account has failed to authenticate to the endpoint. It is logged on the **destination** endpoint. It closely mirrors the information logged for the event [`4624: An account was successfully logged on`](/account/evtx-4624-successful-logon.md).
 
-⚠️ In windows XP, the corresponding Event ID is `528`.
-
 ### Behavioral Indications
  - [x] Behavioral - Lateral Movement (TA0008)
 
