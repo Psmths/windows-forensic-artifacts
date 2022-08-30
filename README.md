@@ -142,6 +142,7 @@ Account activity artifacts may provide the following information:
  - [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md)
  - [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md)
  - [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md)
+ - [Security/4625: An account failed to log on](account/evtx-4625-failed-logon.md)
 
 ### Account - Logon ID
 > Certain activity can be tied to login sessions by means of a `Logon ID`
@@ -164,6 +165,7 @@ Account activity artifacts may provide the following information:
  - [TerminalServices-RDPClient/Operational/1102](network/evtx-1102-rdp-activex.md)
  - [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md)
  - [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md)
+ - [Security/4625: An account failed to log on](account/evtx-4625-failed-logon.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -224,6 +226,7 @@ Network activity artifacts may provide the following information:
  - [Scheduled Task Files](persistence/task-scheduler-files.md)
  - [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md)
  - [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md)
+ - [Security/4625: An account failed to log on](account/evtx-4625-failed-logon.md)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -281,6 +284,8 @@ The below artifacts may prove useful in identifying instances of lateral movemen
 | Eventlog | [TerminalServices-RDPClient/Operational/1102](network/evtx-1102-rdp-activex.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Eventlog | [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Eventlog | [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+| Eventlog | [Security/4625: An account failed to log on](account/evtx-4625-failed-logon.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

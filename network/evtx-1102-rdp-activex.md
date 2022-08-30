@@ -21,7 +21,7 @@ This event, logged to the TerminalServices-RDPClient/Operational channel, is log
 This artifact can provide the **destination** IP address of an *attempted* RDP session. 
 
 ## Caveats
-This event is logged regardless of success or failure of the RDP session, and must be cross-referenced with other events such as `Security/4264` on the destination host. 
+This event is logged regardless of success or failure of the RDP session, and must be cross-referenced with other events such as [`4624: An account was successfully logged on`](/account/evtx-4624-successful-logon.md) on the destination host. 
 
 ## Example
 ![Example Image](/media/examples/evtx-1102-example.png)
