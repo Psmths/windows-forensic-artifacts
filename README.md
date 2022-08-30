@@ -103,12 +103,14 @@ Execution artifacts may provide the following information:
  - [Prefetch](execution/prefetch.md)
  - [Scheduled Task Files](persistence/task-scheduler-files.md)
  - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
+ - [Background Activity Montitor](execution/bam-dam.md)
 
 ### Execution - Permissions / Account
 >What permissions does the process have?
 >What account launced the process?
  - [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
  - [Scheduled Task Files](persistence/task-scheduler-files.md)
+ - [Background Activity Montitor](execution/bam-dam.md)
 
 ### Execution - Process Tree
 >How did this process come to be? What spawned this process?
@@ -203,6 +205,7 @@ File activity artifacts may provide the following information:
  - [USN Journal](file-activity/usn-journal.md)
  - [Scheduled Task Files](persistence/task-scheduler-files.md)
  - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
+ - [Background Activity Montitor](execution/bam-dam.md)
 
 ### File - Size
 > What is the file's size on disk?
