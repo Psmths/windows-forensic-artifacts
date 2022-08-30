@@ -1,6 +1,8 @@
 # Security/4624: An account was successfully logged on
 This event indicates an account has successfuly authenticated to the endpoint. It is logged on the **destination** endpoint. 
 
+This event is a **Logon Event**, meaning it is logged on the system that is being authenticated to. 
+
 ⚠️ In windows XP, the corresponding Event ID is `528`.
 
 ### Behavioral Indications
