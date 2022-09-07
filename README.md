@@ -7,17 +7,9 @@
 
 This repository serves as a guide to a variety of Windows forensic artifacts that may be levereaged during an investigation. It is meant to offer succint information regarding these artifacts, such as their location, parsers that are available for them, and how to interpret the results of a forensic acquisition of these artifacts.
 
-With each new major version of the Windows operating system, forensic artifacts may be added, modified, or removed. Because of this, their applicability to an investigation may depend on what version of windows an endpoint has installed. 
-
-Such cases are identified in this repository as follows:
-| Icon | Interpretation |
-| - | - |
-| ✅ | Denotes that the forensic artifact is fully supported on this operating system version |
-| ⚠️ | Denotes that a forensic artifact may have certain information available that depends on the operating system version |
-| ❌ | Denotes that a forensic artifact is not present on a certain operating system version |
-
 # Contents
  - [Types of Windows Artifacts](#types-of-windows-artifacts)
+ - [How to Use this Guide](#how-to-use-this-guide)
  - [Artifacts by Category](#artifacts-by-category)
    * [Execution](#execution)
      - [Command Line Options / Full Path](#execution---command-line-options)
@@ -69,6 +61,18 @@ Forensic artifacts on the Windows operatying system can generally be split into 
 **Memory** artifacts are those artifacts found in the endpoint's memory while it is operational. These artifacts must be collected from a live system, and are generally not applicable to dead disk forensics with certain exceptions such as page files and hibernation files that consist of memory that has been written to the disk. 
 
 A complete forensic analysis of a Windows endpoint will consist of one or all of these artifacts. They may be collected and parsed individually at the analyst's discretion, or consolidated into "super timelines" with forensic software such as [log2timeline](https://github.com/log2timeline).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# How to Use this Guide
+
+This guide was created to classify the numerous Windows forensic artifacts and provide a concise list of what information they respectively provide. While it may be used as a general reference, it shines when it comes time to tie separate artifacts together based on mutual/shared datapoints.
+
+For instance, if it is known that an attacker has logged into an endpoint around a certain time, an analyst may want to determine what activity on the endpoint can be attributed to this session. For this, the analyst might begin by looking at 4624 Login events and pull the `Logon ID` from this artifact. This guide provides a list of every artifact that has the `Logon ID` field present, providing a quick way to correlate logon activity with other activity on the endpoint filed under the section [Logon ID](#account---logon-id).
+
+As another example, say for instance you are aware that an endpoint may have a malicious file on it. Maybe you want to see [when the file was created](#file---creation), or [when it was first executed](#execution---first-executed). What about determining [what Logon ID is associated with the execution with 4688 events?](#account---logon-id)
+
+Building a visual map in your mind of the relationships between all the artifacts present in Windows is necessary to allow for an analyst to efficiently pivot their focus during an investigation, this guide simply lays it all out and provides useful analysis tips collected during years of forensic experience while doing so.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
