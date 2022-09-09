@@ -115,6 +115,7 @@ Execution artifacts may provide the following information:
  - [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
  - [Scheduled Task Files](persistence/task-scheduler-files.md)
  - [Background Activity Montitor](execution/bam-dam.md)
+ - [SRUM Database](execution/srum-db.md)
 
 ### Execution - Process Tree
 >How did this process come to be? What spawned this process?
@@ -173,6 +174,7 @@ Account activity artifacts may provide the following information:
  - [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md)
  - [Security/4625: An account failed to log on](account/evtx-4625-failed-logon.md)
  - [WMI-Activity/Operational/5861: New WMI Event Consumer](persistence/evtx-5861-event-consumer-created.md)
+ - [SRUM Database](execution/srum-db.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -211,6 +213,7 @@ File activity artifacts may provide the following information:
  - [Scheduled Task Files](persistence/task-scheduler-files.md)
  - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
  - [Background Activity Montitor](execution/bam-dam.md)
+ - [SRUM Database](execution/srum-db.md)
 
 ### File - Size
 > What is the file's size on disk?
@@ -262,6 +265,7 @@ The below artifacts may prove useful in identifying instances of execution on an
 | Registry | [AmCache.hve](execution/amcache.md) | ✅ | ✅ | ✅ | ⚠️ | ❌ | ❌ |
 | Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
+| Registry/Filesystem | [SRUM Database](execution/srum-db.md) | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
 
 ## TA0003 Persistence
 The below artifacts are related to [persistence activities](https://attack.mitre.org/tactics/TA0003/). Persistence is defined by MITRE as:
