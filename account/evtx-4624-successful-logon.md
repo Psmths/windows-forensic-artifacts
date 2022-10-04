@@ -57,3 +57,6 @@ The following logon types are commonly seen:
 | 7 | RDP reconnects or interactive unlocking |
 | 9 | Explicit credentials (`runas`) |
 | 10 | Interactive logon (RDP) |
+
+### Caveats
+Certain situations may cause this artifact to become noisy. On Domain Controllers serving many endpoints, these endpoints will periodically perform Type 3 Network Logons to the Domain Controller to retrieve group policy.
