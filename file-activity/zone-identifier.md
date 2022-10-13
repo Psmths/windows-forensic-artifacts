@@ -20,6 +20,8 @@ This artifact is present in an alternate data stream (ADS) of the file of intere
 
 ## Artifact Parsers
  - FTK Imager
+ - KAPE
+ - MFTEcmd
 
 ## Artifact Interpretation
 

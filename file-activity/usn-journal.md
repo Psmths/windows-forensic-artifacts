@@ -10,12 +10,7 @@ The USN Journal is an artifact present on NTFS volumes that functions as the fil
 
 
 ## Operating System Availability
- - [x] Windows 11
- - [x] Windows 10
- - [x] Windows 8
- - [x] Windows 7
- - [x] Windows Vista
- - [x] Windows XP
+ - NTFS Volumes
 
 ## Artifact Location(s)
  - `$Extend\$UsnJrnl\$J`
@@ -24,6 +19,7 @@ The USN Journal is an artifact present on NTFS volumes that functions as the fil
  - Velociraptor
  - jp (TZWorks)
  - MFTEcmd (Eric Zimmerman)
+ - KAPE can be used to extract
 
 ## Artifact Interpretation
 Below are several common USN Journal events:
