@@ -18,6 +18,7 @@ This repository serves as a guide to a variety of Windows forensic artifacts tha
      - [Permissions/Account](#execution---permissions--account)
      - [Process Geneaology/Tree](#execution---process-tree)
      - [Execution Time](#execution---time)
+     - [Evidence of Execution](#execution---evidence-of-execution)
    * [Account Activity](#account-activity)
      - [Account Creation Time](#account---creation-time)
      - [Group Membership](#account---group-membership)
@@ -89,12 +90,13 @@ The forensic artifacts described in this repository are split into the following
 ## Execution
 Execution artifacts may provide the following information:
 
-### Execution - Command Line Options
+### Execution - Command Line Options / Full Path
 >What command line was used to spawn this process?
 
 - [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
 - [Scheduled Task Files](persistence/task-scheduler-files.md)
 - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
+- [Detection History Files](file-activity/detectionhistory.md)
 
 ### Execution - First Executed
 >When was this executable furst run?
@@ -127,6 +129,10 @@ Execution artifacts may provide the following information:
  - [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
  - [Scheduled Task Files](persistence/task-scheduler-files.md)
  - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
+
+### Execution - Evidence of Execution
+>Was a process spawned?
+- [Detection History Files](file-activity/detectionhistory.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -194,6 +200,7 @@ File activity artifacts may provide the following information:
 ### File - Hash
 > What is the hash of this file?
  - [AmCache.hve](execution/amcache.md)
+ - [Detection History Files](file-activity/detectionhistory.md)
 
 ### File - Last Modified
 > When was the file last modified?
@@ -215,6 +222,7 @@ File activity artifacts may provide the following information:
  - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
  - [Background Activity Montitor](execution/bam-dam.md)
  - [SRUM Database](execution/srum-db.md)
+ - [Detection History Files](file-activity/detectionhistory.md)
 
 ### File - Size
 > What is the file's size on disk?
