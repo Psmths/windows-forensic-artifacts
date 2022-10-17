@@ -37,6 +37,7 @@ This repository serves as a guide to a variety of Windows forensic artifacts tha
    * [Network Activity](#network-activity)
      - [Destination Identification](#network-activity---destination-identification)
      - [Source Identification](#network-activity---source-identification)
+     - [Browser Activity](#network-activity---browser-activity)
  - [Artifact Behavioral Mappings](#artifact-behavioral-mappings) 
    * [TA0002 - Execution](#ta0002-execution)
    * [TA0003 - Persistence](#ta0003-persistence)
@@ -239,6 +240,9 @@ Network activity artifacts may provide the following information:
  - [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md)
  - [Security/4625: An account failed to log on](account/evtx-4625-failed-logon.md)
 
+### Network Activity - Browser Activity
+> Artifacts supporting general forensic analysis for browser activity on an endpoint
+ - [places.sqlite](network/places-sqlite.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
