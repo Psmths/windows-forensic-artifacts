@@ -25,3 +25,5 @@ The presence of this artifact indicates that the file the artifact was created f
  - The process responsible for the file's creation
 
 In the event that the malicious item is a registry key, the registry key will be present in this artifact.
+
+More detailed information regarding the structure of this artifact can be found [here](https://github.com/libyal/dtformats/blob/main/documentation/Windows%20Defender%20scan%20DetectionHistory%20file%20format.asciidoc).
