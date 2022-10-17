@@ -8,6 +8,7 @@ It provides 30-60 days of resolution. It is present in both the **registry** as 
 
 ### Analysis Value
  - [x] Execution - Permissions/Account
+ - [x] Execution - Evidence of Execution
  - [x] File - Path
  - [x] Account - Security Identifier (SID)
 

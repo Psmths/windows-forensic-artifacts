@@ -132,7 +132,15 @@ Execution artifacts may provide the following information:
 
 ### Execution - Evidence of Execution
 >Was a process spawned?
-- [Detection History Files](file-activity/detectionhistory.md)
+ - [AmCache.hve](execution/amcache.md)
+ - [Background Activity Montitor](execution/bam-dam.md)
+ - [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
+ - [Prefetch](execution/prefetch.md)
+ - [ShimCache](execution/shimcache.md)
+ - [SRUM Database](execution/srum-db.md)
+ - [Detection History Files](file-activity/detectionhistory.md)
+ - [Scheduled Task Files](persistence/task-scheduler-files.md)
+ - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

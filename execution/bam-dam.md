@@ -7,6 +7,7 @@ The Background Activity Monitor and Desktop Activity Montior registry artifacts 
 ### Analysis Value
  - [x] Execution - Last Executed
  - [x] Execution - Permissions / Account
+ - [x] Execution - Evidence of Execution
  - [x] File - Path
 
 ## Operating System Availability
