@@ -1,12 +1,12 @@
 # Amcache.hve
-The Amcache hive stores metadata regarding launched executables on an endpoint. 
+The Amcache hive stores metadata regarding executables present on an endpoint. 
 
 ### Behavioral Indications
  - [x] Behavioral - Execution (TA0002)
 
 ### Analysis Value
- - [x] Execution - First Executed
- - [x] Execution - Evidence of Execution
+ - [x] Execution - First Executed <sup>[1]</sup>
+ - [x] Execution - Evidence of Execution <sup>[1]</sup>
  - [x] File - Hash
  - [x] File - Last Modified
  - [x] File - Path
@@ -41,7 +41,7 @@ For the SHA-1 hash, remove the leading 4 zeroes.
 For each numeric key, the last write time represents the first execution timestamp for the application. 
 
 ## Caveats
-This artifact alone does not absolutely indicate program execution. There are some instances where an item may be found in the Amcache hive that has not been executed. Consider enriching analysis with other execution artifacts to positively identify execution.
+<sup>[1]</sup> This artifact alone does not absolutely indicate program execution. There are some instances where an item may be found in the Amcache hive that has not been executed. Consider enriching analysis with other execution artifacts to positively identify execution.
 
 **There is a limit to the size of the data that gets hashed to produce this artifact's SHA-1 hash.** If the size of the binary exceeds approximately 30MB in size, only the first 30MB will be hashed. The result is that the SHA-1 hash will not be valid for that binary. 
 
