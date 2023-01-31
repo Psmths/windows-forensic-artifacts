@@ -1,9 +1,6 @@
 # Group Membership Registry Key
 The Group Membership Registry Key is a registry key that stores information about all the groups a user is a part of. It is located in the Windows registry under a user's profile and contains the group security identifiers (SIDs) and a count of how many groups a user is joined to.
 
-### Behavioral Indications
- - [x] Behavioral - Persistence (TA0003)
-
 ### Analysis Value
  - [x] Account - Group Membership
 
