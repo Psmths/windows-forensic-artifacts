@@ -5,7 +5,7 @@
   <img src="https://www.repostatus.org/badges/latest/wip.svg">
 </p>
 
-This repository serves as a guide to a variety of Windows forensic artifacts that may be levereaged during an investigation. It is meant to offer succint information regarding these artifacts, such as their location, parsers that are available for them, and how to interpret the results of a forensic acquisition of these artifacts.
+This repository provides an in-depth guide to the various Windows forensic artifacts that can be utilized when conducting an investigation. Detailed information is provided for each artifact, including its location, available parsing tools, and instructions for interpreting the results of a forensic data extraction. Furthermore, the repository seeks to provide a comprehensive resource for those seeking to expand their understanding of Windows forensics artifacts and how to properly leverage them during a forensic investigation.
 
 # Contents
  - [Types of Windows Artifacts](#types-of-windows-artifacts)
@@ -154,6 +154,7 @@ Account activity artifacts may provide the following information:
 ### Account - Group Membership
 > What groups is the account a member of?
  - [SAM Hive](account/sam-hive.md)
+ - [Group Membership Registry Key](account/group-membership-key.md)
 
 ### Account - Last Login
 > When did this account last log in?
