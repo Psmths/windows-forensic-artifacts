@@ -18,7 +18,7 @@ This event, logged to the WMI-Activity/Operational channel, is logged when a new
 - `%SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-WMI-Activity%4Operational.evtx`
 
 ## Artifact Interpretation
-Because new WMI event consumers on Windows enpoints are rather rare, this artifact provides a high-fidelity indicator of persistence activity. The information that you find in this event may vary depending on specific attacker techniques. In general, suspicious WMI event consumers will be of the following types, which are indicated in the event data:
+Because new WMI event consumers on Windows enpoints are rather rare, this artifact provides a high-fidelity indicator of persistence activity. The information that you find in this event may vary depending on specific attacker techniques. In general, suspicious WMI event consumers will be of the following types, which are indicated in the event data for event ID `5861`:
 
  - `CommandLineEventConsumer`
  - `ActiveScriptEventConsumer`
@@ -34,4 +34,4 @@ Evidence of WMI event consumers may also be queried on a live system through Pow
 `Get-WMIObject -Namespace root/Subscription -Class CommandLineEventConsumer`
 
 ## Example
-![Example Image](/media/examples/wmi.png)
+![Example Image](/media/examples/wmi.png) 

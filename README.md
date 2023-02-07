@@ -27,6 +27,7 @@ This repository provides an in-depth guide to the various Windows forensic artif
      - [Logon ID](#account---logon-id)
      - [Relative Identifier (RID)](#account---relative-identifier-rid)
      - [Security Identifier (SID)](#account---security-identifier-sid)
+     - [Username](#account---username)
    * [File Activity](#file-activity)
      - [Creation](#file---creation)
      - [Deletion](#file---deletion)
@@ -191,6 +192,11 @@ Account activity artifacts may provide the following information:
  - [Security/4625: An account failed to log on](account/evtx-4625-failed-logon.md)
  - [WMI-Activity/Operational/5861: New WMI Event Consumer](persistence/evtx-5861-event-consumer-created.md)
  - [SRUM Database](execution/srum-db.md)
+ - [ProfileList](account/profile-list-key.md)
+
+### Account - Username
+> Determining the username attached to a particular SID
+ - [ProfileList](account/profile-list-key.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
