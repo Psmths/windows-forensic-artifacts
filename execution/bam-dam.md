@@ -15,13 +15,17 @@ The Background Activity Monitor and Desktop Activity Montior registry artifacts 
  - [x] Windows 10
 
 ## Artifact Location(s)
-- `SYSTEM\CurrentControlSet\Services\bam\state\UserSettings\{User SID}`
-- `SYSTEM\CurrentControlSet\Services\dam\state\UserSettings\{User SID}`
+- File: `C:\Windows\System32\config\SYSTEM`
+
+For newer versions of Windows 10:
+
+- Key: `SYSTEM\CurrentControlSet\Services\bam\state\UserSettings\{User SID}`
+- Key: `SYSTEM\CurrentControlSet\Services\dam\state\UserSettings\{User SID}`
 
 On older version of Windows 10, this artifact has a different path:
 
-- `SYSTEM\CurrentControlSet\Services\bam\UserSettings\{User SID}`
-- `SYSTEM\CurrentControlSet\Services\dam\UserSettings\{User SID}`
+- Key: `SYSTEM\CurrentControlSet\Services\bam\UserSettings\{User SID}`
+- Key: `SYSTEM\CurrentControlSet\Services\dam\UserSettings\{User SID}`
 
 ## Artifact Parsers
  - RegistryExplorer (Eric Zimmerman)

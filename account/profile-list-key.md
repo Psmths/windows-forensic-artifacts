@@ -14,7 +14,12 @@ The ProfileList Registry Key is a registry key that contains subkeys named by us
  - [x] Windows XP
 
 ## Artifact Location(s)
+🔋 Live System:
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\{USER_SID}`
+
+🔌 Offline system:
+- File: `C:\Windows\System32\Config\SOFTWARE`
+- Key: `SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList\{USER_SID}`
 
 ## Artifact Parsers
  - RegistryExplorer (Eric Zimmerman)

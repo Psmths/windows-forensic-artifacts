@@ -16,6 +16,8 @@ Image File Execution Options (IFEO) is a registry key that allows users to attac
  - [x] Windows XP
 
 ## Artifact Location(s)
+File: `C:\Windows\System32\config\SOFTWARE`
+
 - `SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\`
 - `SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\`
 

@@ -1,4 +1,4 @@
-# Registry Autostart Keys
+# Run/RunOnce Registry Keys
 There are several registry keys on a Windows system that allow for programs to execute during user logon events or a system boot. These keys are located in both the NTUSER.dat hive as well as the SOFTWARE and SYSTEM hives.
 
 ### Behavioral Indications
@@ -15,7 +15,7 @@ There are several registry keys on a Windows system that allow for programs to e
  - [x] Windows Vista
  - [x] Windows XP
 
-## Artifact Location(s)
+## Artifact File Location(s)
 
 #### NTUSER.dat
 - `C:\Users\{username}\NTUSER.dat` (Windows Vista - 10)
@@ -23,9 +23,6 @@ There are several registry keys on a Windows system that allow for programs to e
 
 #### SOFTWARE
  - `C:\Windows\System32\Config\SOFTWARE`
-
-#### SYSTEM
- - `C:\Windows\System32\Config\SYSTEM`
 
 ## Artifact Parsers
  - RegistryExplorer (Eric Zimmerman)
@@ -46,10 +43,3 @@ Disabled autoruns will appear in a sub-key named "AutorunsDisabled."
 The following keys will contain full paths to the executables that will start on **logon**:
 - `SOFTWARE\Microsoft\Windows\CurrentVersion\Run`
 - `SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce`
-
-### SYSTEM
-The following keys will contain full paths to the executables:
-
-- `SYSTEM\CurrentControlSet\Services`
-
-For each key, there will be a value named `Start.` Services with the value set to 0x02 will start at **boot**.

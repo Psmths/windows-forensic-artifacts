@@ -13,7 +13,14 @@ The Group Membership Registry Key is a registry key that stores information abou
  - [x] Windows XP
 
 ## Artifact Location(s)
+This registry key resides in the NTUSER.DAT file, and on a live system is loaded into HKEY_USERS.
+
+🔋 Live System:
 - `HKEY_USERS\{USER_SID}\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy\GroupMembership`
+
+🔌 Offline system:
+- File: `C:\Users\{USER_HOME_DIRECTORY}\NTUSER.DAT`
+- Key: `SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy\GroupMembership`
 
 ## Artifact Parsers
  - RegistryExplorer (Eric Zimmerman)

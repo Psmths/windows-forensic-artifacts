@@ -18,7 +18,7 @@ The Amcache hive stores metadata regarding executables present on an endpoint.
  - [x] Windows 7 (⚠️ Most recent service packs)
 
 ## Artifact Location(s)
-- `C:\Windows\AppCompat\Programs\Amcache. hve`
+- `C:\Windows\AppCompat\Programs\Amcache.hve`
 
 ## Artifact Parsers
  - amcacheparser.exe (Eric Zimmerman)

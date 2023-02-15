@@ -231,7 +231,7 @@ File activity artifacts may provide the following information:
 > Where is the file located?
  - [ShimCache](execution/shimcache.md)
  - [AmCache.hve](execution/amcache.md)
- - [Registry Autostarts](persistence/reg-autostarts.md)
+ - [Run/RunOnce Keys](persistence/reg-run-runonce.md)
  - [USN Journal](file-activity/usn-journal.md)
  - [Scheduled Task Files](persistence/task-scheduler-files.md)
  - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
@@ -304,7 +304,7 @@ The below artifacts may prove useful in identifying instances of persistence on 
 
 | Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
 | - | - | - | - | - | - | - | - |
-| Registry | [Registry Autostarts](persistence/reg-autostarts.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Registry | [Run/RunOnce Keys](persistence/reg-run-runonce.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Eventlog | [Security/4720: A user account was created](account/evtx-4720-account-created.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
