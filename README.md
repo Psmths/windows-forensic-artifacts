@@ -105,6 +105,7 @@ Execution artifacts may provide the following information:
  - [AmCache.hve](execution/amcache.md)
  - [Scheduled Task Files](persistence/task-scheduler-files.md)
  - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
+ - [Microsoft-Windows-PowerShell/Operational/4104: PowerShell Script Block Logging](execution/evtx-4104-script-block-logging.md)
 
 ### Execution - Last Executed
 >When was the last time this executable was run?
@@ -125,6 +126,7 @@ Execution artifacts may provide the following information:
 ### Execution - Process Tree
 >How did this process come to be? What spawned this process?
  - [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
+ - [Microsoft-Windows-PowerShell/Operational/4104: PowerShell Script Block Logging](execution/evtx-4104-script-block-logging.md)
 
 ### Execution - Time
 >When was this process spawned?
@@ -195,6 +197,7 @@ Account activity artifacts may provide the following information:
  - [WMI-Activity/Operational/5861: New WMI Event Consumer](persistence/evtx-5861-event-consumer-created.md)
  - [SRUM Database](execution/srum-db.md)
  - [ProfileList](account/profile-list-key.md)
+ - [Microsoft-Windows-PowerShell/Operational/4104: PowerShell Script Block Logging](execution/evtx-4104-script-block-logging.md)
 
 ### Account - Username
 > Determining the username attached to a particular SID
@@ -242,6 +245,7 @@ File activity artifacts may provide the following information:
  - [Detection History Files](file-activity/detectionhistory.md)
  - [Image File Execution Options](persistence/image-file-execution-options.md)
  - [Program Compatibility Assistant (PCA)](execution/program-compatibility-assistant.md)
+ - [Microsoft-Windows-PowerShell/Operational/4104: PowerShell Script Block Logging](execution/evtx-4104-script-block-logging.md)
 
 ### File - Size
 > What is the file's size on disk?
