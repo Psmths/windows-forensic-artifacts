@@ -20,6 +20,11 @@ The TaskScheduler/Operational event log channel provides detailed tracing of sch
  - [x] Windows 10
  - [x] Windows 8
  - [x] Windows 7
+ - [x] Windows Server 2019
+ - [x] Windows Server 2016
+ - [x] Windows Server 2012 R2
+ - [x] Windows Server 2012
+ - [x] Windows Server 2008 R2
 
 ## Artifact Location(s)
  - `%SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-TaskScheduler%4Operational.evtx`

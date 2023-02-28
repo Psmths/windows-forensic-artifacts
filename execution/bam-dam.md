@@ -12,7 +12,7 @@ The Background Activity Monitor and Desktop Activity Montior registry artifacts 
 
 ## Operating System Availability
  - [x] Windows 11
- - [x] Windows 10
+ - [x] Windows 10 (⚠️ 1709 and later)
 
 ## Artifact Location(s)
 - File: `C:\Windows\System32\config\SYSTEM`

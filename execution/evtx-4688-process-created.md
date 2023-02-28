@@ -14,10 +14,20 @@ This event, logged to the Security channel, indicates a process was created on t
  - [x] Execution - Time
 
 ## Operating System Availability
- - [x] Windows 11
- - [x] Windows 10
- - [x] Windows 8
- - [x] Windows 7
+ - [x] Windows 11 (⚠️ Requires manual enable)
+ - [x] Windows 10 (⚠️ Requires manual enable)
+ - [x] Windows 8 (⚠️ Requires manual enable)
+ - [x] Windows 7 (⚠️ Requires manual enable)
+ - [x] Windows Vista (⚠️ Requires manual enable)
+ - [x] Windows XP (⚠️ Requires manual enable)
+ - [x] Windows Server 2019 (⚠️ Requires manual enable)
+ - [x] Windows Server 2016 (⚠️ Requires manual enable)
+ - [x] Windows Server 2012 R2 (⚠️ Requires manual enable)
+ - [x] Windows Server 2012 (⚠️ Requires manual enable)
+ - [x] Windows Server 2008 R2 (⚠️ Requires manual enable)
+ - [x] Windows Server 2008 (⚠️ Requires manual enable)
+ - [x] Windows Server 2003 R2 (⚠️ Requires manual enable)
+ - [x] Windows Server 2003 (⚠️ Requires manual enable)
 
 ## Artifact Location(s)
 - `%SystemRoot%\System32\Winevt\Logs\Security.evtx`

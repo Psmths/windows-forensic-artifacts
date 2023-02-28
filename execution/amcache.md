@@ -15,8 +15,12 @@ The Amcache hive stores metadata regarding executables present on an endpoint.
  - [x] Windows 11
  - [x] Windows 10
  - [x] Windows 8
- - [x] Windows 7 (⚠️ Most recent service packs)
-
+ - [x] Windows 7 (⚠️ KB2952664 and later)
+ - [x] Windows Server 2019
+ - [x] Windows Server 2016
+ - [x] Windows Server 2012 R2
+ - [x] Windows Server 2012
+ 
 ## Artifact Location(s)
 - `C:\Windows\AppCompat\Programs\Amcache.hve`
 

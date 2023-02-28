@@ -19,6 +19,14 @@ In addition to providing evidence of execution, the prefetch artifact provides a
  - [x] Windows 7
  - [x] Windows Vista
  - [x] Windows XP
+ - [x] Windows Server 2019 (⚠️ Requires manual enable)
+ - [x] Windows Server 2016 (⚠️ Requires manual enable)
+ - [x] Windows Server 2012 R2 (⚠️ Requires manual enable)
+ - [x] Windows Server 2012 (⚠️ Requires manual enable)
+ - [x] Windows Server 2008 R2 (⚠️ Requires manual enable)
+ - [x] Windows Server 2008 (⚠️ Requires manual enable)
+ - [x] Windows Server 2003 R2 (⚠️ Requires manual enable)
+ - [x] Windows Server 2003 (⚠️ Requires manual enable)
 
 ## Artifact Location(s)
 - `C:\Windows\Prefetch`

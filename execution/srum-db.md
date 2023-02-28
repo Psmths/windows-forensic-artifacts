@@ -16,7 +16,8 @@ It provides 30-60 days of resolution. It is present in both the **registry** as 
  - [x] Windows 11
  - [x] Windows 10
  - [x] Windows 8
-
+ - [x] Windows Server 2019
+ 
 ## Artifact Location(s)
  - `%SystemRoot%\System32\sru\SRUDB.dat` (Filesystem Location)
  - `SOFTWARE\Microsoft\Windows NT\Current Version\SRUM\Extensions` (Registry Location)
