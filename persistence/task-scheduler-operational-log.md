@@ -60,3 +60,6 @@ Scheduled task deletion is a rare event on Windows systems and provides an easy 
 
  - `Windows-TaskScheduler\Operational Event 141: Scheduled Task Deleted`
  - `Security Event 4699: Scheduled Task Deleted`
+
+### Software Installation/Uninstallation
+When applications are installed on a Windows system, they will sometimes create a scheduled task to run their update functionality, making the Task Scheduler Operational log a possible option for cross-validation of other application installation artifacts such as the `Uninstall` registry key. 
