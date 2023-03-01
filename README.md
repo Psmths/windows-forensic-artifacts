@@ -40,6 +40,7 @@ This repository provides an in-depth guide to the various Windows forensic artif
      - [Destination Identification](#network-activity---destination-identification)
      - [Source Identification](#network-activity---source-identification)
      - [Browser Activity](#network-activity---browser-activity)
+ - [System Enumeration Artifacts](#enumeration-artifacts)
  - [Artifact Behavioral Mappings](#artifact-behavioral-mappings) 
    * [TA0002 - Execution](#ta0002-execution)
    * [TA0003 - Persistence](#ta0003-persistence)
@@ -274,6 +275,19 @@ Network activity artifacts may provide the following information:
 ### Network Activity - Browser Activity
 > Artifacts supporting general forensic analysis for browser activity on an endpoint
  - [places.sqlite](network/places-sqlite.md)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# Enumeration Artifacts
+> These artifacts may be leveraged by an analyst to enumerate information from an endpoint that may prove useful during an investigation. While some of these artifacts may not necessarily be looked at for evidence of activity, they may be analyzed to obtain information important to an investigation. 
+
+| Arifact | Information | 
+| - | - | 
+| [Select](enumeration/select.md) | <ul><li>CurrentControlSet</li></ul> |
+| [CurrentVersion](enumeration/current-version.md) | <ul><li>OS Version</li><li>Installation Timestamp</li></ul> |
+| [TimeZoneInformation](enumeration/time-zone-information.md) | <ul><li>System Time Zone</li></ul> |
+| [ComputerName](enumeration/computer-name.md) | <ul><li>System Name</li></ul> |
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

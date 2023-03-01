@@ -18,17 +18,16 @@ The Services registry key, located in the SYSTEM hive, stores information regard
 ## Artifact Location(s)
 🔋 Live System:
 - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services`
-- `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services`
 
 🔌 Offline system:
 - File: `C:\Windows\system32\config\SYSTEM`
-- Key: `SYSTEM\ControlSet001\Services`
+- Key: `SYSTEM\{CONTROL_SET}\Services`
 
 ## Artifact Parsers
  - RegistryExplorer (Eric Zimmerman)
 
 ## Artifact Interpretation
-Within the `SYSTEM\ControlSet001\Services` key you will find subkeys, one for each service installed on an endpoint. 
+Within the `Services` key you will find subkeys, one for each service installed on an endpoint. 
 
 The values within this key may be interpreted as follows:
 
