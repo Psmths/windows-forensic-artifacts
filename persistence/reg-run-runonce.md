@@ -1,5 +1,5 @@
 # Run/RunOnce Registry Keys
-There are several registry keys on a Windows system that allow for programs to execute during user logon events or a system boot. These keys are located in both the NTUSER.dat hive as well as the SOFTWARE and SYSTEM hives.
+The `Run` and `RunOnce` keys specify what programs will start during a logon event. These keys are located in both the NTUSER.dat and SOFTWARE hives.
 
 ### Behavioral Indications
  - [x] Behavioral - Persistence (TA0003)
@@ -29,7 +29,7 @@ There are several registry keys on a Windows system that allow for programs to e
  - AutoRuns (Sysinternals)
 
 ## Artifact Interpretation
-### NTUSER.DAT / HKEY_CURRENT_USER (HKCU)
+### NTUSER.DAT
 The following keys will contain full paths to the executables that will start on **logon**:
 
 - `NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Run`
@@ -41,5 +41,6 @@ Disabled autoruns will appear in a sub-key named "AutorunsDisabled."
 
 ### SOFTWARE
 The following keys will contain full paths to the executables that will start on **logon**:
-- `SOFTWARE\Microsoft\Windows\CurrentVersion\Run`
-- `SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\Explorer\Run`

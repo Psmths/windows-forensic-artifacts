@@ -1,5 +1,5 @@
 # CurrentVersion Registry Key
-The `CurrentVersion` registry key will provide you with the current operating system's version, service pack, and date of installation. 
+The `CurrentVersion` registry key will provide you with the current operating system's version, service pack, and date of installation. In order to determine what the active `CurrentVersion` is, analyze the [Select](/enumeration/select.md) registry key. 
 
 
 ### Analysis Value
