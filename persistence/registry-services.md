@@ -21,9 +21,9 @@ The Services registry key, located in the SYSTEM hive, stores information regard
 
 🔌 Offline system:
 - File: `C:\Windows\system32\config\SYSTEM`
-- Key: `SYSTEM\{CONTROL_SET}\Services`
+- Key: `SYSTEM\{CURRENT_CONTROL_SET}\Services`
 
-> More information on [{CONTROL_SET}](/enumeration/current-version.md)
+> ℹ️ More information on [{CURRENT_CONTROL_SET}](/enumeration/current-version.md)
 
 ## Artifact Parsers
  - RegistryExplorer (Eric Zimmerman)
