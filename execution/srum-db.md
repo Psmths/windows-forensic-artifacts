@@ -11,6 +11,7 @@ It provides 30-60 days of resolution. It is present in both the **registry** as 
  - [x] Execution - Evidence of Execution
  - [x] File - Path
  - [x] Account - Security Identifier (SID)
+ - [x] Network Activity - Transmit Volume
 
 ## Operating System Availability
  - [x] Windows 11
