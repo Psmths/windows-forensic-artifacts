@@ -39,6 +39,7 @@ This repository provides an in-depth guide to the various Windows forensic artif
    * [Network Activity](#network-activity)
      - [Destination Identification](#network-activity---destination-identification)
      - [Source Identification](#network-activity---source-identification)
+     - [Transmit Volume](#network-activity---transmit-volume)
      - [Browser Activity](#network-activity---browser-activity)
  - [System Enumeration Artifacts](#enumeration-artifacts)
  - [Artifact Behavioral Mappings](#artifact-behavioral-mappings) 
@@ -271,6 +272,10 @@ Network activity artifacts may provide the following information:
  - [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md)
  - [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md)
  - [Security/4625: An account failed to log on](account/evtx-4625-failed-logon.md)
+
+### Network Activity - Transmit Volume
+> Can the amount of data sent or received be determined?
+ - [SRUM Database](execution/srum-db.md)
 
 ### Network Activity - Browser Activity
 > Artifacts supporting general forensic analysis for browser activity on an endpoint

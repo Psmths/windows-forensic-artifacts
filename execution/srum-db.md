@@ -63,9 +63,8 @@ The following information is available from these providers:
    - Duration of connection
    - Type of interface network traffic traversed (i.e., Ethernet, loopback, IEEE 802.11 wireless, etc.)
 
-The srum-dump utility can be used to extract and parse valuable information from the SRUM ESE database. However, manual analysis of this artifact can be an arduous task, as it requires a comprehensive cross-referencing of various sections of the SRUM ESE database. For this reason, it is not recommended to employ manual analysis on this type of artifact.
-
-This artifact is useful for identifying potential data exfiltration events from Windows systems, as it captures network utilization over time, providing insight into the magnitude of the data transfer.
+### Network Data Usage Monitor
+This artifact is useful for identifying potential data exfiltration events from Windows systems, as it captures network utilization over time, providing insight into the magnitude of the data transfer. Note that this artifact provides an **hourly, bucketed** count of how many bytes were sent and received by an application, therefore, the first and last SRUM entry will not correspond exactly to the first and last execution time. This can, however, be used to provide a rough estimate of the timeline of execution for an application. 
 
 ## Caveats
 Data collected is written to the SRUM database on the filesystem once per hour to reflect what is stored in the registry, or during system shutdown/reboot events. 
