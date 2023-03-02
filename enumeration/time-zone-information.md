@@ -27,7 +27,9 @@ The `TimeZoneInformation` registry key provides the current system time zone. Th
 
 🔌 Offline system:
 - File: `C:\Windows\system32\config\SYSTEM`
-- Key: `SYSTEM\{CONTROL_SET}\Control\TimeZoneInformation`
+- Key: `SYSTEM\{CURRENT_CONTROL_SET}\Control\TimeZoneInformation`
+
+> ℹ️ More information on [{CURRENT_CONTROL_SET}](/enumeration/current-version.md)
 
 ## Artifact Parsers
  - RegistryExplorer (Eric Zimmerman)
