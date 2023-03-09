@@ -58,5 +58,9 @@ The following logon types are commonly seen:
 | 9 | Explicit credentials (`runas`) |
 | 10 | Interactive logon (RDP) |
 
+#### Logon Type 3 - Network
+This logon type is seen when an authentication occurs over the network. Some examples include:
+ - On Windows File Servers, when a client connects to a file share, a Type 3 logon event will be recorded. This can be useful for auditing potential file access on network shares. 
+
 ### Caveats
 Certain situations may cause this artifact to become noisy. On Domain Controllers serving many endpoints, these endpoints will periodically perform Type 3 Network Logons to the Domain Controller to retrieve group policy.
