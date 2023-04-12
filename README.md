@@ -200,6 +200,7 @@ Account activity artifacts may provide the following information:
  - [SRUM Database](execution/srum-db.md)
  - [ProfileList](account/profile-list-key.md)
  - [Microsoft-Windows-PowerShell/Operational/4104: PowerShell Script Block Logging](execution/evtx-4104-script-block-logging.md)
+ - [Recycle Bin $I/$J Files](file-activity/recycle-bin-files.md)
 
 ### Account - Username
 > Determining the username attached to a particular SID
@@ -218,6 +219,7 @@ File activity artifacts may provide the following information:
 ### File - Deletion
 > When was the file deleted?
  - [USN Journal](file-activity/usn-journal.md)
+ - [Recycle Bin $I/$J Files](file-activity/recycle-bin-files.md)
 
 ### File - Hash
 > What is the hash of this file?
@@ -248,11 +250,13 @@ File activity artifacts may provide the following information:
  - [Image File Execution Options](persistence/image-file-execution-options.md)
  - [Program Compatibility Assistant (PCA)](execution/program-compatibility-assistant.md)
  - [Microsoft-Windows-PowerShell/Operational/4104: PowerShell Script Block Logging](execution/evtx-4104-script-block-logging.md)
+ - [Recycle Bin $I/$J Files](file-activity/recycle-bin-files.md)
 
 ### File - Size
 > What is the file's size on disk?
  - [ShimCache](execution/shimcache.md)
  - [USN Journal](file-activity/usn-journal.md)
+ - [Recycle Bin $I/$J Files](file-activity/recycle-bin-files.md)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
