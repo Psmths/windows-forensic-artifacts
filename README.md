@@ -37,6 +37,7 @@ This repository provides an in-depth guide to the various Windows forensic artif
      - [Path](#file---path)
      - [Size](#file---size)
    * [Network Activity](#network-activity)
+     - [Evidence of Network Activity](#network-activity---evidence-of-network-activity)
      - [Destination Identification](#network-activity---destination-identification)
      - [Source Identification](#network-activity---source-identification)
      - [Transmit Volume](#network-activity---transmit-volume)
@@ -148,6 +149,7 @@ Execution artifacts may provide the following information:
  - [Scheduled Task Files](persistence/task-scheduler-files.md)
  - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
  - [Program Compatibility Assistant (PCA)](execution/program-compatibility-assistant.md)
+ - [Tracing Registry Keys](network/tracing-keys.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -263,6 +265,10 @@ File activity artifacts may provide the following information:
 
 ## Network Activity
 Network activity artifacts may provide the following information:
+
+### Network Activity - Evidence of Network Activity
+> Is there evidence of network activity?
+ - [Tracing Registry Keys](network/tracing-keys.md)
 
 ### Network Activity - Destination Identification
 > Can the destination for this activity be identified?
