@@ -9,29 +9,43 @@ The Background Activity Monitor and Desktop Activity Montior registry artifacts 
  - [x] Execution - Permissions / Account
  - [x] Execution - Evidence of Execution
  - [x] File - Path
-
+ 
 ## Operating System Availability
  - [x] Windows 11
  - [x] Windows 10 (⚠️ 1709 and later)
 
+
 ## Artifact Location(s)
+🔋 Live System:
+
+> Newer Windows 10 Versions
+- BAM: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\bam\state\UserSettings\{USER_SID}`
+- DAM: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\dam\state\UserSettings\{USER_SID}`
+
+> Older Windows 10 Versions
+- BAM: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\bam\UserSettings\{USER_SID}`
+- DAM: `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\dam\UserSettings\{USER_SID}`
+
+🔌 Offline system:
+
+> Newer Windows 10 Versions
 - File: `%SystemRoot%\System32\config\SYSTEM`
+- BAM: `SYSTEM\{CURRENT_CONTROL_SET}\Services\bam\state\UserSettings\{USER_SID}`
+- DAM: `SYSTEM\{CURRENT_CONTROL_SET}\Services\dam\state\UserSettings\{USER_SID}`
 
-For newer versions of Windows 10:
+> Older Windows 10 Versions
+- File: `%SystemRoot%\System32\config\SYSTEM`
+- BAM: `SYSTEM\{CURRENT_CONTROL_SET}\Services\bam\UserSettings\{USER_SID}`
+- DAM: `SYSTEM\{CURRENT_CONTROL_SET}\Services\dam\UserSettings\{USER_SID}`
 
-- Key: `SYSTEM\CurrentControlSet\Services\bam\state\UserSettings\{User SID}`
-- Key: `SYSTEM\CurrentControlSet\Services\dam\state\UserSettings\{User SID}`
+> ℹ️ More information on [{CURRENT_CONTROL_SET}](/enumeration/current-version.md)
 
-On older version of Windows 10, this artifact has a different path:
-
-- Key: `SYSTEM\CurrentControlSet\Services\bam\UserSettings\{User SID}`
-- Key: `SYSTEM\CurrentControlSet\Services\dam\UserSettings\{User SID}`
 
 ## Artifact Parsers
  - RegistryExplorer (Eric Zimmerman)
 
 ## Artifact Interpretation
-The `Execution Time` as seen in RegistryExplorer represents the most recent time of execution for the binary. **Based on testing, this execution time is written upon process termination.** The `Program` field represents the full path the the binary. 
+The `Execution Time` as seen in RegistryExplorer represents the most recent time of execution for the binary in UTC. **Based on testing, this execution time is written upon process creation, and again on termination.** The `Program` field represents the full path the the binary. 
 
 In the event that you are parsing or interpreting this artifact manually, the following CyberChef recipe can be used to convert Windows FILETIME timestamps to a date and time:
 
@@ -47,6 +61,18 @@ In the event that you are parsing or interpreting this artifact manually, the fo
     "args": ["Milliseconds (ms)"] }
 ]
 ```
+
+For example:
+
+- Path: `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\bam\State\UserSettings\S-1-5-21-3471133136-2963561160-3931775028-1001`
+- Key: `\Device\HarddiskVolume4\Program Files\PuTTY\putty.exe`
+- Type: `REG_BINARY`
+- Value: `60-9F-62-A8-FB-6C-D9-01-00-00-00-00-00-00-00-00-00-00-00-00-02-00-00-00`
+
+The 64-Bit FILETIME timestamp `60-9F-62-A8-FB-6C-D9-01` resolves to `Wed 12 April 2023 05:00:10 UTC`
+
+## Caveats
+Console applications that are launched through a command line interface will not have BAM/DAM entries. 
 
 ## Analysis Tips
 
