@@ -203,6 +203,7 @@ Account activity artifacts may provide the following information:
  - [ProfileList](account/profile-list-key.md)
  - [Microsoft-Windows-PowerShell/Operational/4104: PowerShell Script Block Logging](execution/evtx-4104-script-block-logging.md)
  - [Recycle Bin $I/$J Files](file-activity/recycle-bin-files.md)
+ - [Background Activity Montitor](execution/bam-dam.md)
 
 ### Account - Username
 > Determining the username attached to a particular SID
