@@ -26,7 +26,7 @@ The `CurrentVersion` registry key will provide you with the current operating sy
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion`
 
 🔌 Offline system:
-- File: `C:\Windows\system32\config\SOFTWARE`
+- File: `%SystemRoot%\System32\config\SOFTWARE`
 - Key: `SOFTWARE\Microsoft\Windows NT\CurrentVersion`
 
 ## Artifact Parsers

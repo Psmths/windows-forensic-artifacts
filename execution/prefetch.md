@@ -29,7 +29,7 @@ In addition to providing evidence of execution, the prefetch artifact provides a
  - [x] Windows Server 2003 (⚠️ Requires manual enable)
 
 ## Artifact Location(s)
-- `C:\Windows\Prefetch`
+- `%SystemRoot%\Prefetch`
 
 ## Artifact Parsers
  - PECmd.exe (Eric Zimmerman)

@@ -15,7 +15,7 @@ The Background Activity Monitor and Desktop Activity Montior registry artifacts 
  - [x] Windows 10 (⚠️ 1709 and later)
 
 ## Artifact Location(s)
-- File: `C:\Windows\System32\config\SYSTEM`
+- File: `%SystemRoot%\System32\config\SYSTEM`
 
 For newer versions of Windows 10:
 

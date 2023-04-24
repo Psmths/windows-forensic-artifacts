@@ -27,7 +27,7 @@ ShimCache is a registry artifact of the application compatibility database to pr
  - [x] Windows Server 2003
 
 ## Artifact Location(s)
-File: `C:\Windows\System32\config\SYSTEM`
+File: `%SystemRoot%\System32\config\SYSTEM`
 
 - Windows XP: `SYSTEM\CurrentControlSet\Control\SessionManager\AppCompatibility\AppCompatCache`
 - Windows Vista/7/8/10: `SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache\AppCompatCache`

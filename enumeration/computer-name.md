@@ -26,7 +26,7 @@ The `ComputerName` registry key will provide the Computer Name of the endpoint.
 - `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName`
 
 🔌 Offline system:
-- File: `C:\Windows\system32\config\SYSTEM`
+- File: `%SystemRoot%\System32\config\SYSTEM`
 - Key: `SYSTEM\{CURRENT_CONTROL_SET}\Control\ComputerName\ComputerName`
 
 > ℹ️ More information on [{CURRENT_CONTROL_SET}](/enumeration/current-version.md)

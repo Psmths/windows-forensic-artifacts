@@ -17,7 +17,7 @@ Tracing registry keys can be used to indicate that a program has initiated a net
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Tracing`
 
 🔌 Offline system:
-- File: `C:\Windows\System32\Config\SOFTWARE`
+- File: `%SystemRoot%\System32\Config\SOFTWARE`
 - Key: `SOFTWARE\Microsoft\Tracing`
 
 ## Artifact Parsers

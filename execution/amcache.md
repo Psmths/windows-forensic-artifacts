@@ -22,7 +22,7 @@ The Amcache hive stores metadata regarding executables present on an endpoint.
  - [x] Windows Server 2012
  
 ## Artifact Location(s)
-- `C:\Windows\AppCompat\Programs\Amcache.hve`
+- `%SystemRoot%\AppCompat\Programs\Amcache.hve`
 
 ## Artifact Parsers
  - amcacheparser.exe (Eric Zimmerman)
@@ -60,7 +60,7 @@ Search for amcache hive entries for executables that reside in suspicious locati
  - `C:\PerfLogs`
 
 ### Suspicious Publishers
-Typically, executables running under system directories such as `C:\Windows\System32` or `C:\Windows\SysWOW64` should have `microsoft` listed as the publisher. Because the Amcache hive provides publisher information, search for executables in these paths that were not published by Microsoft.
+Typically, executables running under system directories such as `%SystemRoot%\System32` or `%SystemRoot%\SysWOW64` should have `microsoft` listed as the publisher. Because the Amcache hive provides publisher information, search for executables in these paths that were not published by Microsoft.
 
 ### IOC Queries
 Assuming IOCs for malicious software are available, searching the Amcache hive for such indicators (SHA-1 hashes, executable name, publisher, etc.) may provide quick wins.

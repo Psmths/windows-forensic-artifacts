@@ -19,7 +19,7 @@ The SAM hive contains a wealth of information that can be used to profile an end
  - [x] Windows XP
 
 ## Artifact Location(s)
-- File: `C:\Windows\System32\config\SAM`
+- File: `%SystemRoot%\System32\config\SAM`
 
 ## Artifact Parsers
  - RegistryExplorer (Eric Zimmerman)

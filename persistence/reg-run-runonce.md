@@ -22,7 +22,7 @@ The `Run` and `RunOnce` keys specify what programs will start during a logon eve
 - `C:\Documents and Settings\{username}\NTUSER.dat` (Windows XP)
 
 #### SOFTWARE
- - `C:\Windows\System32\Config\SOFTWARE`
+ - `%SystemRoot%\System32\Config\SOFTWARE`
 
 ## Artifact Parsers
  - RegistryExplorer (Eric Zimmerman)

@@ -28,7 +28,7 @@ In general, `ControlSet001` will be the most recent Control Set that has been bo
 - `HKEY_LOCAL_MACHINE\SYSTEM\Select`
 
 🔌 Offline system:
-- File: `C:\Windows\system32\config\SYSTEM`
+- File: `%SystemRoot%\System32\config\SYSTEM`
 - Key: `SYSTEM\Select`
 
 ## Artifact Parsers
