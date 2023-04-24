@@ -5,6 +5,7 @@ The Background Activity Monitor and Desktop Activity Montior registry artifacts 
  - [x] Behavioral - Execution (TA0002)
 
 ### Analysis Value
+ - [x] Account - Security Identifier (SID)
  - [x] Execution - Last Executed
  - [x] Execution - Permissions / Account
  - [x] Execution - Evidence of Execution
