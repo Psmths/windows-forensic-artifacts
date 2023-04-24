@@ -69,7 +69,7 @@ For example:
 - Type: `REG_BINARY`
 - Value: `60-9F-62-A8-FB-6C-D9-01-00-00-00-00-00-00-00-00-00-00-00-00-02-00-00-00`
 
-The 64-Bit FILETIME timestamp `60-9F-62-A8-FB-6C-D9-01` resolves to `Wed 12 April 2023 05:00:10 UTC`
+The 64-Bit FILETIME timestamp `60-9F-62-A8-FB-6C-D9-01` resolves to `Wed 12 April 2023 05:00:10 UTC`, which is the last known execution of the binary `putty.exe`.
 
 ## Caveats
 Console applications that are launched through a command line interface will not have BAM/DAM entries. 
@@ -77,7 +77,7 @@ Console applications that are launched through a command line interface will not
 ## Analysis Tips
 
 ### Executables in Suspicious Locations
-Search for amcache hive entries for executables that reside in suspicious locations, such as:
+Search for BAM entries for executables that reside in suspicious locations, such as:
 
  - User `Downloads` directories
  - Other user profile directories such as `Desktop` or `Documents`
