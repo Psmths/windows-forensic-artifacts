@@ -130,6 +130,7 @@ Execution artifacts may provide the following information:
 >How did this process come to be? What spawned this process?
  - [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
  - [Microsoft-Windows-PowerShell/Operational/4104: PowerShell Script Block Logging](execution/evtx-4104-script-block-logging.md)
+ - [TerminalServices-RDPClient/Operational/1024](network/evtx-1024-rdp-activex.md)
 
 ### Execution - Time
 >When was this process spawned?
@@ -181,7 +182,6 @@ Account activity artifacts may provide the following information:
  - [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
  - [Security/4720: A user account was created](account/evtx-4720-account-created.md)
  - [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md)
- - [TerminalServices-RDPClient/Operational/1102](network/evtx-1102-rdp-activex.md)
  - [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md)
  - [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md)
 
@@ -194,7 +194,7 @@ Account activity artifacts may provide the following information:
  - [SAM Hive](account/sam-hive.md)
  - [Security/4720: A user account was created](account/evtx-4720-account-created.md)
  - [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md)
- - [TerminalServices-RDPClient/Operational/1102](network/evtx-1102-rdp-activex.md)
+ - [TerminalServices-RDPClient/Operational/1024](network/evtx-1024-rdp-activex.md)
  - [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md)
  - [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md)
  - [Security/4625: An account failed to log on](account/evtx-4625-failed-logon.md)
@@ -268,11 +268,12 @@ Network activity artifacts may provide the following information:
 
 ### Network Activity - Evidence of Network Activity
 > Is there evidence of network activity?
+ - [TerminalServices-RDPClient/Operational/1024](network/evtx-1024-rdp-activex.md)
  - [Tracing Registry Keys](network/tracing-keys.md)
 
 ### Network Activity - Destination Identification
 > Can the destination for this activity be identified?
- - [TerminalServices-RDPClient/Operational/1102](network/evtx-1102-rdp-activex.md)
+ - [TerminalServices-RDPClient/Operational/1024](network/evtx-1024-rdp-activex.md)
  - [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md)
 
 ### Network Activity - Source Identification
@@ -360,7 +361,7 @@ The below artifacts may prove useful in identifying instances of lateral movemen
 | Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Eventlog | [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
-| Eventlog | [TerminalServices-RDPClient/Operational/1102](network/evtx-1102-rdp-activex.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Eventlog | [TerminalServices-RDPClient/Operational/1024](network/evtx-1024-rdp-activex.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Eventlog | [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Eventlog | [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Eventlog | [Security/4625: An account failed to log on](account/evtx-4625-failed-logon.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
