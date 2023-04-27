@@ -44,3 +44,4 @@ The `$I` file contains the following data:
  - Full path of the original file
  - Deletion time and date
 
+<sup><sub>This example was produced on Windows 10, Version 10.0.19044 Build 19044</sub></sup>
