@@ -92,5 +92,7 @@ In this example, a file has been moved to a different directory. In this instanc
 
 In this example, we see that `notepad.exe` was likely executed to edit `text.txt`. This is particularly valuable as the [Prefetch](/execution/prefetch.md) artifact only stores the last 8 execution timestamps of an application, but it is updated for each execution, meaning the USN Journal may provide additional execution timestamps that have rolled out of the Prefetch file. 
 
+<sup><sub>This example was produced on Windows 10, Version 10.0.19044 Build 19044</sub></sup>
+
 ## Caveats
 The USN Journal is limited in size and therefore only recent activity will be reflected in this file. Depending on the amount of filesystem activity on a volume this artifact may only provide several days (or even hours) of coverage. A potential workaround to obtain more history from this artifact would be to extract a copy of it from any available Volume Shadow Copies present on the NTFS volume. 
