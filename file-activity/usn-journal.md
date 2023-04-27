@@ -63,6 +63,8 @@ In this example, we first see that a new text file is created, called `New Text 
 
 > ℹ️ More information on [Recycle Bin $I/$J Files](/file-activity/recycle-bin-files.md)
 
+<sup><sub>This example was produced on Windows 10, Version 10.0.19044 Build 19044</sub></sup>
+
 ### Example: Moving a File
 In this example, a file has been moved to a different directory. In this instance, while the filename remains the same, we see that the update reasons `RenameOldName` and `RenameNewName` are present. The parent entry numbers (as well as the parent sequence numbers, not shown in this table) change, indicating that the file has been moved to a different directory. 
 
@@ -74,7 +76,7 @@ In this example, a file has been moved to a different directory. In this instanc
 | 2023-04-26 23:51:41.41 | 101882              | test2.txt             | SecurityChange       |
 | 2023-04-26 23:51:41.41 | 101882              | test2.txt             | SecurityChange|Close |
 
-
+<sup><sub>This example was produced on Windows 10, Version 10.0.19044 Build 19044</sub></sup>
 
 ## Caveats
 The USN Journal is limited in size and therefore only recent activity will be reflected in this file. Depending on the amount of filesystem activity on a volume this artifact may only provide several days (or even hours) of coverage. A potential workaround to obtain more history from this artifact would be to extract a copy of it from any available Volume Shadow Copies present on the NTFS volume. 
