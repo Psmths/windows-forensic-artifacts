@@ -47,9 +47,6 @@ This activity is also logged in the Security channel with more granular informat
 | 4702 | Scheduled Task Updated |
 | 4699 | Scheduled Task Deleted |
 
-
-In the event that tasks are remotely scheduled, as is commonly seen during lateral movement attempts, this activity may be identified by observing Type 3 logons via [`4624: An account was successfully logged on`](/account/evtx-4624-successful-logon.md) events in close proximity to task creation.
-
 ## Caveats
 Logging for these events is disabled by default and must be enabled to provide these artifacts.
 
@@ -63,3 +60,6 @@ Scheduled task deletion is a rare event on Windows systems and provides an easy 
 
 ### Software Installation/Uninstallation
 When applications are installed on a Windows system, they will sometimes create a scheduled task to run their update functionality, making the Task Scheduler Operational log a possible option for cross-validation of other application installation artifacts such as the `Uninstall` registry key. 
+
+### Lateral Movement through Remote Scheduled Task Installation
+In the event that tasks are remotely scheduled, as is commonly seen during lateral movement attempts, this activity may be identified by observing Type 3 logons via [`4624: An account was successfully logged on`](/account/evtx-4624-successful-logon.md) events in close proximity to task creation.
