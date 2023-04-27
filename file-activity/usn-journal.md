@@ -44,20 +44,20 @@ In this example, we created a file `test.txt`, modified its contents, and then d
 | Timestamp              | Filename              | Update Reason               |
 | ---------------------- | --------------------- | --------------------------- |
 | 2023-04-26 23:51:09.09 | New Text Document.txt | FileCreate                  |
-| 2023-04-26 23:51:09.09 | New Text Document.txt | FileCreate|Close            |
+| 2023-04-26 23:51:09.09 | New Text Document.txt | FileCreate,Close            |
 | 2023-04-26 23:51:16.16 | New Text Document.txt | RenameOldName               |
 | 2023-04-26 23:51:16.16 | test.txt              | RenameNewName               |
-| 2023-04-26 23:51:16.16 | test.txt              | RenameNewName|Close         |
+| 2023-04-26 23:51:16.16 | test.txt              | RenameNewName,Close         |
 | 2023-04-26 23:51:22.22 | test.txt              | DataExtend                  |
-| 2023-04-26 23:51:22.22 | test.txt              | DataExtend|Close            |
+| 2023-04-26 23:51:22.22 | test.txt              | DataExtend,Close            |
 | 2023-04-26 23:51:29.29 | $I4NTH4K.txt          | FileCreate                  |
-| 2023-04-26 23:51:29.29 | $I4NTH4K.txt          | DataExtend|FileCreate       |
-| 2023-04-26 23:51:29.29 | $I4NTH4K.txt          | DataExtend|FileCreate|Close |
+| 2023-04-26 23:51:29.29 | $I4NTH4K.txt          | DataExtend,FileCreate       |
+| 2023-04-26 23:51:29.29 | $I4NTH4K.txt          | DataExtend,FileCreate,Close |
 | 2023-04-26 23:51:29.29 | test.txt              | RenameOldName               |
 | 2023-04-26 23:51:29.29 | $R4NTH4K.txt          | RenameNewName               |
-| 2023-04-26 23:51:29.29 | $R4NTH4K.txt          | RenameNewName|Close         |
+| 2023-04-26 23:51:29.29 | $R4NTH4K.txt          | RenameNewName,Close         |
 | 2023-04-26 23:51:29.29 | $R4NTH4K.txt          | SecurityChange              |
-| 2023-04-26 23:51:29.29 | $R4NTH4K.txt          | SecurityChange|Close        |
+| 2023-04-26 23:51:29.29 | $R4NTH4K.txt          | SecurityChange,Close        |
 
 In this example, we first see that a new text file is created, called `New Text Document.txt` (`FileCreate`), indicating that it was likely created by right-clicking in Explorer. It is then renamed to `test.txt` (`RenameNewName`). Afterwards, its contents are modified (`DataExtend`). The file is then "deleted," being sent to the recycle bin. This is evidenced by the creation of the `$I` and `$R` files. As expected, the `$R4NTH4K.txt` file should contain the full contents of the deleted file, and we see that Windows simply renames the original file to this. 
 
@@ -72,9 +72,9 @@ In this example, a file has been moved to a different directory. In this instanc
 | ---------------------- | ------------------- | --------------------- | -------------------- |
 | 2023-04-26 23:51:41.41 | 114291              | test2.txt             | RenameOldName        |
 | 2023-04-26 23:51:41.41 | 101882              | test2.txt             | RenameNewName        |
-| 2023-04-26 23:51:41.41 | 101882              | test2.txt             | RenameNewName|Close  |
+| 2023-04-26 23:51:41.41 | 101882              | test2.txt             | RenameNewName,Close  |
 | 2023-04-26 23:51:41.41 | 101882              | test2.txt             | SecurityChange       |
-| 2023-04-26 23:51:41.41 | 101882              | test2.txt             | SecurityChange|Close |
+| 2023-04-26 23:51:41.41 | 101882              | test2.txt             | SecurityChange,Close |
 
 <sup><sub>This example was produced on Windows 10, Version 10.0.19044 Build 19044</sub></sup>
 
@@ -84,10 +84,10 @@ In this example, a file has been moved to a different directory. In this instanc
 | 2023-04-26 23:51:16.16 | New Text Document.txt   | RenameOldName                   |
 | 2023-04-26 23:51:16.16 | test.txt                | RenameNewName                   |
 | 2023-04-26 23:51:22.22 | test.txt                | DataExtend                      |
-| 2023-04-26 23:51:22.22 | test.txt                | DataExtend|Close                |
+| 2023-04-26 23:51:22.22 | test.txt                | DataExtend,Close                |
 | 2023-04-26 23:51:23.23 | NOTEPAD.EXE-9FB27C0E.pf | DataTruncation                  |
-| 2023-04-26 23:51:23.23 | NOTEPAD.EXE-9FB27C0E.pf | DataExtend|DataTruncation       |
-| 2023-04-26 23:51:23.23 | NOTEPAD.EXE-9FB27C0E.pf | DataExtend|DataTruncation|Close |
+| 2023-04-26 23:51:23.23 | NOTEPAD.EXE-9FB27C0E.pf | DataExtend,DataTruncation       |
+| 2023-04-26 23:51:23.23 | NOTEPAD.EXE-9FB27C0E.pf | DataExtend,DataTruncation,Close |
 
 
 In this example, we see that `notepad.exe` was likely executed to edit `text.txt`. This is particularly valuable as the [Prefetch](/execution/prefetch.md) artifact only stores the last 8 execution timestamps of an application, but it is updated for each execution, meaning the USN Journal may provide additional execution timestamps that have rolled out of the Prefetch file. 
