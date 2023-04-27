@@ -63,14 +63,15 @@ In the event that you are parsing or interpreting this artifact manually, the fo
 ]
 ```
 
-For example:
-
+### Example: Execution Timestamp
 - Path: `HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\bam\State\UserSettings\S-1-5-21-3471133136-2963561160-3931775028-1001`
 - Key: `\Device\HarddiskVolume4\Program Files\PuTTY\putty.exe`
 - Type: `REG_BINARY`
 - Value: `60-9F-62-A8-FB-6C-D9-01-00-00-00-00-00-00-00-00-00-00-00-00-02-00-00-00`
 
 The 64-Bit FILETIME timestamp `60-9F-62-A8-FB-6C-D9-01` resolves to `Wed 12 April 2023 05:00:10 UTC`, which is the last known execution of the binary `putty.exe`.
+
+<sup><sub>This example was produced on Windows 10, Version 10.0.19044 Build 19044</sub></sup>
 
 ## Caveats
 Console applications that are launched through a command line interface will not have BAM/DAM entries. 
