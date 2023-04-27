@@ -30,7 +30,7 @@ The following fields may be interpreted from this artifact:
 | - | - |
 | Subject / Security ID | SID of account that used the explicit credentials |
 | Subject / Account Name | Name of account that used the explicit credentials |
-| Subject / Logon ID | Logon ID of session for account that used the explicit credentials |
+| Subject / Logon ID | [Logon ID](/README.md/#account---logon-id) of session for account that used the explicit credentials |
 | Account Whose Credentials Were Used / Account Name | Account name for the explicit credentials |
 | Target Server / Target Server Name | The name of the **destination** endpoint the credentials were used on |
 | Process Information / Process ID | Hex PID of the process that used the explicit credentials |

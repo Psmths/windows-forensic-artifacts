@@ -34,7 +34,7 @@ The following fields may be interpreted from this artifact:
 | Logon Information / Logon Type | Logon type. See [Logon Types](#logon-types) |
 | New Logon / Security ID | SID of account that authenticated |
 | New Logon / Account Name | Name of account that authenticated |
-| New Logon / Logon ID | Logon ID for account that authenticated |
+| New Logon / Logon ID | [Logon ID](/README.md/#account---logon-id) for account that authenticated |
 | Network Information / Source Network Address | IP address of source endpoint |
 
 **NOTE:** The SID may be translated by event viewer. To view the raw SID, look at the event's XML data, which has the following fields available:
@@ -44,7 +44,7 @@ The following fields may be interpreted from this artifact:
 | EventData/LogonType | Logon type. See [Logon Types](#logon-types) |
 | EventData/TargetUserSid | SID of account that authenticated |
 | EventData/TargetUserName | Name of account that authenticated |
-| EventData/TargetLogonId | Logon ID for account that authenticated. Can be cross-referenced with 4634 Logoff events. |
+| EventData/TargetLogonId | [Logon ID](/README.md/#account---logon-id) for account that authenticated. Can be cross-referenced with 4634 Logoff events. |
 | EventData/IpAddress | IP address of source endpoint |
 
 ### Logon Types

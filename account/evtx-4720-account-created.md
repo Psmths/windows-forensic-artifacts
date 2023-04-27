@@ -28,7 +28,7 @@ The following fields may be interpreted from this artifact:
 | - | - |
 | Subject / Security ID | SID of account that created the new account |
 | Subject / Account Name | Account name of account that created the new account |
-| Subject / Logon ID | Logon ID of session for account that created the new account |
+| Subject / Logon ID | [Logon ID](/README.md/#account---logon-id) of session for account that created the new account |
 | New Account / Security ID | SID of the new account |
 | New Account / Account Name | Name of the new account |
 
@@ -41,5 +41,5 @@ When parsing the event's XML data:
 | EventData/TargetSid | New account SID |
 | EventData/SubjectUserSid | SID of account that created the new account |
 | EventData/SubjectUserName | Account name of account that created the new account |
-| EventData/SubjectLogonId | Logon ID of session for account that created the new account |
+| EventData/SubjectLogonId | [Logon ID](/README.md/#account---logon-id) of session for account that created the new account |
 

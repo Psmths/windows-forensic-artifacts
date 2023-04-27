@@ -29,7 +29,7 @@ The fields may be interpreted as follows:
 | Field Name | Interpretation |
 | - | - |
 | Subject / Account Name | The name of the account for this RDP session |
-| Subject / Logon ID | Logon ID for this session that can be used to correlate with other events |
+| Subject / Logon ID | [Logon ID](/README.md/#account---logon-id) for this session that can be used to correlate with other events |
 | Additional Information / Client Name | The name of the source host |
 | Additional Information / Client Address | The IP address of the source host |
 
