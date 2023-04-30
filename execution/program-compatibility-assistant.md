@@ -10,7 +10,7 @@ Program Compatibility Assistant (PCA) is a feature introduced since Windows 8 in
  - [x] File - Path
 
 ## Operating System Availability
- - [x] Windows 11
+ - [x] Windows 11 (⚠️ Recent builds only)
 
 ## Artifact Location(s)
 - `%SystemRoot%\AppCompat\pca\PcaAppLaunchDic.txt`
