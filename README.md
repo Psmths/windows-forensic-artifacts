@@ -116,7 +116,7 @@ Execution artifacts may provide the following information:
  - [Scheduled Task Files](persistence/task-scheduler-files.md)
  - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
  - [Background Activity Montitor](execution/bam-dam.md)
- - [Program Compatibility Assistant (PCA)](execution/program-compatibility-assistant.md)
+ - [Program Compatibility Assistant (PCA) - PcaAppLaunchDic.txt](execution/program-compatibility-assistant.md)
 
 ### Execution - Permissions / Account
 >What permissions does the process have?
@@ -149,7 +149,7 @@ Execution artifacts may provide the following information:
  - [Detection History Files](file-activity/detectionhistory.md)
  - [Scheduled Task Files](persistence/task-scheduler-files.md)
  - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
- - [Program Compatibility Assistant (PCA)](execution/program-compatibility-assistant.md)
+ - [Program Compatibility Assistant (PCA) - PcaAppLaunchDic.txt](execution/program-compatibility-assistant.md)
  - [Tracing Registry Keys](network/tracing-keys.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -251,7 +251,7 @@ File activity artifacts may provide the following information:
  - [SRUM Database](execution/srum-db.md)
  - [Detection History Files](file-activity/detectionhistory.md)
  - [Image File Execution Options](persistence/image-file-execution-options.md)
- - [Program Compatibility Assistant (PCA)](execution/program-compatibility-assistant.md)
+ - [Program Compatibility Assistant (PCA) - PcaAppLaunchDic.txt](execution/program-compatibility-assistant.md)
  - [Microsoft-Windows-PowerShell/Operational/4104: PowerShell Script Block Logging](execution/evtx-4104-script-block-logging.md)
  - [Recycle Bin $I/$J Files](file-activity/recycle-bin-files.md)
 
@@ -332,7 +332,7 @@ The below artifacts may prove useful in identifying instances of execution on an
 | Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Registry/Filesystem | [SRUM Database](execution/srum-db.md) | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Filesystem | [Program Compatibility Assistant (PCA)](execution/program-compatibility-assistant.md) | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Filesystem | [Program Compatibility Assistant (PCA) - PcaAppLaunchDic.txt](execution/program-compatibility-assistant.md) | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
 
 ## TA0003 Persistence
 The below artifacts are related to [persistence activities](https://attack.mitre.org/tactics/TA0003/). Persistence is defined by MITRE as:
