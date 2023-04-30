@@ -304,8 +304,8 @@ Network activity artifacts may provide the following information:
 | [CurrentVersion](enumeration/current-version.md) | <ul><li>OS Version</li><li>Installation Timestamp</li></ul> |
 | [TimeZoneInformation](enumeration/time-zone-information.md) | <ul><li>System Time Zone</li></ul> |
 | [ComputerName](enumeration/computer-name.md) | <ul><li>System Name</li></ul> |
-| [Interfaces](enumeration/interfaces.md) | <ul><li>System Name</li></ul> |
-| [Network Cards](enumeration/network-cards.md) | <ul><li>System Name</li></ul> |
+| [Interfaces](enumeration/interfaces.md) | <ul><li>IP configuration</li></ul> |
+| [Network Cards](enumeration/network-cards.md) | <ul><li>Network Adapter Enumeration</li></ul> |
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
