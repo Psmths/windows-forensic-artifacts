@@ -62,5 +62,8 @@ The following logon types are commonly seen:
 This logon type is seen when an authentication occurs over the network. Some examples include:
  - On Windows File Servers, when a client connects to a file share, a Type 3 logon event will be recorded. This can be useful for auditing potential file access on network shares. 
 
+#### Logon Type 10 - Remote Interactive
+This logon type is indicative of Remote Desktop activity (RDP). Look out for Source IP addresses from the localhost as these may indicate potential reverse tunnels being used for RDP command and control. 
+
 ### Caveats
 Certain situations may cause this artifact to become noisy. On Domain Controllers serving many endpoints, these endpoints will periodically perform Type 3 Network Logons to the Domain Controller to retrieve group policy.
