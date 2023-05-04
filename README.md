@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/github/license/Psmths/windows-forensic-artifacts.svg">
   <img src="https://www.repostatus.org/badges/latest/wip.svg">
-  <img src="https://img.shields.io/badge/Forensic%20Artifacts-36-brightgreen">
+  <img src="https://img.shields.io/badge/Forensic%20Artifacts-37-brightgreen">
 </p>
 
 This repository provides an in-depth guide to the various Windows forensic artifacts that can be utilized when conducting an investigation. Detailed information is provided for each artifact, including its location, available parsing tools, and instructions for interpreting the results of a forensic data extraction. Furthermore, the repository seeks to provide a comprehensive resource for those seeking to expand their understanding of Windows forensics artifacts and how to properly leverage them during a forensic investigation.
@@ -98,10 +98,11 @@ Execution artifacts may provide the following information:
 ### Execution - Command Line Options / Full Path
 >What command line was used to spawn this process?
 
-- [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
-- [Scheduled Task Files](persistence/task-scheduler-files.md)
-- [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
-- [Detection History Files](file-activity/detectionhistory.md)
+ - [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
+ - [Scheduled Task Files](persistence/task-scheduler-files.md)
+ - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
+ - [Detection History Files](file-activity/detectionhistory.md)
+ - [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md)
 
 ### Execution - First Executed
 >When was this executable furst run?
@@ -126,18 +127,21 @@ Execution artifacts may provide the following information:
  - [Scheduled Task Files](persistence/task-scheduler-files.md)
  - [Background Activity Montitor](execution/bam-dam.md)
  - [SRUM Database](execution/srum-db.md)
+ - [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md)
 
 ### Execution - Process Tree
 >How did this process come to be? What spawned this process?
  - [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
  - [Microsoft-Windows-PowerShell/Operational/4104: PowerShell Script Block Logging](execution/evtx-4104-script-block-logging.md)
  - [TerminalServices-RDPClient/Operational/1024](network/evtx-1024-rdp-activex.md)
+ - [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md)
 
 ### Execution - Time
 >When was this process spawned?
  - [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
  - [Scheduled Task Files](persistence/task-scheduler-files.md)
  - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
+ - [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md)
 
 ### Execution - Evidence of Execution
 >Was a process spawned?
@@ -152,6 +156,7 @@ Execution artifacts may provide the following information:
  - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
  - [Program Compatibility Assistant (PCA) - PcaAppLaunchDic.txt](execution/program-compatibility-assistant.md)
  - [Tracing Registry Keys](network/tracing-keys.md)
+ - [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -205,6 +210,7 @@ Account activity artifacts may provide the following information:
  - [Microsoft-Windows-PowerShell/Operational/4104: PowerShell Script Block Logging](execution/evtx-4104-script-block-logging.md)
  - [Recycle Bin $I/$J Files](file-activity/recycle-bin-files.md)
  - [Background Activity Montitor](execution/bam-dam.md)
+ - [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md)
 
 ### Account - Username
 > Determining the username attached to a particular SID
@@ -352,6 +358,7 @@ The below artifacts may prove useful in identifying instances of persistence on 
 | Eventlog | [Security/4720: A user account was created](account/evtx-4720-account-created.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Eventlog | [WMI-Activity/Operational/5861: New WMI Event Consumer](persistence/evtx-5861-event-consumer-created.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Registry | [Image File Execution Options](persistence/image-file-execution-options.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Eventlog | [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 
 ## TA0008 Lateral Movement
 The below artifacts are related to [lateral movement activities](https://attack.mitre.org/tactics/TA0008/). Lateral movement is defined by MITRE as:
