@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/github/license/Psmths/windows-forensic-artifacts.svg">
   <img src="https://www.repostatus.org/badges/latest/wip.svg">
-  <img src="https://img.shields.io/badge/Forensic%20Artifacts-37-brightgreen">
+  <img src="https://img.shields.io/badge/Forensic%20Artifacts-40-brightgreen">
 </p>
 
 This repository provides an in-depth guide to the various Windows forensic artifacts that can be utilized when conducting an investigation. Detailed information is provided for each artifact, including its location, available parsing tools, and instructions for interpreting the results of a forensic data extraction. Furthermore, the repository seeks to provide a comprehensive resource for those seeking to expand their understanding of Windows forensics artifacts and how to properly leverage them during a forensic investigation.
@@ -43,6 +43,7 @@ This repository provides an in-depth guide to the various Windows forensic artif
      - [Source Identification](#network-activity---source-identification)
      - [Transmit Volume](#network-activity---transmit-volume)
      - [Browser Activity](#network-activity---browser-activity)
+     - [Firewall Activity](#network-activity---firewall-activity)
  - [System Enumeration Artifacts](#enumeration-artifacts)
  - [Artifact Behavioral Mappings](#artifact-behavioral-mappings) 
    * [TA0002 - Execution](#ta0002-execution)
@@ -130,7 +131,7 @@ Execution artifacts may provide the following information:
  - [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md)
 
 ### Execution - Process Tree
->How did this process come to be? What spawned this process?
+>How did this process come to be? What spawned this process? Is the ProcessID available?
  - [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
  - [Microsoft-Windows-PowerShell/Operational/4104: PowerShell Script Block Logging](execution/evtx-4104-script-block-logging.md)
  - [TerminalServices-RDPClient/Operational/1024](network/evtx-1024-rdp-activex.md)
@@ -299,6 +300,14 @@ Network activity artifacts may provide the following information:
 ### Network Activity - Browser Activity
 > Artifacts supporting general forensic analysis for browser activity on an endpoint
  - [places.sqlite](network/places-sqlite.md)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Network Activity - Firewall Activity
+> Artifacts supporting general forensic analysis of events pertaining to the Windows Firewall
+ - [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2004: Firewall Rule Added](network/evtx-2004-firewall.md)
+ - [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2005: Firewall Rule Modified](network/evtx-2005-firewall.md)
+ - [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2006: Firewall Rule Deleted](network/evtx-2006-firewall.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
