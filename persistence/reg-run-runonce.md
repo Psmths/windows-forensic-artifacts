@@ -30,7 +30,7 @@ The `Run` and `RunOnce` keys specify what programs will start during a logon eve
 
 ## Artifact Interpretation
 ### NTUSER.DAT
-The following keys will contain full paths to the executables that will start on **logon**:
+The following keys will contain full paths to the executables that will start on **logon** for the account that owns this particular `NTUSER.DAT` hive:
 
 - `NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Run`
 - `NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\RunOnce`
@@ -40,7 +40,13 @@ Disabled autoruns will appear in a sub-key named "AutorunsDisabled."
 ***NOTE:** On a live system, the HKEY_CURRENT_USER registry hive is the loaded NTUSER.dat hive.*
 
 ### SOFTWARE
-The following keys will contain full paths to the executables that will start on **logon**:
+The following keys will contain full paths to the executables that will start on **logon** for any user on the system:
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run`
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce`
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\Explorer\Run`
+
+## Caveats
+
+If the system is booted into Safe Mode, these keys will be ignored. A `RunOnce` key preceeded by an asterisk will ignore this restriction.
+
+The `RunOnce` entry is typically deleted before the command is executed, regardless of its return value. If preceeded by and exclamation point, the `RunOnce` key will be deleted after the command has executed, and only if the command returned successfully. 
