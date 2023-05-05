@@ -45,8 +45,10 @@ The following keys will contain full paths to the executables that will start on
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce`
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\Explorer\Run`
 
-## Caveats
+## Analysis Tips
+It is possible to obtain evidence of execution for processes that have executed as a result of these registry keys using the [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](/execution/evtx-9707-shell-core.md) event.
 
+## Caveats
 If the system is booted into Safe Mode, these keys will be ignored. A `RunOnce` key preceeded by an asterisk will ignore this restriction.
 
 The `RunOnce` entry is typically deleted before the command is executed, regardless of its return value. If preceeded by and exclamation point, the `RunOnce` key will be deleted after the command has executed, and only if the command returned successfully. 
