@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/github/license/Psmths/windows-forensic-artifacts.svg">
   <img src="https://www.repostatus.org/badges/latest/wip.svg">
-  <img src="https://img.shields.io/badge/Forensic%20Artifacts-40-brightgreen">
+  <img src="https://img.shields.io/badge/Forensic%20Artifacts-42-brightgreen">
 </p>
 
 This repository provides an in-depth guide to the various Windows forensic artifacts that can be utilized when conducting an investigation. Detailed information is provided for each artifact, including its location, available parsing tools, and instructions for interpreting the results of a forensic data extraction. Furthermore, the repository seeks to provide a comprehensive resource for those seeking to expand their understanding of Windows forensics artifacts and how to properly leverage them during a forensic investigation.
@@ -212,6 +212,7 @@ Account activity artifacts may provide the following information:
  - [Recycle Bin $I/$J Files](file-activity/recycle-bin-files.md)
  - [Background Activity Montitor](execution/bam-dam.md)
  - [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md)
+ - [Security/7045: Service Installed](persistence/evtx-7045-service-install.md)
 
 ### Account - Username
 > Determining the username attached to a particular SID
@@ -263,6 +264,7 @@ File activity artifacts may provide the following information:
  - [Microsoft-Windows-PowerShell/Operational/4104: PowerShell Script Block Logging](execution/evtx-4104-script-block-logging.md)
  - [Recycle Bin $I/$J Files](file-activity/recycle-bin-files.md)
  - [Services Registry Keys](persistence/registry-services.md)
+ - [Security/7045: Service Installed](persistence/evtx-7045-service-install.md)
 
 ### File - Size
 > What is the file's size on disk?
@@ -370,6 +372,7 @@ The below artifacts may prove useful in identifying instances of persistence on 
 | Registry | [Image File Execution Options](persistence/image-file-execution-options.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Eventlog | [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Registry | [Services Registry Keys](persistence/registry-services.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
+| Eventlog | [Security/7045: Service Installed](persistence/evtx-7045-service-install.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 
 ## TA0008 Lateral Movement
 The below artifacts are related to [lateral movement activities](https://attack.mitre.org/tactics/TA0008/). Lateral movement is defined by MITRE as:
