@@ -24,13 +24,13 @@ This event indicates that a firewall rule has been deleted.
 ## Artifact Interpretation
 
 ### Account - Security Identifier (SID)
-The `System/Security/UserID` and `EventData/ModifyingUser` fields of this command provides the [Security Identifier (SID)](/README.md/#account---security-identifier-sid) of the account that deleted the firewall rule.
+The `System/Security/UserID` and `EventData/ModifyingUser` fields of this event provides the [Security Identifier (SID)](/README.md/#account---security-identifier-sid) of the account that deleted the firewall rule.
 
 ### Execution - Full Path
 The full image path for the process that deleted the firewall rule will be available in the `EventData/ModifyingApplication` field of this event. 
 
 ### Execution - Permissions / Account
-The `System/Security/UserID` and `EventData/ModifyingUser` fields of this command provides the [Security Identifier (SID)](/README.md/#account---security-identifier-sid) of the account that deleted the firewall rule.
+The `System/Security/UserID` and `EventData/ModifyingUser` fields of this event provides the [Security Identifier (SID)](/README.md/#account---security-identifier-sid) of the account that deleted the firewall rule.
 
 ### Execution - Process Tree
 The Process and Thread ID of the process that deleted the firewall rule will be available in the `System/Execution/ProcessID` and `System/Execution/ThreadID` fields of this event, respectively. 
