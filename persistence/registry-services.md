@@ -14,6 +14,13 @@ The Services registry key, located in the SYSTEM hive, stores information regard
  - [x] Windows 7
  - [x] Windows Vista
  - [x] Windows XP
+ - [x] Windows Server 2019
+ - [x] Windows Server 2016
+ - [x] Windows Server 2012 R2
+ - [x] Windows Server 2012
+ - [x] Windows Server 2008 R2
+ - [x] Windows Server 2003 R2
+ - [x] Windows Server 2003
 
 ## Artifact Location(s)
 🔋 Live System:
@@ -38,7 +45,19 @@ The values within this key may be interpreted as follows:
 | DisplayName | The name of the service as it would appear in `services.msc` |
 | Description | The description of the service as it would appear in `services.msc` |
 | ImagePath | The path to the executable for this service |
-| Start |  |
-| Type |  |
+| Start | Start mode of the service |
+| Type | Type of service |
 
-The Last Write Timestamp for each service key represents the time at which the service was installed or modified. 
+The Last Write Timestamp for each service key represents the time at which the service was installed or modified.
+
+Additionally, for each service there may be an optional `Parameters` subkey. This key may contain any options that are passed to the executable when the service is started. Certain service installers such as NSSM (Non-Sucking Service Manager) will show the "true" executable for the service under this `Parameters` key.  
+
+### Interpreting the ```Start``` Value
+| Value | Interpretation |
+| - | - |
+| 0 | **Boot** - Service is a device driver |
+| 1 | **System** - Service is a device driver |
+| 2 | **Automatic** - Service and all of its dependency services is started on boot by the OS |
+| 3 | **Manual** - Service is started manually by user interaction |
+| 4 | **Disabled** - Service is disabled and cannot be started automatically or manually |
+

@@ -262,6 +262,7 @@ File activity artifacts may provide the following information:
  - [Program Compatibility Assistant (PCA) - PcaAppLaunchDic.txt](execution/program-compatibility-assistant.md)
  - [Microsoft-Windows-PowerShell/Operational/4104: PowerShell Script Block Logging](execution/evtx-4104-script-block-logging.md)
  - [Recycle Bin $I/$J Files](file-activity/recycle-bin-files.md)
+ - [Services Registry Keys](persistence/registry-services.md)
 
 ### File - Size
 > What is the file's size on disk?
@@ -368,6 +369,7 @@ The below artifacts may prove useful in identifying instances of persistence on 
 | Eventlog | [WMI-Activity/Operational/5861: New WMI Event Consumer](persistence/evtx-5861-event-consumer-created.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Registry | [Image File Execution Options](persistence/image-file-execution-options.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 | Eventlog | [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Registry | [Services Registry Keys](persistence/registry-services.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 ## TA0008 Lateral Movement
 The below artifacts are related to [lateral movement activities](https://attack.mitre.org/tactics/TA0008/). Lateral movement is defined by MITRE as:
