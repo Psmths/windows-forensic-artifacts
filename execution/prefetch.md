@@ -39,8 +39,6 @@ In addition to providing evidence of execution, the prefetch artifact provides a
 ## Artifact Interpretation
 The name of the prefetch file takes on the format: `{executable_name}-{hash}.pf`, where `executable_name` is the name of the executable file that was run, and `hash` provides a hash of the executable's path and the command line used to launch the executable. If the same executable was run with different command line options, or the executable was moved and then run again, this essentially means there will be more than one prefetch entry for it. 
 
-Prefetch will contain a list 
-
 ### Earliest Execution
 The creation timestamp of the prefetch file indicates the **potential** *earliest* time the executable was run on the system. This is because the amount of prefetch files stored on the system is limited, and older files are rotated out. 
 
