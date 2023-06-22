@@ -44,6 +44,7 @@ This repository provides an in-depth guide to the various Windows forensic artif
      - [Transmit Volume](#network-activity---transmit-volume)
      - [Browser Activity](#network-activity---browser-activity)
      - [Firewall Activity](#network-activity---firewall-activity)
+     - [Wireless Activity](#network-activity---wireless-activity)
  - [System Enumeration Artifacts](#enumeration-artifacts)
  - [Artifact Behavioral Mappings](#artifact-behavioral-mappings) 
    * [TA0002 - Execution](#ta0002-execution)
@@ -282,6 +283,7 @@ Network activity artifacts may provide the following information:
 > Is there evidence of network activity?
  - [TerminalServices-RDPClient/Operational/1024](network/evtx-1024-rdp-activex.md)
  - [Tracing Registry Keys](network/tracing-keys.md)
+ - [Microsoft-Windows-WLAN-AutoConfig/Operational/8001: Successfully Connected to a Wireless Network](network/evtx-8001-wlan-connect)
 
 ### Network Activity - Destination Identification
 > Can the destination for this activity be identified?
@@ -311,6 +313,12 @@ Network activity artifacts may provide the following information:
  - [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2004: Firewall Rule Added](network/evtx-2004-firewall.md)
  - [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2005: Firewall Rule Modified](network/evtx-2005-firewall.md)
  - [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2006: Firewall Rule Deleted](network/evtx-2006-firewall.md)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Network Activity - Wireless Activity
+> Artifacts providing evidence of wireless network activity
+ - [Microsoft-Windows-WLAN-AutoConfig/Operational/8001: Successfully Connected to a Wireless Network](network/evtx-8001-wlan-connect)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
