@@ -27,6 +27,8 @@ When logged, this event indicates that the system has successfully connected to 
 | EventData/AuthenticationAlgorithm     | The security protocol used to connect to the wireless network (i.e. WEP, WPA2, etc.) |
 | EventData/ConnectionMode              | If the wireless network was set to be joined automatically, this will read "Automatic connection with a profile", otherwise, this will read "Connection to a secure network without a profile" |
 
+Together with the event [Microsoft-Windows-WLAN-AutoConfig/Operational/8003: Successfully Disconnected from a Wireless Network](network/evtx-8003-wlan-disconnect), this can be used to determine a timestan during which a system was connected to a wireless area network.
+
 ## Example
 ```
 - <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
