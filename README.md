@@ -159,6 +159,7 @@ Execution artifacts may provide the following information:
  - [Program Compatibility Assistant (PCA) - PcaAppLaunchDic.txt](execution/program-compatibility-assistant.md)
  - [Tracing Registry Keys](network/tracing-keys.md)
  - [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md)
+ - [Security/5156: The Windows Filtering Platform has permitted a connection](network/evtx-5156-wfp-permitted.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -266,6 +267,7 @@ File activity artifacts may provide the following information:
  - [Recycle Bin $I/$J Files](file-activity/recycle-bin-files.md)
  - [Services Registry Keys](persistence/registry-services.md)
  - [Security/7045: Service Installed](persistence/evtx-7045-service-install.md)
+ - [Security/5156: The Windows Filtering Platform has permitted a connection](network/evtx-5156-wfp-permitted.md)
 
 ### File - Size
 > What is the file's size on disk?
@@ -285,11 +287,13 @@ Network activity artifacts may provide the following information:
  - [Tracing Registry Keys](network/tracing-keys.md)
  - [Microsoft-Windows-WLAN-AutoConfig/Operational/8001: Successfully Connected to a Wireless Network](network/evtx-8001-wlan-connect.md)
  - [Microsoft-Windows-WLAN-AutoConfig/Operational/8003: Successfully Disconnected from a Wireless Network](network/evtx-8003-wlan-disconnect.md)
+ - [Security/5156: The Windows Filtering Platform has permitted a connection](network/evtx-5156-wfp-permitted.md)
 
 ### Network Activity - Destination Identification
 > Can the destination for this activity be identified?
  - [TerminalServices-RDPClient/Operational/1024](network/evtx-1024-rdp-activex.md)
  - [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md)
+ - [Security/5156: The Windows Filtering Platform has permitted a connection](network/evtx-5156-wfp-permitted.md)
 
 ### Network Activity - Source Identification
 > Can the source of this activity be identified?
@@ -298,6 +302,7 @@ Network activity artifacts may provide the following information:
  - [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md)
  - [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md)
  - [Security/4625: An account failed to log on](account/evtx-4625-failed-logon.md)
+ - [Security/5156: The Windows Filtering Platform has permitted a connection](network/evtx-5156-wfp-permitted.md)
 
 ### Network Activity - Transmit Volume
 > Can the amount of data sent or received be determined?
@@ -314,6 +319,7 @@ Network activity artifacts may provide the following information:
  - [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2004: Firewall Rule Added](network/evtx-2004-firewall.md)
  - [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2005: Firewall Rule Modified](network/evtx-2005-firewall.md)
  - [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2006: Firewall Rule Deleted](network/evtx-2006-firewall.md)
+ - [Security/5156: The Windows Filtering Platform has permitted a connection](network/evtx-5156-wfp-permitted.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
