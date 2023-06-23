@@ -52,7 +52,7 @@ Some common protocols:
 
 The complete list of protocols is assigned and made available from IANA (Internet Assigned Numbers Authority).
 
-This event is logged even if the network connection never left the local system (i.e, localhost to localhost network traffic). In this case, the source and destination IP addresses will both be `126.0.0.1`.
+This event is logged even if the network connection never left the local system (i.e, localhost to localhost network traffic). In this case, the source and destination IP addresses will both be `127.0.0.1`.
 
 ## Example
 In the following example, a DNS request was made on the local system, causing this event to be logged. Note that the `Protocol` field is `17` for UDP.
