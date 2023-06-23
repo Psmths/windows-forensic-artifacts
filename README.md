@@ -13,7 +13,7 @@ This repository provides an in-depth guide to the various Windows forensic artif
  - [How to Use this Guide](#how-to-use-this-guide)
  - [Artifacts by Category](#artifacts-by-category)
    * [Execution](#execution)
-     - [Command Line Options / Full Path](#execution---command-line-options)
+     - [Command Line Options](#execution---command-line-options)
      - [First Executed](#execution---first-executed)
      - [Last Executed](#execution---last-executed)
      - [Permissions/Account](#execution---permissions--account)
@@ -97,7 +97,7 @@ The forensic artifacts described in this repository are split into the following
 ## Execution
 Execution artifacts may provide the following information:
 
-### Execution - Command Line Options / Full Path
+### Execution - Command Line Options
 >What command line was used to spawn this process?
 
  - [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
