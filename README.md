@@ -284,6 +284,7 @@ Network activity artifacts may provide the following information:
  - [TerminalServices-RDPClient/Operational/1024](network/evtx-1024-rdp-activex.md)
  - [Tracing Registry Keys](network/tracing-keys.md)
  - [Microsoft-Windows-WLAN-AutoConfig/Operational/8001: Successfully Connected to a Wireless Network](network/evtx-8001-wlan-connect)
+ - [Microsoft-Windows-WLAN-AutoConfig/Operational/8003: Successfully Disconnected from a Wireless Network](network/evtx-8003-wlan-disconnect)
 
 ### Network Activity - Destination Identification
 > Can the destination for this activity be identified?
@@ -319,6 +320,7 @@ Network activity artifacts may provide the following information:
 ### Network Activity - Wireless Activity
 > Artifacts providing evidence of wireless network activity
  - [Microsoft-Windows-WLAN-AutoConfig/Operational/8001: Successfully Connected to a Wireless Network](network/evtx-8001-wlan-connect)
+ - [Microsoft-Windows-WLAN-AutoConfig/Operational/8003: Successfully Disconnected from a Wireless Network](network/evtx-8003-wlan-disconnect)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
