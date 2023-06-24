@@ -39,7 +39,7 @@ The Background Activity Monitor and Desktop Activity Montior registry artifacts 
 - BAM: `SYSTEM\{CURRENT_CONTROL_SET}\Services\bam\UserSettings\{USER_SID}`
 - DAM: `SYSTEM\{CURRENT_CONTROL_SET}\Services\dam\UserSettings\{USER_SID}`
 
-> ℹ️ More information on [{CURRENT_CONTROL_SET}](/enumeration/current-version.md)
+> ℹ️ More information on [{CURRENT_CONTROL_SET}](/enumeration/select.md)
 
 
 ## Artifact Parsers

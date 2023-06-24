@@ -30,7 +30,7 @@ The Services registry key, located in the SYSTEM hive, stores information regard
 - File: `%SystemRoot%\system32\config\SYSTEM`
 - Key: `SYSTEM\{CURRENT_CONTROL_SET}\Services`
 
-> ℹ️ More information on [{CURRENT_CONTROL_SET}](/enumeration/current-version.md)
+> ℹ️ More information on [{CURRENT_CONTROL_SET}](/enumeration/select.md)
 
 ## Artifact Parsers
  - RegistryExplorer (Eric Zimmerman)
