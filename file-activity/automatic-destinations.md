@@ -46,7 +46,7 @@ Given that the AutomaticDestinations files are stored in a user's %AppData% dire
 The presence of an AutomaticDestinations file for an application implies that the application was executed and was used to open a file or save a new file.
 
 ### File - Path
-Within each AutomaticDestinations file is a list of recent files that were accessed, as well as a count of how many times each file was accessed using that specific application. Alongside this are timestamps corresponding to the first and most recent known times that the file was accessed using that application. 
+Within each AutomaticDestinations file is a list of recent files that were accessed, as well as a count of how many times each file was accessed using that specific application. Alongside this is the timestamp corresponding to the last known time each file was accessed by the application. 
 
 For instance, when using JLECmd.exe (Eric Zimmerman) to analyze an AutomaticDestinations file for Excel, the following is seen:
 
@@ -78,7 +78,6 @@ We can conclude:
  - The user `john.doe` executed Excel and accessed `C:\temp\test.xlsx`
  - `C:\temp\test.xlsx` was opened using `Microsoft Office Excel x64`
  - `C:\temp\test.xlsx` was accessed twice using Excel
- - The first known time Excel was used to access `C:\temp\test.xlsx` was at `2023-06-24 15:53:43`
  - The last known time Excel was used to access `C:\temp\test.xlsx` was at `2023-06-24 17:56:09`
 
 As the AutomaticDestinations file is a collection of LNK files, JLECmd offers an additional option to parse these as well through the `--ld` flag. We can get a lot more information this way, for example, accessing a file (`Y:\Documents\new.xlsx`) on a mapped network share (at `192.168.0.20`):
