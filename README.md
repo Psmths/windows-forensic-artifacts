@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/github/license/Psmths/windows-forensic-artifacts.svg">
   <img src="https://www.repostatus.org/badges/latest/wip.svg">
-  <img src="https://img.shields.io/badge/Forensic%20Artifacts-45-brightgreen">
+  <img src="https://img.shields.io/badge/Forensic%20Artifacts-46-brightgreen">
 </p>
 
 This repository provides an in-depth guide to the various Windows forensic artifacts that can be utilized when conducting an investigation. Detailed information is provided for each artifact, including its location, available parsing tools, and instructions for interpreting the results of a forensic data extraction. Furthermore, the repository seeks to provide a comprehensive resource for those seeking to expand their understanding of Windows forensics artifacts and how to properly leverage them during a forensic investigation.
@@ -113,6 +113,7 @@ Execution artifacts may provide the following information:
  - [Scheduled Task Files](persistence/task-scheduler-files.md)
  - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
  - [Microsoft-Windows-PowerShell/Operational/4104: PowerShell Script Block Logging](execution/evtx-4104-script-block-logging.md)
+ - [AutomaticDestinations Jumplists](file-activity/automatic-destinations.md)
 
 ### Execution - Last Executed
 >When was the last time this executable was run?
@@ -121,6 +122,7 @@ Execution artifacts may provide the following information:
  - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
  - [Background Activity Montitor](execution/bam-dam.md)
  - [Program Compatibility Assistant (PCA) - PcaAppLaunchDic.txt](execution/program-compatibility-assistant.md)
+ - [AutomaticDestinations Jumplists](file-activity/automatic-destinations.md)
 
 ### Execution - Permissions / Account
 >What permissions does the process have?
@@ -130,6 +132,7 @@ Execution artifacts may provide the following information:
  - [Background Activity Montitor](execution/bam-dam.md)
  - [SRUM Database](execution/srum-db.md)
  - [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md)
+ - [AutomaticDestinations Jumplists](file-activity/automatic-destinations.md)
 
 ### Execution - Process Tree
 >How did this process come to be? What spawned this process? Is the ProcessID available?
@@ -160,6 +163,7 @@ Execution artifacts may provide the following information:
  - [Tracing Registry Keys](network/tracing-keys.md)
  - [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md)
  - [Security/5156: The Windows Filtering Platform has permitted a connection](network/evtx-5156-wfp-permitted.md)
+ - [AutomaticDestinations Jumplists](file-activity/automatic-destinations.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -217,8 +221,9 @@ Account activity artifacts may provide the following information:
  - [Security/7045: Service Installed](persistence/evtx-7045-service-install.md)
 
 ### Account - Username
-> Determining the username attached to a particular SID
+> Determining the username attached to a particular SID, or artifacts where you would expect to find a username
  - [ProfileList](account/profile-list-key.md)
+ - [AutomaticDestinations Jumplists](file-activity/automatic-destinations.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -268,6 +273,7 @@ File activity artifacts may provide the following information:
  - [Services Registry Keys](persistence/registry-services.md)
  - [Security/7045: Service Installed](persistence/evtx-7045-service-install.md)
  - [Security/5156: The Windows Filtering Platform has permitted a connection](network/evtx-5156-wfp-permitted.md)
+ - [AutomaticDestinations Jumplists](file-activity/automatic-destinations.md)
 
 ### File - Size
 > What is the file's size on disk?
