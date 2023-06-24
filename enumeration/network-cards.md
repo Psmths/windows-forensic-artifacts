@@ -38,7 +38,7 @@ Each network interface adapter will have its own subkey with the following value
  - `Description`: The name of the network adapter
  - `ServiceName`: The GUID of the network adapter
 
-### Examples
+## Examples
 
 ```
 Description     REG_SZ      Microsoft Hyper-V Network Adapter

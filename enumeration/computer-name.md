@@ -36,3 +36,11 @@ The `ComputerName` registry key will provide the Computer Name of the endpoint.
 
 ## Artifact Interpretation
 The `ComputerName` value's data field will provide the system's configured Computer Name. 
+
+## Example
+```
+PS> Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\ComputerName\ComputerName" -Name *
+
+ComputerName : HLPC01
+```
+<sup><sub>This example was produced on Windows 10, Version 10.0.19044 Build 19044</sub></sup>

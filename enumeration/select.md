@@ -36,3 +36,15 @@ In general, `ControlSet001` will be the most recent Control Set that has been bo
 
 ## Artifact Interpretation
 Within the `Select` key, the value named `Current` identifies the `CurrentControlSet` by an integer. If the value is `1` for instance, that means that the `CurrentControlSet` on a live system will point to `ControlSet001`. 
+
+## Example
+In the following example, the `Select` value's data is `1`, indicating that the CurrentControlSet is `ControlSet001`.
+```
+PS> Get-ItemProperty -Path "HKLM:\SYSTEM\Select" -Name *
+
+Current       : 1
+Default       : 1
+Failed        : 0
+LastKnownGood : 1
+```
+<sup><sub>This example was produced on Windows 10, Version 10.0.19044 Build 19044</sub></sup>

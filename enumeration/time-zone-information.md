@@ -40,3 +40,20 @@ Within the `TimeZoneInformation` registry key, the value name `TimeZoneKeyName` 
 For examples of what this may look like, execute the command `Get-TimeZone -ListAvailable` in PowerShell and look at the `Id` key. 
 
 The `Bias` key contains the numer of minutes between UTC and the system's selected time zone, such that `UTC = Local System Time + Bias`.
+
+## Example
+```
+PS> Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" -Name *
+
+Bias                        : 360
+DaylightBias                : 4294967236
+DaylightName                : @tzres.dll,-161
+DaylightStart               : {0, 0, 3, 0...}
+StandardBias                : 0
+StandardName                : @tzres.dll,-162
+StandardStart               : {0, 0, 11, 0...}
+TimeZoneKeyName             : Central Standard Time
+DynamicDaylightTimeDisabled : 0
+ActiveTimeBias              : 300
+```
+<sup><sub>This example was produced on Windows 10, Version 10.0.19044 Build 19044</sub></sup>

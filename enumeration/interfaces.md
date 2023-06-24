@@ -46,3 +46,45 @@ Each interface will have its own dedicated registry key, and may contain the fol
 | EnableDHCP          | REG_DWORD | 0x0 if DHCP is disabled and 0x1 if DHCP is enabled                   |
 | LeaseObtainedTime   | REG_DWORD | FILETIME timestamp of when the endpoint received a DHCP lease        |
 | LeaseTerminatesTime | REG_DWORD | FILETIME timestamp of when the endpoint's DHCP lease expires    |
+
+## Example
+```
+PS> Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{a7d8885d-10c1-43d4-9e1e-0a7b2678f020}" -Name *
+
+EnableDHCP                 : 1
+Domain                     :
+NameServer                 :
+DhcpServer                 : 10.100.0.1
+Lease                      : 172800
+LeaseObtainedTime          : 1687622031
+T1                         : 1687708431
+T2                         : 1687773231
+LeaseTerminatesTime        : 1687794831
+AddressType                : 0
+IsServerNapAware           : 0
+DhcpConnForceBroadcastFlag : 0
+IPAddress                  : {}
+SubnetMask                 : {}
+DefaultGateway             : {}
+DefaultGatewayMetric       : {}
+RegistrationEnabled        : 1
+RegisterAdapterName        : 0
+DhcpInterfaceOptions       : {252, 0, 0, 0...}
+DhcpDefaultGateway         : {10.100.0.1}
+DhcpNameServer             : 10.100.0.10 10.100.0.10
+DhcpSubnetMaskOpt          : {255.255.0.0}
+DhcpIPAddress              : 10.100.65.234
+DhcpSubnetMask             : 255.255.0.0
+DhcpGatewayHardware        : {10, 100, 0, 1...}
+DhcpGatewayHardwareCount   : 1
+```
+
+Correlating with the [NetworkCards](/enumeration/network-cards.md) registry key:
+```
+PS> Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkCards\" -Name *
+
+ServiceName  : {A7D8885D-10C1-43D4-9E1E-0A7B2678F020}
+Description  : Intel(R) Wi-Fi 6 AX200 160MHz
+PSPath       : Microsoft.PowerShell.Core\Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkCards\5
+```
+<sup><sub>This example was produced on Windows 10, Version 10.0.19044 Build 19044</sub></sup>
