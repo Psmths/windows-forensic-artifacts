@@ -37,7 +37,7 @@ The modification time of each AutomaticDestinations file corresponds to the last
  - A user opened Excel, and then opened a workbook from within Excel.
  - A user opened Excel, and saved a new workbook from within Excel.
 
-The timestamp will not be updated in the case that a user simple opened Excel without opening another file. 
+The timestamp will not be updated in the case that a user simply opened Excel without opening another file. 
 
 ### Execution - Permissions / Account
 Given that the AutomaticDestinations files are stored in a user's %AppData% directory, this effectively ties execution of an application to a particular user account. For instance, if the AutomaticDestinations file for Excel exists in the following path: `C:\Users\john.doe\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations\b8ab77100df80ab2.automaticDestinations-ms`, this implies that the user `john.doe` executed `Microsoft Office Excel x64`.
@@ -79,6 +79,11 @@ We can conclude:
  - `C:\temp\test.xlsx` was opened using `Microsoft Office Excel x64`
  - `C:\temp\test.xlsx` was accessed twice using Excel
  - The last known time Excel was used to access `C:\temp\test.xlsx` was at `2023-06-24 17:56:09`
+
+We can gather more information given the Creation/Modification timestamps of the AutomaticDestinations file `b8ab77100df80ab2.automaticDestinations-ms` itself:
+
+ - The creation timestamp of the file `b8ab77100df80ab2.automaticDestinations-ms` is `2022-02-12 15:22:00`, indicating that (given the AutomaticDestinations files were not deleted) Excel was first used to access files at `2022-02-12 15:22:00`
+ - The modification timestamp of the file is `2023-06-24 17:56:09`, indicating that this was the last time Excel was used to access a file. As this is the `Last modified` timestamp of the entry for `C:\temp\test.xlsx`, we can conclude this is the last known file that Excel accessed on this system, corroborated by its `MRU` value of 0. 
 
 As the AutomaticDestinations file is a collection of LNK files, JLECmd offers an additional option to parse these as well through the `--ld` flag. We can get a lot more information this way, for example, accessing a file (`Y:\Documents\new.xlsx`) on a mapped network share (at `192.168.0.20`):
 
