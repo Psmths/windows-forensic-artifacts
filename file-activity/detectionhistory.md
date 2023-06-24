@@ -11,7 +11,7 @@ Detection history files are an artifact present on endpoints with Windows Defend
  - Windows Defender
 
 ## Artifact Location(s)
- - `C:\ProgramData\Microsoft\Windows Defender\Scans\History\Service\DetectionHistory\[0-9]*\`
+ - `%ProgramData%\Microsoft\Windows Defender\Scans\History\Service\DetectionHistory\[0-9]*\`
 
 ## Artifact Parsers
  - KAPE (Extraction and Parsing)

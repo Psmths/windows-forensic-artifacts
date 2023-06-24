@@ -18,7 +18,7 @@ The `Run` and `RunOnce` keys specify what programs will start during a logon eve
 ## Artifact File Location(s)
 
 #### NTUSER.dat
-- `C:\Users\{username}\NTUSER.dat` (Windows Vista - 10)
+- `%UserProfile%\NTUSER.dat` (Windows Vista - 10)
 - `C:\Documents and Settings\{username}\NTUSER.dat` (Windows XP)
 
 #### SOFTWARE

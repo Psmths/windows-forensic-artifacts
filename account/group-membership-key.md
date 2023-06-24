@@ -19,7 +19,7 @@ This registry key resides in the NTUSER.DAT file, and on a live system is loaded
 - `HKEY_USERS\{USER_SID}\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy\GroupMembership`
 
 🔌 Offline system:
-- File: `C:\Users\{USER_HOME_DIRECTORY}\NTUSER.DAT`
+- File: `%UserProfile%\NTUSER.DAT`
 - Key: `SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy\GroupMembership`
 
 ## Artifact Parsers

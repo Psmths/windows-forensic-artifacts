@@ -11,7 +11,7 @@
  - [x] Windows 7
 
 ## Artifact Location(s)
- - `C:\Users\{username}\AppData\Roaming\Mozilla\Firefox\Profiles\{firefox_profile}\places.sqlite*`
+ - `%UserProfile%\AppData\Roaming\Mozilla\Firefox\Profiles\{firefox_profile}\places.sqlite*`
 
 ## Artifact Parsers
  - KAPE (Extraction and Parsing)
