@@ -33,7 +33,7 @@ The following Zone IDs are available:
 | 0 | My Computer |
 | 1 | Intranet |
 | 2 | Trusted |
-| 3 | Internet |
+| 3 | Internet (AKA Mark of the Web) |
 | 4 | Untrusted |
 
 A Zone Identifier of 4 indicates that Microsoft SmartScreen has determined a file is suspicious.
@@ -48,3 +48,6 @@ HostUrl=http://example.com/example.exe
 ```
 
 In this example, in addition to the Zone Identifier being present, the associated URLs are also noted as well. This behavior is dependent on the application used to download the file. Browsers such as Chrome and Microsoft Edge will append this information to the Zone.Identifier file.
+
+## Caveats
+Some software does not assign Zone Identifiers to files that originate from the internet, such as git. Other software, such as 7zip, may or may not assign Zone Identifiers. 
