@@ -26,7 +26,7 @@ When logged, this event indicates that the system has successfully disconnected 
 | EventData/SSID                        | The SSID of the network that was connected to |
 | EventData/Reason              | Provides the reason this network was disconnected from |
 
-Together with the event [Microsoft-Windows-WLAN-AutoConfig/Operational/8001: Successfully Connected to a Wireless Network](network/evtx-8001-wlan-connect), this can be used to determine a timestan during which a system was connected to a wireless area network.
+Together with the event [Microsoft-Windows-WLAN-AutoConfig/Operational/8001: Successfully Connected to a Wireless Network](network/evtx-8001-wlan-connect), this can be used to determine a timespan during which a system was connected to a wireless area network.
 
 ## Example
 ```
