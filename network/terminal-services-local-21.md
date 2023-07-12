@@ -44,7 +44,7 @@ This event logs a Session ID, available in the XML path `UserData\EventXML\Sessi
 ### ActivityID Correlation
 This event logs an ActivityID, available in the XML path `System\Correlation ActivityID`. This may be used to correlate activity between other events logged that are related to this activity, such as:
 
- - [Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational/1149](network/terminal-services-remote-1149.md) to determine when the connection was established
+ - [Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational/1149](/network/terminal-services-remote-1149.md) to determine when the connection was established
 
 ## Example
 ```

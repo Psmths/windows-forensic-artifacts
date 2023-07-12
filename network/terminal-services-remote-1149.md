@@ -39,13 +39,13 @@ This artifact can provide the **source** IP address of an RDP *connection*. This
 ### ActivityID Correlation
 This event logs an ActivityID, available in the XML path `System\Correlation ActivityID`. This may be used to correlate activity between other events logged that are related to this activity, such as:
 
- - [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/21: Session logon succeeded](network/terminal-services-local-21.md)
+ - [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/21: Session logon succeeded](/network/terminal-services-local-21.md)
 
 ## Caveats
 This event is logged regardless of success or failure of the RDP session, and must be cross-referenced with other events such as:
 
  - [`4624: An account was successfully logged on`](/account/evtx-4624-successful-logon.md)
- - [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/21: Session logon succeeded](network/terminal-services-local-21.md)
+ - [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/21: Session logon succeeded](/network/terminal-services-local-21.md)
 
 ## Example
 ```
