@@ -24,7 +24,7 @@ This event, logged to the TerminalServices-RDPClient/Operational channel, is log
 This artifact can provide the **destination** IP address of an *attempted* RDP session. It will also provide the SID of the user who initiated the *attempted* connection, as well as the ProcessID associated with this activity. 
 
 ## Caveats
-This event is logged regardless of success or failure of the RDP session, and must be cross-referenced with other events such as [`4624: An account was successfully logged on`](/account/evtx-4624-successful-logon.md) on the destination host.
+This event is logged regardless of success or failure of the RDP session, and must be cross-referenced with other events such as [4624: An account was successfully logged on](/account/evtx-4624-successful-logon.md) on the destination host.
 
 If available, a successful RDP authentication is indicated by the event ID `TerminalServices-RDPClient/Operational/1027`. To correlate these two Event IDs, compare their `Correlation ActivityID` field values.
 

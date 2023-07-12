@@ -62,4 +62,4 @@ Scheduled task deletion is a rare event on Windows systems and provides an easy 
 When applications are installed on a Windows system, they will sometimes create a scheduled task to run their update functionality, making the Task Scheduler Operational log a possible option for cross-validation of other application installation artifacts such as the `Uninstall` registry key. 
 
 ### Lateral Movement through Remote Scheduled Task Installation
-In the event that tasks are remotely scheduled, as is commonly seen during lateral movement attempts, this activity may be identified by observing Type 3 logons via [`4624: An account was successfully logged on`](/account/evtx-4624-successful-logon.md) events in close proximity to task creation.
+In the event that tasks are remotely scheduled, as is commonly seen during lateral movement attempts, this activity may be identified by observing Type 3 logons via [4624: An account was successfully logged on](/account/evtx-4624-successful-logon.md) events in close proximity to task creation.

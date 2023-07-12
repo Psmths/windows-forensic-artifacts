@@ -44,7 +44,7 @@ This event logs an ActivityID, available in the XML path `System\Correlation Act
 ## Caveats
 This event is logged regardless of success or failure of the RDP session, and must be cross-referenced with other events such as:
 
- - [`4624: An account was successfully logged on`](/account/evtx-4624-successful-logon.md)
+ - [4624: An account was successfully logged on](/account/evtx-4624-successful-logon.md)
  - [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/21: Session logon succeeded](/network/terminal-services-local-21.md)
 
 ## Example
