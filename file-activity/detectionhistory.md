@@ -2,10 +2,9 @@
 Detection history files are an artifact present on endpoints with Windows Defender installed and with Real-Time Protection enabled. In the event that defender quarantines/removes a potentially malicious item, a detection history file is created to record the event.
 
 ### Analysis Value
+ - [x] Execution - Evidence of Execution
  - [x] File - Path
  - [x] File - Hash
- - [x] Execution - Full Path
- - [x] Execution - Evidence of Execution
 
 ## Operating System Availability
  - Windows Defender
