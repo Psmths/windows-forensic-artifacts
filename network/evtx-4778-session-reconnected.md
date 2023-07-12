@@ -1,5 +1,7 @@
 # Security/4778: Session reconnected
-This event, logged to the Security channel, is logged when an RDP session is reconnected. This event is logged on the **destination** endpoint. 
+This event, logged to the Security channel, is logged when an existing RDP terminal session is connected to, but it may also be logged as a result of Fast User Switching. Fast User Switching is a feature in newer versions of Windows (Vista+) that allows multiple users to be logged in to a single system concurrently. 
+
+This event is particularly important for a forensic analysis because, for RDP activity, it is logged on the **destination** endpoint and provides information about the source of the RDP activity. 
 
 ⚠️ In windows XP, the corresponding Event ID is `682`.
 
@@ -17,6 +19,12 @@ This event, logged to the Security channel, is logged when an RDP session is rec
  - [x] Windows 8
  - [x] Windows 7
  - [x] Windows Vista
+ - [x] Windows Server 2019
+ - [x] Windows Server 2016
+ - [x] Windows Server 2012 R2
+ - [x] Windows Server 2012
+ - [x] Windows Server 2008 R2
+ - [x] Windows Server 2008
 
 ## Artifact Location(s)
 - `%SystemRoot%\System32\Winevt\Logs\Security.evtx`
