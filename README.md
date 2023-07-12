@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/github/license/Psmths/windows-forensic-artifacts.svg">
   <img src="https://www.repostatus.org/badges/latest/wip.svg">
-  <img src="https://img.shields.io/badge/Forensic%20Artifacts-48-brightgreen">
+  <img src="https://img.shields.io/badge/Forensic%20Artifacts-49-brightgreen">
 </p>
 
 This repository provides an in-depth guide to the various Windows forensic artifacts that can be utilized when conducting an investigation. Detailed information is provided for each artifact, including its location, available parsing tools, and instructions for interpreting the results of a forensic data extraction. Furthermore, the repository seeks to provide a comprehensive resource for those seeking to expand their understanding of Windows forensics artifacts and how to properly leverage them during a forensic investigation.
@@ -226,6 +226,7 @@ Account activity artifacts may provide the following information:
  - [AutomaticDestinations Jumplists](file-activity/automatic-destinations.md)
  - [Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational/1149](network/terminal-services-remote-1149.md)
  - [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/21: Session logon succeeded](network/terminal-services-local-21.md)
+ - [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/24: Session has been disconnected](network/terminal-services-local-24.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -298,6 +299,7 @@ Network activity artifacts may provide the following information:
  - [Security/5156: The Windows Filtering Platform has permitted a connection](network/evtx-5156-wfp-permitted.md)
  - [Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational/1149](network/terminal-services-remote-1149.md)
  - [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/21: Session logon succeeded](network/terminal-services-local-21.md)
+ - [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/24: Session has been disconnected](network/terminal-services-local-24.md)
 
 ### Network Activity - Destination Identification
 > Can the destination for this activity be identified?
@@ -315,6 +317,7 @@ Network activity artifacts may provide the following information:
  - [Security/5156: The Windows Filtering Platform has permitted a connection](network/evtx-5156-wfp-permitted.md)
  - [Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational/1149](network/terminal-services-remote-1149.md)
  - [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/21: Session logon succeeded](network/terminal-services-local-21.md)
+ - [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/24: Session has been disconnected](network/terminal-services-local-24.md)
 
 ### Network Activity - Transmit Volume
 > Can the amount of data sent or received be determined?
