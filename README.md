@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/github/license/Psmths/windows-forensic-artifacts.svg">
   <img src="https://www.repostatus.org/badges/latest/wip.svg">
-  <img src="https://img.shields.io/badge/Forensic%20Artifacts-47-brightgreen">
+  <img src="https://img.shields.io/badge/Forensic%20Artifacts-48-brightgreen">
 </p>
 
 This repository provides an in-depth guide to the various Windows forensic artifacts that can be utilized when conducting an investigation. Detailed information is provided for each artifact, including its location, available parsing tools, and instructions for interpreting the results of a forensic data extraction. Furthermore, the repository seeks to provide a comprehensive resource for those seeking to expand their understanding of Windows forensics artifacts and how to properly leverage them during a forensic investigation.
@@ -219,12 +219,13 @@ Account activity artifacts may provide the following information:
  - [Background Activity Montitor](execution/bam-dam.md)
  - [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md)
  - [Security/7045: Service Installed](persistence/evtx-7045-service-install.md)
- - [Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational/1149](network/terminal-services-remote-1149.md)
 
 ### Account - Username
 > Determining the username attached to a particular SID, or artifacts where you would expect to find a username
  - [ProfileList](account/profile-list-key.md)
  - [AutomaticDestinations Jumplists](file-activity/automatic-destinations.md)
+ - [Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational/1149](network/terminal-services-remote-1149.md)
+ - [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/21: Session logon succeeded](network/terminal-services-local-21.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -296,6 +297,7 @@ Network activity artifacts may provide the following information:
  - [Microsoft-Windows-WLAN-AutoConfig/Operational/8003: Successfully Disconnected from a Wireless Network](network/evtx-8003-wlan-disconnect.md)
  - [Security/5156: The Windows Filtering Platform has permitted a connection](network/evtx-5156-wfp-permitted.md)
  - [Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational/1149](network/terminal-services-remote-1149.md)
+ - [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/21: Session logon succeeded](network/terminal-services-local-21.md)
 
 ### Network Activity - Destination Identification
 > Can the destination for this activity be identified?
@@ -312,6 +314,7 @@ Network activity artifacts may provide the following information:
  - [Security/4625: An account failed to log on](account/evtx-4625-failed-logon.md)
  - [Security/5156: The Windows Filtering Platform has permitted a connection](network/evtx-5156-wfp-permitted.md)
  - [Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational/1149](network/terminal-services-remote-1149.md)
+ - [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/21: Session logon succeeded](network/terminal-services-local-21.md)
 
 ### Network Activity - Transmit Volume
 > Can the amount of data sent or received be determined?
