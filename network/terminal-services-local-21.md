@@ -47,7 +47,7 @@ This event logs an ActivityID, available in the XML path `System\Correlation Act
  - [Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational/1149](/network/terminal-services-remote-1149.md) to determine when the connection was established
 
 ### Determining Timeline of RDP Activity
-Together with [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/24: Session logon succeeded](network/terminal-services-local-24.md), by correlating the `SessionID` field of both events, one can determine the start and end time of an RDP session.
+Together with [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/24: Session logon succeeded](/network/terminal-services-local-24.md), by correlating the `SessionID` field of both events, one can determine the start and end time of an RDP session.
 
 ## Example
 ```
