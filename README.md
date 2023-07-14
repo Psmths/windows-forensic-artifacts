@@ -45,6 +45,7 @@ This repository provides an in-depth guide to the various Windows forensic artif
      - [Browser Activity](#network-activity---browser-activity)
      - [Firewall Activity](#network-activity---firewall-activity)
      - [Wireless Activity](#network-activity---wireless-activity)
+ - [User Activity](#user-activity)
  - [System Enumeration Artifacts](#enumeration-artifacts)
  - [Artifact Behavioral Mappings](#artifact-behavioral-mappings) 
    * [TA0002 - Execution](#ta0002-execution)
@@ -344,6 +345,12 @@ Network activity artifacts may provide the following information:
 > Artifacts providing evidence of wireless network activity
  - [Microsoft-Windows-WLAN-AutoConfig/Operational/8001: Successfully Connected to a Wireless Network](network/evtx-8001-wlan-connect.md)
  - [Microsoft-Windows-WLAN-AutoConfig/Operational/8003: Successfully Disconnected from a Wireless Network](network/evtx-8003-wlan-disconnect.md)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# User Activity
+> These miscellaneous artifacts may provide an analyst information regarding certain actions that a user took on a system.
+ - [WordWheelQuery](/user-activity/wordwheelquery.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
