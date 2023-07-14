@@ -26,9 +26,9 @@ This artifact can provide the **destination** IP address (or hostname) of an *at
 ## Caveats
 This event is logged regardless of success or failure of the RDP session, and must be cross-referenced with other events such as [4624: An account was successfully logged on](/account/evtx-4624-successful-logon.md) on the destination host.
 
-If available, a successful RDP authentication is indicated by the event ID `TerminalServices-RDPClient/Operational/1027`. To correlate these two Event IDs, compare their `Correlation ActivityID` field values.
+If available, a successful RDP authentication is indicated by the event ID `TerminalServices-RDPClient/Operational/1027: Connected to domain`. To correlate these two Event IDs, compare their `Correlation ActivityID` field values.
 
-When the RDP session is ended, either due to a failure to connect, a failure to successfully authenticate, or a manual close of the session, `TerminalServices-RDPClient/Operational/1105` should be logged, and is likewise able to be correlated by its `Correlation ActivityID` field. This allows for determining a time span during which an RDP session was in progress.
+When the RDP session is ended, either due to a failure to connect, a failure to successfully authenticate, or a manual close of the session, `TerminalServices-RDPClient/Operational/1105: The multi-transport connection has been disconnected` and `TerminalServices-RDPClient/Operational/1026: RDP ClientActiveX has been disconnected` should be logged, and is likewise able to be correlated by its `Correlation ActivityID` field. This allows for determining a time span during which an RDP session was in progress.
 
 ## Example
 In the following example, the user with SID `S-1-5-21-3471133136-2963561160-3931775028-1001` attempted to RDP to a system at IP address `192.168.116.74`. The connection was not successfull, resulting in `TerminalServices-RDPClient/Operational/1026: RDP ClientActiveX has been disconnected` being logged with the same `Correlation ActivityID` value of `{780cf827-0ed1-4f4b-924c-3b14e7660000}`. 
