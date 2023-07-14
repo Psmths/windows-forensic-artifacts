@@ -139,7 +139,7 @@ Execution artifacts may provide the following information:
 >How did this process come to be? What spawned this process? Is the ProcessID available?
  - [Security/4688: A new process has been created](execution/evtx-4688-process-created.md)
  - [Microsoft-Windows-PowerShell/Operational/4104: PowerShell Script Block Logging](execution/evtx-4104-script-block-logging.md)
- - [TerminalServices-RDPClient/Operational/1024](network/evtx-1024-rdp-activex.md)
+ - [TerminalServices-RDPClient/Operational/1024: RDP ClientActiveX is trying to connect to the server](network/evtx-1024-rdp-activex.md)
  - [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md)
 
 ### Execution - Time
@@ -209,7 +209,7 @@ Account activity artifacts may provide the following information:
  - [SAM Hive](account/sam-hive.md)
  - [Security/4720: A user account was created](account/evtx-4720-account-created.md)
  - [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md)
- - [TerminalServices-RDPClient/Operational/1024](network/evtx-1024-rdp-activex.md)
+ - [TerminalServices-RDPClient/Operational/1024: RDP ClientActiveX is trying to connect to the server](network/evtx-1024-rdp-activex.md)
  - [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md)
  - [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md)
  - [Security/4625: An account failed to log on](account/evtx-4625-failed-logon.md)
@@ -295,7 +295,7 @@ Network activity artifacts may provide the following information:
 
 ### Network Activity - Evidence of Network Activity
 > Is there evidence of network activity?
- - [TerminalServices-RDPClient/Operational/1024](network/evtx-1024-rdp-activex.md)
+ - [TerminalServices-RDPClient/Operational/1024: RDP ClientActiveX is trying to connect to the server](network/evtx-1024-rdp-activex.md)
  - [Tracing Registry Keys](network/tracing-keys.md)
  - [Microsoft-Windows-WLAN-AutoConfig/Operational/8001: Successfully Connected to a Wireless Network](network/evtx-8001-wlan-connect.md)
  - [Microsoft-Windows-WLAN-AutoConfig/Operational/8003: Successfully Disconnected from a Wireless Network](network/evtx-8003-wlan-disconnect.md)
@@ -306,7 +306,7 @@ Network activity artifacts may provide the following information:
 
 ### Network Activity - Destination Identification
 > Can the destination for this activity be identified?
- - [TerminalServices-RDPClient/Operational/1024](network/evtx-1024-rdp-activex.md)
+ - [TerminalServices-RDPClient/Operational/1024: RDP ClientActiveX is trying to connect to the server](network/evtx-1024-rdp-activex.md)
  - [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md)
  - [Security/5156: The Windows Filtering Platform has permitted a connection](network/evtx-5156-wfp-permitted.md)
 
@@ -426,7 +426,7 @@ The below artifacts may prove useful in identifying instances of lateral movemen
 | Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Eventlog | [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
-| Eventlog | [TerminalServices-RDPClient/Operational/1024](network/evtx-1024-rdp-activex.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
+| Eventlog | [TerminalServices-RDPClient/Operational/1024: RDP ClientActiveX is trying to connect to the server](network/evtx-1024-rdp-activex.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
 | Eventlog | [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Eventlog | [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
 | Eventlog | [Security/4625: An account failed to log on](account/evtx-4625-failed-logon.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
