@@ -46,8 +46,8 @@ The following logon types are commonly seen:
 
 | Logon Type | Description |
 | - | - |
-| 2 | Interactive Logon (user loggong on through screen or virtual console) |
-| 3 | Network Logon |
-| 7 | RDP reconnects or interactive unlocking |
-| 9 | Explicit credentials (`runas`) |
-| 10 | Interactive logon (RDP) |
+| 2 | **Interactive** (user loggong on through screen or virtual console) |
+| 3 | **Network** (RDP with NLA enabled) |
+| 7 | **Unlock** (RDP reconnects or interactive unlocking) |
+| 9 | **Explicit** credentials (`runas`) |
+| 10 | **Remote** Interactive (RDP with NLA diasbled) |

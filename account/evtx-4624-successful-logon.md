@@ -50,14 +50,11 @@ The `EventData/LogonType` provides information regarding what type of logon occu
 
 | Logon Type | Description |
 | - | - |
-| 2 | Interactive |
-| 3 | Network |
-| 4 | Batch |
-| 5 | Service |
-| 7 | Unlock |
-| 9 | NewCredentials |
-| 10 | RemoteInteractive |
-| 11 | CachedInteractive |
+| 2 | **Interactive** (user loggong on through screen or virtual console) |
+| 3 | **Network** (RDP with NLA enabled) |
+| 7 | **Unlock** (RDP reconnects or interactive unlocking) |
+| 9 | **Explicit** credentials (`runas`) |
+| 10 | **Remote** Interactive (RDP with NLA diasbled) |
 
 Some analysis tips for certain situations:
 
