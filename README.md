@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/github/license/Psmths/windows-forensic-artifacts.svg">
   <img src="https://www.repostatus.org/badges/latest/wip.svg">
-  <img src="https://img.shields.io/badge/Forensic%20Artifacts-51-brightgreen">
+  <img src="https://img.shields.io/badge/Forensic%20Artifacts-54-brightgreen">
 </p>
 
 This repository provides an in-depth guide to the various Windows forensic artifacts that can be utilized when conducting an investigation. Detailed information is provided for each artifact, including its location, available parsing tools, and instructions for interpreting the results of a forensic data extraction. Furthermore, the repository seeks to provide a comprehensive resource for those seeking to expand their understanding of Windows forensics artifacts and how to properly leverage them during a forensic investigation.
@@ -335,8 +335,11 @@ Network activity artifacts may provide the following information:
 ### Network Activity - Firewall Activity
 > Artifacts supporting general forensic analysis of events pertaining to the Windows Firewall
  - [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2004: Firewall Rule Added](network/evtx-2004-firewall.md)
+ - [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2071: Firewall Rule Added](network/evtx-2071-firewall-windows-11.md)
  - [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2005: Firewall Rule Modified](network/evtx-2005-firewall.md)
+ - [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2073: Firewall Rule Modified](network/evtx-2073-firewall-windows-11.md)
  - [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2006: Firewall Rule Deleted](network/evtx-2006-firewall.md)
+ - [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2052: Firewall Rule Deleted](network/evtx-2052-firewall-windows-11.md)
  - [Security/5156: The Windows Filtering Platform has permitted a connection](network/evtx-5156-wfp-permitted.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

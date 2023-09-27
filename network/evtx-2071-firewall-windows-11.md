@@ -1,0 +1,2 @@
+# Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2071: Firewall Rule Added
+This event indicates that a new firewall rule has been added to the Windows Firewall. While currently unique to newer versions of Windows 11, it is functionally similar to [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2004: Firewall Rule Added](/network/evtx-2004-firewall.md).

@@ -1,0 +1,2 @@
+# Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2073: Firewall Rule Modified
+This event indicates that a new Windows Defender Firewall rule has been modified. While currently unique to newer versions of Windows 11, it is functionally similar to [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2005: Firewall Rule Modified](/network/evtx-2005-firewall.md).
