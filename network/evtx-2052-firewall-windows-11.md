@@ -1,2 +1,2 @@
 # Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2052: Firewall Rule Deleted
-This event indicates that a new firewall rule has been deleted from the Windows Firewall. While currently unique to newer versions of Windows 11, it is functionally similar to [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2005: Firewall Rule Deleted](/network/evtx-2006-firewall.md).
+This event indicates that a new firewall rule has been deleted from the Windows Firewall. While currently unique to newer versions of Windows 11, it is functionally similar to [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2006: Firewall Rule Deleted](/network/evtx-2006-firewall.md).
