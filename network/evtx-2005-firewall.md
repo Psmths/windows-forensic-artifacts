@@ -1,7 +1,7 @@
 # Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2005: Firewall Rule Modified
 This event indicates that a firewall rule has been modified. The contents of this event will contain the new parameters of the firewall rule.
 
-In recent builds of Windows 11, this event has been replaced by a new event ID, 2073.
+In recent builds of Windows 11, this event has been replaced by a new event ID, [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2073: Firewall Rule Modified](/network/evtx-2073-firewall-windows-11.md).
 
 ### Analysis Value
  - [x] Account - Security Identifier (SID)

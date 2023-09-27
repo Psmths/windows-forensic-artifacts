@@ -1,7 +1,7 @@
 # Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2004: Firewall Rule Added
 This event indicates that a new firewall rule has been added to the Windows Firewall.
 
-In recent builds of Windows 11, this event has been replaced by a new event ID, 2071.
+In recent builds of Windows 11, this event has been replaced by a new event ID, [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2071: Firewall Rule Added](/network/evtx-2071-firewall-windows-11.md).
 
 ### Analysis Value
  - [x] Account - Security Identifier (SID)
