@@ -253,7 +253,6 @@ File activity artifacts may provide the following information:
 ### File - Last Modified
 > When was the file last modified?
  - [ShimCache](execution/shimcache.md)
- - [AmCache.hve](execution/amcache.md)
  - [USN Journal](file-activity/usn-journal.md)
 
 ### File - Origin

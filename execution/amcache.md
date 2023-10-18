@@ -5,10 +5,9 @@ The Amcache hive stores metadata regarding executables/installed programs presen
  - [x] Behavioral - Execution (TA0002)
 
 ### Analysis Value
- - [x] Execution - First Executed <sup>[1]</sup>
- - [x] Execution - Evidence of Execution <sup>[1]</sup>
+ - [x] Execution - First Executed
+ - [x] Execution - Evidence of Execution
  - [x] File - Hash
- - [x] File - Last Modified
  - [x] File - Path
 
 ## Operating System Availability
@@ -72,7 +71,7 @@ The subkeys will contain the executable name, and a hash separated by a `|` char
 | BinaryType | 32/64bit indicator |
 | Size | The size, in bytes, of the executable |
 
-<span style="color:red">⚠️**There is a limit to the size of the data that gets hashed to produce this artifact's SHA-1 hash in the `FileId` value.** If the size of the binary exceeds approximately 30MB in size, only the first 30MB will be hashed. The result is that the SHA-1 hash will not be valid for that binary.⚠️</span>
+⚠️ **There is a limit to the size of the data that gets hashed to produce this artifact's SHA-1 hash in the `FileId` value.** If the size of the binary exceeds approximately 30MB in size, only the first 30MB will be hashed. The result is that the SHA-1 hash will not be valid for that binary. ⚠️
 
 ## Example
 Installing a new software, CrystalDiskMark on a system and manually running `compattelrunner.exe` updated the Amcache Hive with the following key (named `00001d78ebb0f68947e39952c24983d564390000ffff`) under `InventoryApplication`:
