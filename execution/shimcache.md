@@ -1,5 +1,5 @@
 # ShimCache / Application Compatibility Cache
-ShimCache is a registry artifact of the application compatibility database to provide backwards-compatibility between operating system versions.
+ShimCache is a registry artifact of the application compatibility database to provide backwards-compatibility between operating system versions. It may provide forensic evidence of execution on a system.
 
 ### Behavioral Indications
  - [x] Behavioral - Execution (TA0002)
@@ -27,10 +27,16 @@ ShimCache is a registry artifact of the application compatibility database to pr
  - [x] Windows Server 2003
 
 ## Artifact Location(s)
-File: `%SystemRoot%\System32\config\SYSTEM`
+🔋 Live System:
+ - Windows XP: `SYSTEM\CurrentControlSet\Control\SessionManager\AppCompatibility\AppCompatCache`
+ - Windows Vista/7/8/10/11: `SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache\AppCompatCache`
 
-- Windows XP: `SYSTEM\CurrentControlSet\Control\SessionManager\AppCompatibility\AppCompatCache`
-- Windows Vista/7/8/10: `SYSTEM\CurrentControlSet\Control\Session Manager\AppCompatCache\AppCompatCache`
+🔌 Offline system:
+ - File: `%SystemRoot%\System32\config\SYSTEM`
+ - Windows XP: `SYSTEM\{CURRENT_CONTROL_SET}\Control\SessionManager\AppCompatibility\AppCompatCache`
+ - Windows Vista/7/8/10: `SYSTEM\{CURRENT_CONTROL_SET}\Control\Session Manager\AppCompatCache\AppCompatCache`
+
+> ℹ️ More information on [{CURRENT_CONTROL_SET}](/enumeration/select.md)
 
 ## Artifact Parsers
  - [ShimCacheParser.py](https://github.com/mandiant/ShimCacheParser)
