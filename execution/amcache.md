@@ -23,6 +23,10 @@ The Amcache hive stores metadata regarding executables/installed programs presen
 ## Artifact Location(s)
 - `%SystemRoot%\AppCompat\Programs\Amcache.hve`
 
+Additional LOG files:
+- `%SystemRoot%\AppCompat\Programs\Amcache.hve.*LOG1`
+- `%SystemRoot%\AppCompat\Programs\Amcache.hve.*LOG2`
+
 ## Artifact Parsers
  - amcacheparser.exe (Eric Zimmerman)
  - RegistryExplorer (Eric Zimmerman)
