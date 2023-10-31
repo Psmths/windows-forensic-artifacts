@@ -1,5 +1,5 @@
 # Amcache.hve
-The Amcache hive stores metadata regarding executables/installed programs present on an endpoint. Typically, only those that have been executed will appear in this registry hive. This artifact has seen numerous revisions, and it is therefore important to first gather information regarding the specific version of Windows that you are analyzing before proceeding with Amcache analysis.
+The Amcache hive stores metadata regarding executables/installed programs present on an endpoint. Typically, only those that have been executed (or executables associated with installed software) will appear in this registry hive. This artifact has seen numerous revisions, and it is therefore important to first gather information regarding the specific version of Windows that you are analyzing before proceeding with Amcache analysis.
 
 ### Behavioral Indications
  - [x] Behavioral - Execution (TA0002)
@@ -58,13 +58,13 @@ The `Source` value can give information regarding how software was installed on 
  - AppXPackage: Software installed via the Windows Store of the `Get-AppxPackage` PowerShell command
 
 ### InventoryApplicationFile (Windows 10 Build 10.0.14393 +)
-This registry key contains information about the executables tied to installed software. A single software installation may drop multiple executables to a system, and they should all be tracked here. Like the `InventoryApplication` key, this key also only updates when the Microsoft Compatibility Appraiser task has run.
+This registry key contains information about the executables tied to installed software, as well as executables that have run on the system. A single software installation may drop multiple executables to a system, and they should all be tracked here. Like the `InventoryApplication` key, this key also only updates when the Microsoft Compatibility Appraiser task has run.
 
 The subkeys will contain the executable name, and a hash separated by a `|` character. The most interesting values to analyze within this key are:
 
 | Value | Description |
 | ----- | ----------- |
-| ProgramId | The ProgramId that this executable is tied to, which can be found in `InventoryApplication` |
+| ProgramId | The ProgramId that this executable is tied to, which can be found in `InventoryApplication`. If the executable was not installed as part of a software installation, this ProgramId will not be found in `InventoryApplication` |
 | FileId | Stripping the four leading 0s, the SHA-1 hash of the executable |
 | LowerCaseLongPath | The path to the executable |
 | Name | The filename of the executable |
