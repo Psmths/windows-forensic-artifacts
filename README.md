@@ -217,7 +217,7 @@ Account activity artifacts may provide the following information:
  - [SRUM Database](execution/srum-db.md)
  - [ProfileList](account/profile-list-key.md)
  - [Microsoft-Windows-PowerShell/Operational/4104: PowerShell Script Block Logging](execution/evtx-4104-script-block-logging.md)
- - [Recycle Bin $I/$J Files](file-activity/recycle-bin-files.md)
+ - [Recycle Bin $I/$R Files](file-activity/recycle-bin-files.md)
  - [Background Activity Montitor](execution/bam-dam.md)
  - [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md)
  - [Security/7045: Service Installed](persistence/evtx-7045-service-install.md)
@@ -243,7 +243,7 @@ File activity artifacts may provide the following information:
 ### File - Deletion
 > When was the file deleted?
  - [USN Journal](file-activity/usn-journal.md)
- - [Recycle Bin $I/$J Files](file-activity/recycle-bin-files.md)
+ - [Recycle Bin $I/$R Files](file-activity/recycle-bin-files.md)
 
 ### File - Hash
 > What is the hash of this file?
@@ -273,7 +273,7 @@ File activity artifacts may provide the following information:
  - [Image File Execution Options](persistence/image-file-execution-options.md)
  - [Program Compatibility Assistant (PCA) - PcaAppLaunchDic.txt](execution/program-compatibility-assistant.md)
  - [Microsoft-Windows-PowerShell/Operational/4104: PowerShell Script Block Logging](execution/evtx-4104-script-block-logging.md)
- - [Recycle Bin $I/$J Files](file-activity/recycle-bin-files.md)
+ - [Recycle Bin $I/$R Files](file-activity/recycle-bin-files.md)
  - [Services Registry Keys](persistence/registry-services.md)
  - [Security/7045: Service Installed](persistence/evtx-7045-service-install.md)
  - [Security/5156: The Windows Filtering Platform has permitted a connection](network/evtx-5156-wfp-permitted.md)
@@ -284,7 +284,7 @@ File activity artifacts may provide the following information:
 > What is the file's size on disk?
  - [ShimCache](execution/shimcache.md)
  - [USN Journal](file-activity/usn-journal.md)
- - [Recycle Bin $I/$J Files](file-activity/recycle-bin-files.md)
+ - [Recycle Bin $I/$R Files](file-activity/recycle-bin-files.md)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

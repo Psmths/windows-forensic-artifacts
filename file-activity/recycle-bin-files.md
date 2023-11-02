@@ -1,4 +1,4 @@
-# Recycle Bin $I/$J Files
+# Recycle Bin $I/$R Files
 In modern versions of Windows, when a file is deleted, it is sent to the Recycle Bin first. Under the hood this constitutes the creation of two unique files prepended by `$I` and `$R` and appended with the original file's extension such as:
 
  - `$RMYY8AS.txt`
