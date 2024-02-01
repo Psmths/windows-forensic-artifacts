@@ -45,6 +45,9 @@ This repository provides an in-depth guide to the various Windows forensic artif
      - [Browser Activity](#network-activity---browser-activity)
      - [Firewall Activity](#network-activity---firewall-activity)
      - [Wireless Activity](#network-activity---wireless-activity)
+   * [Browser Activity](#browser-activity)
+     - [History](#browser-activity---history)
+     - [Bookmarks](#browser-activity---bookmarks)
  - [User Activity](#user-activity)
  - [System Enumeration Artifacts](#enumeration-artifacts)
  - [Artifact Behavioral Mappings](#artifact-behavioral-mappings) 
@@ -348,6 +351,17 @@ Network activity artifacts may provide the following information:
  - [Microsoft-Windows-WLAN-AutoConfig/Operational/8001: Successfully Connected to a Wireless Network](network/evtx-8001-wlan-connect.md)
  - [Microsoft-Windows-WLAN-AutoConfig/Operational/8003: Successfully Disconnected from a Wireless Network](network/evtx-8003-wlan-disconnect.md)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Browser Activity
+Network activity artifacts may provide the following information:
+
+### Browser Activity - History
+ - [Firefox places.sqlite Database](browser/firefox-places-sqlite.md)
+
+### Browser Activity - Bookmarks
+ - [Firefox places.sqlite Database](browser/firefox-places-sqlite.md)
+ 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # User Activity
