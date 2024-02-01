@@ -16,7 +16,6 @@ The `Run` and `RunOnce` keys specify what programs will start during a logon eve
  - [x] Windows XP
 
 ## Artifact File Location(s)
-
 #### NTUSER.dat
 - `%UserProfile%\NTUSER.dat` (Windows Vista - 10)
 - `C:\Documents and Settings\{username}\NTUSER.dat` (Windows XP)
@@ -37,7 +36,8 @@ The following keys will contain full paths to the executables that will start on
 
 Disabled autoruns will appear in a sub-key named "AutorunsDisabled."
 
-***NOTE:** On a live system, the HKEY_CURRENT_USER registry hive is the loaded NTUSER.dat hive.*
+> [!NOTE]
+> On a live system, the HKEY_CURRENT_USER registry hive is the loaded NTUSER.dat hive.
 
 ### SOFTWARE
 The following keys will contain full paths to the executables that will start on **logon** for any user on the system:

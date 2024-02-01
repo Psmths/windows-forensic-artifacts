@@ -1,7 +1,8 @@
 # Security/4720: A user account was created
 This event, logged to the Security channel, indicates a new user account was created on the endpoint.
 
-⚠️ In windows XP, the corresponding Event ID is `624`.
+> [!NOTE]
+> In windows XP, the corresponding Event ID is `624`.
 
 ### Behavioral Indications
  - [x] Behavioral - Persistence (TA0003)
@@ -32,9 +33,11 @@ The following fields may be interpreted from this artifact:
 | New Account / Security ID | SID of the new account |
 | New Account / Account Name | Name of the new account |
 
-When viewed in Event Viewer, the SIDs will be translated to names if possible. To view the underlying SIDs, the event's XML data should be analyzed. 
+> [!NOTE]
+> The SID may be translated by event viewer. To view the raw SID, look at the event's XML data, which has the following fields available:
 
 When parsing the event's XML data:
+
 | XML Path | Interpretation |
 | - | - |
 | EventData/TargetUserName | New account name |

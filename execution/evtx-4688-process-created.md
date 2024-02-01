@@ -1,9 +1,14 @@
 # Security/4688: A new process has been created
 This event, logged to the Security channel, indicates a process was created on the system.
 
-- ⚠️ In windows XP/Windows Server 2003, the corresponding Event ID is `592`.
-- ⚠️ These events require the `Audit Process Creation` policy to be configured, which is by default not configured. 
-- ⚠️ For the events to contain the full command line for each logged process, an additional policy called `Include command line in process creation events` must also be configured. 
+> [!NOTE]  
+> In windows XP/Windows Server 2003, the corresponding Event ID is `592`.
+
+> [!NOTE]  
+>  These events require the `Audit Process Creation` policy to be configured, which is by default not configured. 
+
+> [!NOTE]  
+>  For the events to contain the full command line for each logged process, an additional policy called `Include command line in process creation events` must also be configured. 
 
 ### Behavioral Indications
  - [x] Behavioral - Execution (TA0002)
@@ -66,7 +71,8 @@ The `EventData\TokenElevationType` field relates to UAC. The following interpret
  - `%%1937` indicates that the user manually ran the process as an administrator, or that the program requested administrative privileges upon execution.
  - `%%1938` indicates that the process did not run with administrator privileges. 
 
-**NOTE**: In the event that UAC was used to elevate permissions in order to execute an application, this information will be stored in the `Target` fields instead. 
+> [!NOTE]  
+>  In the event that UAC was used to elevate permissions in order to execute an application, this information will be stored in the `Target` fields instead. 
 
 ### Execution - Command Line Options
 In the event that Process Tracking is enabled (defaults to disabled), the full command line will be available in the `Process Command Line` field. 

@@ -14,7 +14,6 @@ The TaskScheduler/Operational event log channel provides detailed tracing of sch
  - [x] File - Path
  - [x] Network Activity - Source Identification
 
-
 ## Operating System Availability
  - [x] Windows 11
  - [x] Windows 10

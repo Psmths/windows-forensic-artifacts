@@ -1,7 +1,8 @@
 # System Resource Usage Monitor (SRUM)
-The SRUM database is a forensic artifact that provides evidence of execution and network activity. It is used by Windows to provide telemetry regarding applications that run on an endpoint. 
+The SRUM database is a forensic artifact that provides evidence of execution and network activity. It is used by Windows to provide telemetry regarding applications that run on an endpoint. It provides 30-60 days of resolution. 
 
-It provides 30-60 days of resolution. It is present in both the **registry** as well as the **filesystem**, as an ESE database.
+> [!NOTE]
+> This artifact is present in both the **registry** as well as the **filesystem**, as an ESE database.
 
 ### Behavioral Indications
  - [x] Behavioral - TA0002 - Execution
@@ -20,11 +21,11 @@ It provides 30-60 days of resolution. It is present in both the **registry** as 
  - [x] Windows Server 2019
  
 ## Artifact Location(s)
- - `%SystemRoot%\System32\sru\SRUDB.dat` (Filesystem Location)
- - `SOFTWARE\Microsoft\Windows NT\Current Version\SRUM\Extensions` (Registry Location)
+ - Filesystem: `%SystemRoot%\System32\sru\SRUDB.dat`
+ - Registry: `SOFTWARE\Microsoft\Windows NT\Current Version\SRUM\Extensions`
 
 ## Artifact Parsers
- - [srum-dump](https://github.com/MarkBaggett/srum-dump) (Recommended!)
+ - [srum-dump](https://github.com/MarkBaggett/srum-dump)
  - ESEDatabaseView
  - Registry Explorer
 

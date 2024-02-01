@@ -1,7 +1,8 @@
 # Security/4625: An account failed to log on 
-This event indicates an account has failed to authenticate to the endpoint. It is logged on the **destination** endpoint. It closely mirrors the information logged for the event [4624: An account was successfully logged on](/account/evtx-4624-successful-logon.md).
+This logon event indicates an account has failed to authenticate to the endpoint. It is logged on the **destination** endpoint. It closely mirrors the information logged for the event [4624: An account was successfully logged on](/account/evtx-4624-successful-logon.md).
 
-This event is a **Logon Event**, meaning it is logged on the system that is being authenticated to. 
+> [!NOTE]
+> This event is a **Logon Event**, meaning it is logged on the system that is being authenticated to. 
 
 ### Behavioral Indications
  - [x] Behavioral - Lateral Movement (TA0008)
@@ -32,7 +33,8 @@ The following fields may be interpreted from this artifact:
 | Account For Which Logon Failed / Account Name | Name of account that authenticated |
 | Network Information / Source Network Address | IP address of source endpoint |
 
-**NOTE:** The SID may be translated by event viewer. To view the raw SID, look at the event's XML data, which has the following fields available:
+> [!NOTE]
+> The SID may be translated by event viewer. To view the raw SID, look at the event's XML data, which has the following fields available:
 
 | XML Field Name | Interpretation |
 | - | - |

@@ -8,7 +8,6 @@ The USN Journal is an artifact present on NTFS volumes that functions as the fil
  - [x] File - Path
  - [x] File - Size
 
-
 ## Operating System Availability
  - NTFS Volumes
 
@@ -61,7 +60,8 @@ In this example, we created a file `test.txt`, modified its contents, and then d
 
 In this example, we first see that a new text file is created, called `New Text Document.txt` (`FileCreate`), indicating that it was likely created by right-clicking in Explorer. It is then renamed to `test.txt` (`RenameNewName`). Afterwards, its contents are modified (`DataExtend`). The file is then "deleted," being sent to the recycle bin. This is evidenced by the creation of the `$I` and `$R` files. As expected, the `$R4NTH4K.txt` file should contain the full contents of the deleted file, and we see that Windows simply renames the original file to this. 
 
-> ℹ️ More information on [Recycle Bin $I/$R Files](/file-activity/recycle-bin-files.md)
+> [!NOTE]
+> More information on [Recycle Bin $I/$R Files](/file-activity/recycle-bin-files.md)
 
 <sup><sub>This example was produced on Windows 10, Version 10.0.19044 Build 19044</sub></sup>
 

@@ -37,5 +37,5 @@ Within the SAM hive, the registry key located at `SAM\Domains\Accounts\Users` wi
  - Last Failed Login Time
  - Last Password Change Time
 
-## Caveats
-If the account in question is authenticating using Microsoft Live, the Logon Count will be 0.
+> [!NOTE]
+> If the account in question is authenticating using Microsoft Live, the Logon Count will be 0.

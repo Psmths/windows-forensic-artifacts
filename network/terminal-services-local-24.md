@@ -1,7 +1,8 @@
 # Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/24: Session has been disconnected
 This event, logged to the Microsoft-Windows-TerminalServices-LocalSessionManager/Operational channel, is logged when an RDP connection is terminated. 
 
-This event is logged on the **destination** sytem, that is, the system which received an RDP connection event, and provides information on the source of the connection. 
+> [!IMPORTANT]  
+> This event is logged on the **destination** endpoint. 
 
 ### Behavioral Indications
  - [x] Behavioral - Lateral Movement (TA0008)

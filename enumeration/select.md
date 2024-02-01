@@ -3,7 +3,6 @@ The `Select` registry key provides the number of the system's `CurrentControlSet
 
 In general, `ControlSet001` will be the most recent Control Set that has been booted under, whereas `ControlSet002` functions as a backup of a known-good state for the Control Set. 
 
-
 ### Analysis Value
  - [x] Endpoint - Enumeration
 

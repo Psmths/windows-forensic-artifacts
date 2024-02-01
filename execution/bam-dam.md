@@ -39,14 +39,18 @@ The Background Activity Monitor and Desktop Activity Montior registry artifacts 
 - BAM: `SYSTEM\{CURRENT_CONTROL_SET}\Services\bam\UserSettings\{USER_SID}`
 - DAM: `SYSTEM\{CURRENT_CONTROL_SET}\Services\dam\UserSettings\{USER_SID}`
 
-> ℹ️ More information on [{CURRENT_CONTROL_SET}](/enumeration/select.md)
+> [!NOTE]
+> More information on [{CURRENT_CONTROL_SET}](/enumeration/select.md)
 
 
 ## Artifact Parsers
  - RegistryExplorer (Eric Zimmerman)
 
 ## Artifact Interpretation
-The `Execution Time` as seen in RegistryExplorer represents the most recent time of execution for the binary in UTC. **Based on testing, this execution time is written upon process creation, and again on termination.** The `Program` field represents the full path the the binary. 
+The `Execution Time` as seen in RegistryExplorer represents the most recent time of execution for the binary in UTC. The `Program` field represents the full path the the binary. 
+
+> [!NOTE]
+> Based on testing, this execution time is written upon process creation, and again on termination.
 
 In the event that you are parsing or interpreting this artifact manually, the following CyberChef recipe can be used to convert Windows FILETIME timestamps to a date and time:
 

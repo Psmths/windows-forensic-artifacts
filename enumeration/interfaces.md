@@ -28,9 +28,11 @@ The `Interfaces` registry key will provide information regarding the systems att
 - File: `%SystemRoot%\System32\config\SYSTEM`
 - Key: `SYSTEM\{CURRENT_CONTROL_SET}\Services\Tcpip\Parameters\Interfaces\{INTERFACE_GUID}`
 
-> ℹ️ More information on [{CURRENT_CONTROL_SET}](/enumeration/select.md)
+> [!NOTE]
+> More information on [{CURRENT_CONTROL_SET}](/enumeration/select.md)
 
-> ℹ️ More information on [{INTERFACE_GUID}](/enumeration/network-cards.md)
+> [!NOTE]
+> More information on [{INTERFACE_GUID}](/enumeration/network-cards.md)
 
 ## Artifact Parsers
  - RegistryExplorer (Eric Zimmerman)

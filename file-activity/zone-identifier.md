@@ -1,7 +1,8 @@
 # NTFS Zone Identifiers
 Zone Identifiers are an artifact that reside in alternate data streams within an NTFS volume. This artifact is used to determine the origins of a file on a disk.
 
-⚠️ In Windows XP, only executable files will be tagged with a Zone Identifier. Later operating systems will tag all files.
+> [!NOTE]
+> In Windows XP, only executable files will be tagged with a Zone Identifier. Later operating systems will tag all files.
 
 ### Analysis Value
  - [x] File - Creation
@@ -24,7 +25,6 @@ This artifact is present in an alternate data stream (ADS) of the file of intere
  - MFTEcmd
 
 ## Artifact Interpretation
-
 The following Zone IDs are available:
 
 | Zone ID | Description |
@@ -49,5 +49,5 @@ HostUrl=http://example.com/example.exe
 
 In this example, in addition to the Zone Identifier being present, the associated URLs are also noted as well. This behavior is dependent on the application used to download the file. Browsers such as Chrome and Microsoft Edge will append this information to the Zone.Identifier file.
 
-## Caveats
-Some software does not assign Zone Identifiers to files that originate from the internet, such as git. Other software, such as 7zip, may or may not assign Zone Identifiers. 
+> [!IMPORTANT]
+> Some software does not assign Zone Identifiers to files that originate from the internet, such as git. Other software, such as 7zip, may or may not assign Zone Identifiers. 

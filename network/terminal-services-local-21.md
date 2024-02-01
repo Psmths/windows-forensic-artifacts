@@ -1,7 +1,8 @@
 # Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/21: Session logon succeeded
 This event, logged to the Microsoft-Windows-TerminalServices-LocalSessionManager/Operational channel, is logged when an RDP connection is successfully authenticated. 
 
-This event is logged on the **destination** sytem, that is, the system which received an RDP connection event, and provides information on the source of the connection. 
+> [!IMPORTANT]  
+> This event is logged on the **destination** endpoint. 
 
 ### Behavioral Indications
  - [x] Behavioral - Lateral Movement (TA0008)
@@ -28,7 +29,6 @@ This event is logged on the **destination** sytem, that is, the system which rec
 - `%SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-TerminalServices-LocalSessionManager%4Operational.evtx`
 
 ## Artifact Interpretation
-
 ### Account - Username
 This event logs only the username and domain that the RDP connection was attempting to establish a session for. It is located in the XML path `UserData\EventXML\User`.
 

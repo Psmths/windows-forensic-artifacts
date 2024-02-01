@@ -1,9 +1,11 @@
 # Security/4778: Session reconnected
 This event, logged to the Security channel, is logged when an existing RDP terminal session is connected to, but it may also be logged as a result of Fast User Switching. Fast User Switching is a feature in newer versions of Windows (Vista+) that allows multiple users to be logged in to a single system concurrently. 
 
-This event is particularly important for a forensic analysis because, for RDP activity, it is logged on the **destination** endpoint and provides information about the source of the RDP activity. 
+> [!IMPORTANT]  
+> This event is logged on the **destination** endpoint. 
 
-⚠️ In windows XP, the corresponding Event ID is `682`.
+> [!NOTE]
+> In windows XP, the corresponding Event ID is `682`.
 
 ### Behavioral Indications
  - [x] Behavioral - Lateral Movement (TA0008)

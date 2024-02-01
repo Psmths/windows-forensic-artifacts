@@ -1,5 +1,8 @@
 # TerminalServices-RDPClient/Operational/1024: RDP ClientActiveX is trying to connect to the server
-This event, logged to the TerminalServices-RDPClient/Operational channel, is logged when an RDP session is attempted to a remote endpoint. This event is unique as it is logged on the **source** endpoint. 
+This event, logged to the TerminalServices-RDPClient/Operational channel, is logged when an RDP session is attempted to a remote endpoint. 
+
+> [!IMPORTANT]  
+> This event is logged on the **source** endpoint. 
 
 ### Behavioral Indications
  - [x] Behavioral - Lateral Movement (TA0008)

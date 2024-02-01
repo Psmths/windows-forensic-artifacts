@@ -7,7 +7,6 @@ The Mast File Table (MFT) is a forensic artifact present on NTFS volumes that ma
  - [x] File - Path
  - [x] File - Size
 
-
 ## Operating System Availability
  - NTFS Volumes
 

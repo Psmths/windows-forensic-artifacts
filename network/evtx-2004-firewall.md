@@ -1,7 +1,8 @@
 # Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2004: Firewall Rule Added
 This event indicates that a new firewall rule has been added to the Windows Firewall.
 
-In recent builds of Windows 11, this event has been replaced by a new event ID, [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2071: Firewall Rule Added](/network/evtx-2071-firewall-windows-11.md).
+> [!NOTE]
+> In recent builds of Windows 11, this event has been replaced by a new event ID, [Microsoft-Windows-Windows Firewall With Advanced Security/Firewall/2071: Firewall Rule Added](/network/evtx-2071-firewall-windows-11.md).
 
 ### Analysis Value
  - [x] Account - Security Identifier (SID)
@@ -11,7 +12,6 @@ In recent builds of Windows 11, this event has been replaced by a new event ID, 
  - [x] Execution - Evidence of Execution
  - [x] Network Activity - Firewall Activity
 
-
 ## Operating System Availability
  - [x] Windows 11 (⚠️ Event ID changed to 2071)
  - [x] Windows 10
@@ -19,12 +19,10 @@ In recent builds of Windows 11, this event has been replaced by a new event ID, 
  - [x] Windows 7
  - [x] Windows Vista
 
-
 ## Artifact Location(s)
 - `%SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Windows Firewall With Advanced Security%4Firewall.evtx`
 
 ## Artifact Interpretation
-
 ### Account - Security Identifier (SID)
 The `System/Security/UserID` and `EventData/ModifyingUser` fields of this event provides the [Security Identifier (SID)](/README.md/#account---security-identifier-sid) of the account that added the new firewall rule.
 

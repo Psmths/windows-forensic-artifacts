@@ -1,7 +1,6 @@
 # ComputerName Registry Key
 The `ComputerName` registry key will provide the Computer Name of the endpoint. 
 
-
 ### Analysis Value
  - [x] Endpoint - Enumeration
 
@@ -29,7 +28,8 @@ The `ComputerName` registry key will provide the Computer Name of the endpoint.
 - File: `%SystemRoot%\System32\config\SYSTEM`
 - Key: `SYSTEM\{CURRENT_CONTROL_SET}\Control\ComputerName\ComputerName`
 
-> ℹ️ More information on [{CURRENT_CONTROL_SET}](/enumeration/select.md)
+> [!NOTE]
+> More information on [{CURRENT_CONTROL_SET}](/enumeration/select.md)
 
 ## Artifact Parsers
  - RegistryExplorer (Eric Zimmerman)

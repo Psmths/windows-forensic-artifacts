@@ -1,7 +1,6 @@
 # TimeZoneInformation Registry Key
 The `TimeZoneInformation` registry key provides the current system time zone. This is useful for consolidating separate artifacts found on a system to align with one time zone, such as UTC. 
 
-
 ### Analysis Value
  - [x] Endpoint - Enumeration
 
@@ -29,7 +28,8 @@ The `TimeZoneInformation` registry key provides the current system time zone. Th
 - File: `%SystemRoot%\System32\config\SYSTEM`
 - Key: `SYSTEM\{CURRENT_CONTROL_SET}\Control\TimeZoneInformation`
 
-> ℹ️ More information on [{CURRENT_CONTROL_SET}](/enumeration/select.md)
+> [!NOTE]
+> More information on [{CURRENT_CONTROL_SET}](/enumeration/select.md)
 
 ## Artifact Parsers
  - RegistryExplorer (Eric Zimmerman)

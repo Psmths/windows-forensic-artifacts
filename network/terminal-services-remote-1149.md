@@ -1,5 +1,11 @@
 # Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational/1149
-This event, logged to the Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational channel, is logged when an RDP connection is established. **It does not indicate a successfully authenticated RDP session has taken place.** This event is logged on the **destination** sytem, that is, the system which received an RDP connection event, and provides information on the source of the connection. 
+This event, logged to the Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational channel, is logged when an RDP connection is established. 
+
+> [!WARNING]
+> This event does not indicate a successfully authenticated RDP session has taken place, only that the channel has been established for an RDP attempt to be made.
+
+> [!IMPORTANT]  
+> This event is logged on the **destination** endpoint. 
 
 ### Behavioral Indications
  - [x] Behavioral - Lateral Movement (TA0008)
@@ -26,7 +32,6 @@ This event, logged to the Microsoft-Windows-TerminalServices-RemoteConnectionMan
 - `%SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-TerminalServices-RemoteConnectionManager%4Operational.evtx`
 
 ## Artifact Interpretation
-
 ### Account - Username
 This event logs only the username that the RDP connection was attempting to establish a session for. It is located in the XML path `UserData\EventXML\Param1`.
 

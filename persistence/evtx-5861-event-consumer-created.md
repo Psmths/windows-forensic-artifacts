@@ -24,7 +24,6 @@ Because new WMI event consumers on Windows enpoints are rather rare, this artifa
  - `ActiveScriptEventConsumer`
 
 ## Analysis Tips
-
 ### Proximate Execution
 Depending on the method an attacker has used to install a WMI event consumer, they will either have run `mofcomp.exe` or powershell. Consider cross-referencing this finding with artifacts that provide evidence of execution and searching for such activity. 
 
