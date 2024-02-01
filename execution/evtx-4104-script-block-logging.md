@@ -41,3 +41,33 @@ The `Creator Process ID` field may be cross-referenced with [Security/4688: A ne
 This event is only logged the first time that a script is executed.
 
 This event will not capture the resultant output of an executed script as module logging does. 
+
+## Example
+
+```
+- <Event xmlns="http://schemas.microsoft.com/win/2004/08/events/event">
+- <System>
+  <Provider Name="Microsoft-Windows-PowerShell" Guid="{a0c1853b-5c40-4b15-8766-3cf1c58f985a}" /> 
+  <EventID>4104</EventID> 
+  <Version>1</Version> 
+  <Level>5</Level> 
+  <Task>2</Task> 
+  <Opcode>15</Opcode> 
+  <Keywords>0x0</Keywords> 
+  <TimeCreated SystemTime="2023-11-06T20:24:01.8911267Z" /> 
+  <EventRecordID>194</EventRecordID> 
+  <Correlation ActivityID="{7af08a74-10ed-0003-e08b-f07aed10da01}" /> 
+  <Execution ProcessID="4328" ThreadID="4600" /> 
+  <Channel>Microsoft-Windows-PowerShell/Operational</Channel> 
+  <Computer>DESKTOP-TUMSOE7</Computer> 
+  <Security UserID="S-1-5-21-1392459375-2353216063-1350843065-1001" /> 
+  </System>
+- <EventData>
+  <Data Name="MessageNumber">1</Data> 
+  <Data Name="MessageTotal">1</Data> 
+  <Data Name="ScriptBlockText">Invoke-WebRequest -Uri "https://example.com" -OutFile "C:\Temp\test.exe"</Data> 
+  <Data Name="ScriptBlockId">808e4d85-977e-4418-9218-59dd2aa1b0ef</Data> 
+  <Data Name="Path" /> 
+  </EventData>
+  </Event>
+```
