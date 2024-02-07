@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/github/license/Psmths/windows-forensic-artifacts.svg">
   <img src="https://www.repostatus.org/badges/latest/wip.svg">
-  <img src="https://img.shields.io/badge/Forensic%20Artifacts-56-brightgreen">
+  <img src="https://img.shields.io/badge/Forensic%20Artifacts-57-brightgreen">
 </p>
 
 This repository provides an in-depth guide to the various Windows forensic artifacts that can be utilized when conducting an investigation. Detailed information is provided for each artifact, including its location, available parsing tools, and instructions for interpreting the results of a forensic data extraction. Furthermore, the repository seeks to provide a comprehensive resource for those seeking to expand their understanding of Windows forensics artifacts and how to properly leverage them during a forensic investigation.
@@ -306,6 +306,7 @@ Network activity artifacts may provide the following information:
  - [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/21: Session logon succeeded](network/terminal-services-local-21.md)
  - [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/24: Session has been disconnected](network/terminal-services-local-24.md)
  - [RDP Persistent Bitmap Cache](network/rdp-bitmap-cache.md)
+ - [Terminal Server Client Registry Keys](network/terminal-server-client-keys.md)
 
 ### Network Activity - Destination Identification
 > Can the destination for this activity be identified?
