@@ -332,7 +332,7 @@ Network activity artifacts may provide the following information:
 
 ### Network Activity - Browser Activity
 > Artifacts supporting general forensic analysis for browser activity on an endpoint
- - [places.sqlite](network/places-sqlite.md)
+ - [places.sqlite](browser/firefox-places-sqlite.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
