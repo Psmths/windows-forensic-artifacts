@@ -15,20 +15,39 @@ The `Run` and `RunOnce` keys specify what programs will start during a logon eve
  - [x] Windows Vista
  - [x] Windows XP
 
-## Artifact File Location(s)
-#### NTUSER.dat
-- `%UserProfile%\NTUSER.dat` (Windows Vista - 10)
-- `C:\Documents and Settings\{username}\NTUSER.dat` (Windows XP)
+## Artifact Location(s)
+> [!NOTE]
+> The `Run` and `RunOnce` keys may be located in two distinct locations. Startup items for individual users will be located in their personal registry hive, NTUSER.dat, whereas startup items applying to all users of a system will be located in the SOFTWARE registry hive.
 
-#### SOFTWARE
- - `%SystemRoot%\System32\Config\SOFTWARE`
+### NTUSER.dat Hive
+🔋 Live System:
+- `NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Run`
+- `NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\RunOnce`
+
+🔌 Offline system:
+- File: `%UserProfile%\NTUSER.dat` (Windows Vista - 10)
+- File: `C:\Documents and Settings\{USER_NAME}\NTUSER.dat` (Windows XP)
+- Key: `SOFTWARE\Microsoft\Windows\CurrentVersion\Run`
+- Key: `SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce`
+
+### SOFTWARE Hive
+🔋 Live System:
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce`
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\Explorer\Run`
+
+🔌 Offline system:
+- File: `%SystemRoot%\System32\Config\SOFTWARE`
+- Key: `SOFTWARE\Microsoft\Windows\CurrentVersion\Run`
+- Key: `SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce`
+- Key: `SOFTWARE\Microsoft\Windows\CurrentVersion\policies\Explorer\Run`
 
 ## Artifact Parsers
  - RegistryExplorer (Eric Zimmerman)
  - AutoRuns (Sysinternals)
 
 ## Artifact Interpretation
-### NTUSER.DAT
+### NTUSER.DAT Location
 The following keys will contain full paths to the executables that will start on **logon** for the account that owns this particular `NTUSER.DAT` hive:
 
 - `NTUSER.DAT\Software\Microsoft\Windows\CurrentVersion\Run`
@@ -39,7 +58,7 @@ Disabled autoruns will appear in a sub-key named "AutorunsDisabled."
 > [!NOTE]
 > On a live system, the HKEY_CURRENT_USER registry hive is the loaded NTUSER.dat hive.
 
-### SOFTWARE
+### SOFTWARE Location
 The following keys will contain full paths to the executables that will start on **logon** for any user on the system:
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run`
 - `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\RunOnce`
