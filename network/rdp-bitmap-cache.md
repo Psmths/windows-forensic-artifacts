@@ -1,6 +1,9 @@
 # RDP Persistent Bitmap Cache
 The persistent bitmap cache is a feature of Microsoft Remote Desktop's GDI Acceleration Extension that stores small chunks of images that were present during an RDP session. The goal is to reduce the bandwidth used by a remote desktop connection to increase performance at the cost of storage. As a forensic artifact, these bitmaps are valuable as they provide, to some extent, visual history of RDP sessions that have taken place from a system.
 
+### Behavioral Indications
+ - [x] Behavioral - Lateral Movement (TA0008)
+
 ### Analysis Value
  - [x] Network - Evidence of Network Activity
 

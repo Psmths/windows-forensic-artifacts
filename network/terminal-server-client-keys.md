@@ -4,6 +4,9 @@ These registry keys store information regarding options selected by a user durin
  - Ignoring an untrusted certificate
  - Username used to log in to the remote system via RDP
 
+### Behavioral Indications
+ - [x] Behavioral - Lateral Movement (TA0008)
+
 ### Analysis Value
  - [x] Network - Evidence of Network Activity
 

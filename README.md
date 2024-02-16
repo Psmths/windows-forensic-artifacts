@@ -383,7 +383,7 @@ Network activity artifacts may provide the following information:
 | [ComputerName](enumeration/computer-name.md) | <ul><li>System Name</li></ul> |
 | [Interfaces](enumeration/interfaces.md) | <ul><li>IP configuration</li></ul> |
 | [Network Cards](enumeration/network-cards.md) | <ul><li>Network Adapter Enumeration</li></ul> |
-
+| [Group Membership Registry Key](account/group-membership-key.md) | <ul><li>Local account group membership enumeration</li></ul> |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -402,16 +402,24 @@ The below artifacts are related to [execution](https://attack.mitre.org/tactics/
 
 The below artifacts may prove useful in identifying instances of execution on an endpoint:
 
-| Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
-| - | - | - | - | - | - | - | - |
-| Filesystem | [Prefetch](execution/prefetch.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Eventlog | [Security/4688: A new process has been created](execution/evtx-4688-process-created.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Registry/Memory | [ShimCache](execution/shimcache.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Registry | [AmCache.hve](execution/amcache.md) | ✅ | ✅ | ✅ | ⚠️ | ❌ | ❌ |
-| Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Registry/Filesystem | [SRUM Database](execution/srum-db.md) | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Filesystem | [Program Compatibility Assistant (PCA) - PcaAppLaunchDic.txt](execution/program-compatibility-assistant.md) | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| Arifact Type | Artifact |
+| - | - |
+| Filesystem | [Prefetch](execution/prefetch.md) |
+| Eventlog | [Security/4688: A new process has been created](execution/evtx-4688-process-created.md) |
+| Registry/Memory | [ShimCache](execution/shimcache.md) |
+| Registry | [AmCache.hve](execution/amcache.md) |
+| Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) |
+| Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) |
+| Registry/Filesystem | [SRUM Database](execution/srum-db.md) |
+| Filesystem | [Program Compatibility Assistant (PCA) - PcaAppLaunchDic.txt](execution/program-compatibility-assistant.md) |
+| Registry | [Background Activity Montitor](execution/bam-dam.md) |
+| Filesystem | [Detection History Files](file-activity/detectionhistory.md) |
+| Filesystem | [Program Compatibility Assistant (PCA) - PcaAppLaunchDic.txt](execution/program-compatibility-assistant.md) |
+| Registry | [Tracing Registry Keys](network/tracing-keys.md) |
+| Eventlog | [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md) |
+| Filesystem | [AutomaticDestinations Jumplists](file-activity/automatic-destinations.md) |
+| Filesystem | [Windows Error Reporting Files (.WER)](execution/wer-files.md) |
+
 
 ## TA0003 Persistence
 The below artifacts are related to [persistence activities](https://attack.mitre.org/tactics/TA0003/). Persistence is defined by MITRE as:
@@ -420,17 +428,19 @@ The below artifacts are related to [persistence activities](https://attack.mitre
 
 The below artifacts may prove useful in identifying instances of persistence on an endpoint:
 
-| Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
-| - | - | - | - | - | - | - | - |
-| Registry | [Run/RunOnce Keys](persistence/reg-run-runonce.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| Eventlog | [Security/4720: A user account was created](account/evtx-4720-account-created.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
-| Eventlog | [WMI-Activity/Operational/5861: New WMI Event Consumer](persistence/evtx-5861-event-consumer-created.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| Registry | [Image File Execution Options](persistence/image-file-execution-options.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Eventlog | [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| Registry | [Services Registry Keys](persistence/registry-services.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
-| Eventlog | [Security/7045: Service Installed](persistence/evtx-7045-service-install.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
+| Arifact Type | Artifact |
+| - | - |
+| Registry | [Run/RunOnce Keys](persistence/reg-run-runonce.md) |
+| Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) |
+| Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) |
+| Eventlog | [Security/4720: A user account was created](account/evtx-4720-account-created.md) |
+| Eventlog | [WMI-Activity/Operational/5861: New WMI Event Consumer](persistence/evtx-5861-event-consumer-created.md) |
+| Registry | [Image File Execution Options](persistence/image-file-execution-options.md) |
+| Eventlog | [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md) |
+| Registry | [Services Registry Keys](persistence/registry-services.md) |
+| Eventlog | [Security/7045: Service Installed](persistence/evtx-7045-service-install.md) |
+| Registry | [Image File Execution Options](persistence/image-file-execution-options.md) |
+| Eventlog | [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md) |
 
 ## TA0008 Lateral Movement
 The below artifacts are related to [lateral movement activities](https://attack.mitre.org/tactics/TA0008/). Lateral movement is defined by MITRE as:
@@ -439,16 +449,19 @@ The below artifacts are related to [lateral movement activities](https://attack.
 
 The below artifacts may prove useful in identifying instances of lateral movement to or from an endpoint:
 
-| Arifact Type | Artifact | 11 | 10 | 8 | 7 | Vista | XP |
-| - | - | - | - | - | - | - | - |
-| Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| Eventlog | [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
-| Eventlog | [TerminalServices-RDPClient/Operational/1024: RDP ClientActiveX is trying to connect to the server](network/evtx-1024-rdp-activex.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ |
-| Eventlog | [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
-| Eventlog | [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
-| Eventlog | [Security/4625: An account failed to log on](account/evtx-4625-failed-logon.md) | ✅ | ✅ | ✅ | ✅ | ✅ | ⚠️ |
-
-
+| Arifact Type | Artifact |
+| - | - |
+| Eventlog | [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md) |
+| Filesystem | [Scheduled Task Files](persistence/task-scheduler-files.md) |
+| Eventlog | [Security/4778: Session reconnected](network/evtx-4778-session-reconnected.md) |
+| Eventlog | [TerminalServices-RDPClient/Operational/1024: RDP ClientActiveX is trying to connect to the server](network/evtx-1024-rdp-activex.md) |
+| Eventlog | [Security/4648: Logon using explicit credentials](account/evtx-4648-explicit-credentials.md) |
+| Eventlog | [Security/4624: An account was successfully logged on](account/evtx-4624-successful-logon.md) |
+| Eventlog | [Security/4625: An account failed to log on](account/evtx-4625-failed-logon.md) |
+| Filesystem | [RDP Persistent Bitmap Cache](network/rdp-bitmap-cache.md) |
+| Registry | [Terminal Server Client Registry Keys](network/terminal-server-client-keys.md) |
+| Eventlog | [Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational/1149](network/terminal-services-remote-1149.md) |
+| Eventlog | [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/21: Session logon succeeded](network/terminal-services-local-21.md) |
+| Eventlog | [Microsoft-Windows-TerminalServices-LocalSessionManager/Operational/24: Session has been disconnected](network/terminal-services-local-24.md) |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

@@ -3,6 +3,9 @@ AutomaticDestinations are jumplist files created by Windows when an application 
 
 Jumplists are used to store common/recent locations and "tasks" on the taskbar for individual programs. From a forensic perspective they are useful in identifying files and folders that were created or accessed by users. 
 
+### Behavioral Indications
+ - [x] Behavioral - Execution (TA0002)
+ 
 ### Analysis Value
  - [x] Execution - First Executed ⚠️
  - [x] Execution - Last Executed ⚠️

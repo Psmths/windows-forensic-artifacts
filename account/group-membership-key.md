@@ -3,6 +3,7 @@ The Group Membership Registry Key is a registry key that stores information abou
 
 ### Analysis Value
  - [x] Account - Group Membership
+ - [x] Endpoint - Enumeration
 
 ## Operating System Availability
  - [x] Windows 11

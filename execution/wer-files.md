@@ -1,6 +1,9 @@
 # Windows Error Reporting Files (.WER)
 Windows Error Reporting is a component of Windows that allows for users to send crash reports to Microsoft. Windows Error Reporting files provide information about the crash and are useful to a forensic analysis to provide evidence of execution.
 
+### Behavioral Indications
+ - [x] Behavioral - Execution (TA0002)
+ 
 ### Analysis Value
  - [x] Execution - Evidence of Execution
  - [x] File - Path

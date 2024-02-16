@@ -1,6 +1,9 @@
 # Tracing Registry Keys
 Tracing registry keys can be used to indicate that a program has initiated a network connection leveraging the Windows Remote Access Server (RAS) through the `rasapi32.dll` and `rasman.dll` libraries.
 
+### Behavioral Indications
+ - [x] Behavioral - Execution (TA0002)
+ 
 ### Analysis Value
  - [x] Execution - Evidence of Execution
  - [x] Network - Evidence of Network Activity
