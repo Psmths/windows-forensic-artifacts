@@ -1,5 +1,5 @@
 # Amcache.hve
-The Amcache hive stores metadata regarding executables/installed programs present on an endpoint. Typically, only those that have been executed (or executables associated with installed software) will appear in this registry hive. This artifact has seen numerous revisions, and it is therefore important to first gather information regarding the specific version of Windows that you are analyzing before proceeding with Amcache analysis.
+The Amcache hive stores metadata regarding executables/installed programs present on an endpoint. Typically, only those that have been executed (or executables associated with installed software) will appear in this registry hive. This artifact has seen numerous revisions, and it is therefore important to first gather information regarding the specific version of Windows that you are analyzing before proceeding with Amcache analysis. You can find a system's OS version and build number information in the [CurrentVersion](enumeration/current-version.md) registry key, using the `CurrentMajorVersionNumber`, `CurrentMinorVersionNumber`, and `CurrentBuildNumber` values.
 
 ### Behavioral Indications
  - [x] Behavioral - Execution (TA0002)
