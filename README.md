@@ -48,7 +48,7 @@ This repository provides an in-depth guide to the various Windows forensic artif
    * [Browser Activity](#browser-activity)
      - [History](#browser-activity---history)
      - [Bookmarks](#browser-activity---bookmarks)
- - [User Activity](#user-activity)
+   * [User Activity](#user-activity)
  - [System Enumeration Artifacts](#enumeration-artifacts)
  - [Artifact Behavioral Mappings](#artifact-behavioral-mappings) 
    * [TA0002 - Execution](#ta0002-execution)
