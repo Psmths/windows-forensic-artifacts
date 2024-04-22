@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/github/license/Psmths/windows-forensic-artifacts.svg">
   <img src="https://www.repostatus.org/badges/latest/wip.svg">
-  <img src="https://img.shields.io/badge/Forensic%20Artifacts-57-brightgreen">
+  <img src="https://img.shields.io/badge/Forensic%20Artifacts-64-brightgreen">
 </p>
 
 This repository provides an in-depth guide to the various Windows forensic artifacts that can be utilized when conducting an investigation. Detailed information is provided for each artifact, including its location, available parsing tools, and instructions for interpreting the results of a forensic data extraction. Furthermore, the repository seeks to provide a comprehensive resource for those seeking to expand their understanding of Windows forensics artifacts and how to properly leverage them during a forensic investigation.
@@ -49,6 +49,7 @@ This repository provides an in-depth guide to the various Windows forensic artif
      - [History](#browser-activity---history)
      - [Bookmarks](#browser-activity---bookmarks)
    * [User Activity](#user-activity)
+   * [Group Policy Activity](#group-policy-activity)
  - [System Enumeration Artifacts](#enumeration-artifacts)
  - [Artifact Behavioral Mappings](#artifact-behavioral-mappings) 
    * [TA0002 - Execution](#ta0002-execution)
@@ -369,6 +370,18 @@ Network activity artifacts may provide the following information:
 # User Activity
 > These miscellaneous artifacts may provide an analyst information regarding certain actions that a user took on a system.
  - [WordWheelQuery](/user-activity/wordwheelquery.md)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# Group Policy Activity
+> These miscellaneous artifacts may provide an analyst information regarding Group Policy Object (GPO) activity on an Active Directory domain.
+ - [Microsoft-Windows-GroupPolicy/Operational/4005: Starting manual processing of policy for user](/group-policy/evtx-4005-user-manual-gpo-processing-start.md)
+ - [Microsoft-Windows-GroupPolicy/Operational/4001: Starting user logon Policy processing](/group-policy/evtx-4001-user-logon-gpo-processing-start.md)
+ - [System/1503: The Group Policy settings for the user were processed successfully](/group-policy/evtx-1503-user-gpo-success.md)
+ - [Microsoft-Windows-GroupPolicy/Operational/4004: Starting manual processing of policy for computer](/group-policy/evtx-4004-computer-manual-gpo-processing-start.md)
+ - [Microsoft-Windows-GroupPolicy/Operational/4000: Starting computer boot policy processing](/group-policy/evtx-4000-computer-boot-gpo-processing-start.md)
+ - [System/1502: The Group Policy settings for the computer were processed successfully](/group-policy/evtx-1502-computer-gpo-success.md)
+ - [Microsoft-Windows-GroupPolicy/Operational/5312: List of applicable Group Policy objects](/group-policy/evtx-5312-list-of-gpo.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
