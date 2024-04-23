@@ -110,6 +110,7 @@ Execution artifacts may provide the following information:
  - [TaskScheduler/Operational Log](persistence/task-scheduler-operational-log.md)
  - [Detection History Files](file-activity/detectionhistory.md)
  - [Microsoft-Windows-Shell-Core/Operational/9707: Command Execution Started](execution/evtx-9707-shell-core.md)
+- [winget Activity](/user-activity/winget.md)
 
 ### Execution - First Executed
 >When was this executable furst run?

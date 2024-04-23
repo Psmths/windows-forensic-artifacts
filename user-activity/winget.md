@@ -2,6 +2,7 @@
 The Windows Package Manager utility, also known as winget, is a utility available on Windows 10/11 that allows for the quick installation of applications through the command line. It is functionally a Windows App, and is therefore installed under `C:\Program Files\WindowsApps`. The per-user application data is found under `%LOCALAPPDATA%\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe`.
 
 ### Analysis Value
+ - [x] Execution - Command Line Options
  - [x] User Activity
 
 ## Operating System Availability
@@ -9,15 +10,16 @@ The Windows Package Manager utility, also known as winget, is a utility availabl
  - [x] Windows 10
 
 ## Artifact Location(s)
-- `%LOCALAPPDATA%\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe`
+- `%LOCALAPPDATA%\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\DiagOutputDir\*`
+- `%LOCALAPPDATA%\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\Microsoft.Winget.Source_8wekyb3d8bbwe\installed.db`
 
 ## Artifact Interpretation
 There are two great locations for analyzing winget activity, the winget logs files and the winget user database.
 
-### Log Files
+### DiagOutputDir Log Files
 The winget log files are found under `%LOCALAPPDATA%\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\DiagOutputDir`. These log files provide a complete terminal input/output log of any winget command that was issued. This will include a full timestamp of the command, the winget version, as well as the command and any arguments passed to it.
 
-### User Database
+### installed.db User Database
 The winget user database is located at `%LOCALAPPDATA%\Packages\Microsoft.DesktopAppInstaller_8wekyb3d8bbwe\LocalState\Microsoft.Winget.Source_8wekyb3d8bbwe\installed.db`. This is an SQLite database that contains information on the applications that are installed. The Date Modified timestamp of this SQLite file represents that last time an app was installed, updated, or removed.
 
 There are a handful of tables within this database. Two notable ones are the `metadata` and `names` tables, the first of which contains the last write timestamp of the database, and the second of which contains the names of all the applications installed through winget.
