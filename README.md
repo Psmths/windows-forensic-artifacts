@@ -3,7 +3,7 @@
 <p align="center">
   <img src="https://img.shields.io/github/license/Psmths/windows-forensic-artifacts.svg">
   <img src="https://www.repostatus.org/badges/latest/wip.svg">
-  <img src="https://img.shields.io/badge/Forensic%20Artifacts-65-brightgreen">
+  <img src="https://img.shields.io/badge/Forensic%20Artifacts-66-brightgreen">
 </p>
 
 This repository provides an in-depth guide to the various Windows forensic artifacts that can be utilized when conducting an investigation. Detailed information is provided for each artifact, including its location, available parsing tools, and instructions for interpreting the results of a forensic data extraction. Furthermore, the repository seeks to provide a comprehensive resource for those seeking to expand their understanding of Windows forensics artifacts and how to properly leverage them during a forensic investigation.
@@ -284,6 +284,7 @@ File activity artifacts may provide the following information:
  - [Security/5156: The Windows Filtering Platform has permitted a connection](network/evtx-5156-wfp-permitted.md)
  - [AutomaticDestinations Jumplists](file-activity/automatic-destinations.md)
  - [Windows Error Reporting Files (.WER)](execution/wer-files.md)
+ - [Microsoft Office TrustRecords Registry Keys](/file-activity/trustrecords-registry-key.md)
 
 ### File - Size
 > What is the file's size on disk?
