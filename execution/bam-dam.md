@@ -78,7 +78,12 @@ The 64-Bit FILETIME timestamp `60-9F-62-A8-FB-6C-D9-01` resolves to `Wed 12 Apri
 <sup><sub>This example was produced on Windows 10, Version 10.0.19044 Build 19044</sub></sup>
 
 ## Caveats
-Console applications that are launched through a command line interface will not have BAM/DAM entries. 
+> [!NOTE]  
+> Applications that reside on file shares or detachable media such as USB drives will not produce BAM/DAM entries. Additionally, not all entries are permanent and may be purged from the Background Activity Monitor registry keys on boot after approximately one week.
+
+> [!NOTE]  
+> Applications that have been deleted from disk may also be removed from the Background Activity Monitor registry keys upon boot, but this does not happen all the time or in all cases.
+
 
 ## Analysis Tips
 
@@ -89,6 +94,3 @@ Search for BAM entries for executables that reside in suspicious locations, such
  - Other user profile directories such as `Desktop` or `Documents`
  - `C:\Temp`
  - `C:\PerfLogs`
-
-## Example
-![Example Image](/media/examples/bam.png)
