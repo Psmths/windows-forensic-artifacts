@@ -48,8 +48,8 @@ The following logon types are commonly seen:
 
 | Logon Type | Description |
 | - | - |
-| 2 | **Interactive** (user loggong on through screen or virtual console) |
-| 3 | **Network** (RDP with NLA enabled) |
-| 7 | **Unlock** (RDP reconnects or interactive unlocking) |
-| 9 | **Explicit** credentials (`runas`) |
-| 10 | **Remote** Interactive (RDP with NLA diasbled) |
+| 2 | **Interactive** — User logged on locally at the computer's console. |
+| 3 | **Network** — User or computer accessed the computer over a network, such as through SMB. May also be associated with RDP-related authentication, but does not by itself identify an RDP logon. |
+| 7 | **Unlock** — User unlocked an existing workstation session. May appear in investigations involving RDP session reconnection or unlocking, but is not specific to RDP. |
+| 9 | **NewCredentials** — Caller cloned its current token and specified new credentials for outbound connections, such as with `runas /netonly`. |
+| 10 | **RemoteInteractive** — User logged on remotely using Remote Desktop Services (RDP) or Terminal Services. The clearest of these logon types for identifying an RDP interactive logon. |
