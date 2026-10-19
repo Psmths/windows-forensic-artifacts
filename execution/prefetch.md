@@ -20,14 +20,17 @@ In addition to providing evidence of execution, the prefetch artifact provides a
  - [x] Windows 7
  - [x] Windows Vista
  - [x] Windows XP
- - [x] Windows Server 2019 (⚠️ Requires manual enable)
- - [x] Windows Server 2016 (⚠️ Requires manual enable)
- - [x] Windows Server 2012 R2 (⚠️ Requires manual enable)
- - [x] Windows Server 2012 (⚠️ Requires manual enable)
- - [x] Windows Server 2008 R2 (⚠️ Requires manual enable)
- - [x] Windows Server 2008 (⚠️ Requires manual enable)
- - [x] Windows Server 2003 R2 (⚠️ Requires manual enable)
- - [x] Windows Server 2003 (⚠️ Requires manual enable)
+- [x] Windows Server 2019 (⚠️ Prefetch configuration and behavior may vary)
+- [x] Windows Server 2016 (⚠️ Prefetch configuration and behavior may vary)
+- [x] Windows Server 2012 R2 (⚠️ Prefetch configuration and behavior may vary)
+- [x] Windows Server 2012 (⚠️ Prefetch configuration and behavior may vary)
+- [x] Windows Server 2008 R2 (⚠️ Prefetch configuration and behavior may vary)
+- [x] Windows Server 2008 (⚠️ Prefetch configuration and behavior may vary)
+- [x] Windows Server 2003 R2 (⚠️ Prefetch configuration and behavior may vary)
+- [x] Windows Server 2003 (⚠️ Prefetch configuration and behavior may vary)
+
+> [!NOTE]
+> Prefetch availability, configuration, storage limits, file format, and recorded execution metadata vary by Windows version and system configuration. Do not assume Prefetch is enabled or populated on every system, particularly on Windows Server. Verify behavior on the specific version being investigated.
 
 ## Artifact Location(s)
 - `%SystemRoot%\Prefetch`
@@ -40,20 +43,20 @@ In addition to providing evidence of execution, the prefetch artifact provides a
 The name of the prefetch file takes on the format: `{executable_name}-{hash}.pf`, where `executable_name` is the name of the executable file that was run, and `hash` provides a hash of the executable's path and the command line used to launch the executable. If the same executable was run with different command line options, or the executable was moved and then run again, this essentially means there will be more than one prefetch entry for it. 
 
 ### Earliest Execution
-The creation timestamp of the prefetch file indicates the **potential** *earliest* time the executable was run on the system. This is because the amount of prefetch files stored on the system is limited, and older files are rotated out. 
+The creation timestamp of a Prefetch file may provide an indication of when the file was first created, but it is not definitive proof of the executable's first-ever execution on the system. Prefetch files can be deleted, recreated, or rotated out as new entries are generated. The creation timestamp may therefore reflect the creation or recreation of the artifact rather than the earliest execution of the application.
 
 ### Last Executed
-The most recent execution is indicated by the modification timestamp of the prefetch file. Additionally, on Windows 8/10, the last 8 execution times are stored within the prefetch file and can be parsed. 
+The most recent execution timestamp recorded inside the Prefetch file is generally more useful than the file's filesystem modification timestamp. On supported Windows versions, Prefetch files may preserve multiple recent execution timestamps. Windows 8 and later commonly support up to eight stored run timestamps, while the exact metadata available depends on the Windows version and Prefetch format. Use a parser such as PECmd to extract the embedded execution timestamps rather than relying exclusively on filesystem timestamps.
 
 ## Full Path
 The artifact, when parsed, provides the full path to the executable that was run.
 
 ## Caveats
-Prefetch files are written approximately 10 seconds after execution. Subtract 10 seconds from the prefetch filesystem timestamps to get an approximate time.
-
-Regarding the "potential" earliest/first execution: Because Windows only stores the last 128 entries (Windows XP/Vista/7) or 1024 entries (Windows 8/10), applications that haven't been run after some time may be rolled out of this directory, and re-created when they are run again.
-
-You may see multiple entries for the same executable on a system. This indicates that the executable was with different command line options, or (less likely) existed in different directories when executed. 
+- **Do not apply a fixed 10-second timestamp adjustment.** Prefetch files are generally written or updated approximately 10 seconds after an application starts, but this delay can vary with Windows version, system behavior, and execution circumstances. Filesystem timestamps should therefore not be adjusted by a fixed interval to estimate execution time. Prefer the execution timestamps embedded in the Prefetch file, when available, and corroborate them with other forensic artifacts.
+- **Artifact creation is not necessarily first execution.** A Prefetch file may have been deleted and recreated, or its metadata may reflect only a limited history of recent executions.
+- **Storage limits vary by Windows version.** Older versions and newer versions have different Prefetch retention behavior and limits. Avoid treating a single historical file-count limit as universal.
+- **Multiple Prefetch entries require context.** Different paths or execution contexts may result in separate entries for the same executable name. Multiple entries do not, by themselves, prove different command-line arguments were used.
+- **File references are not proof of execution.** A file listed in Prefetch may have been loaded or referenced during application startup, but its presence does not establish that it was executed independently or accessed during every recorded run.
 
 ## Analysis Tips
 
