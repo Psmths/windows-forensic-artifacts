@@ -1,11 +1,13 @@
 # AutomaticDestinations Jumplists
-AutomaticDestinations are jumplist files created by Windows when an application is launched. As these are jumplist files, they are in a binary format known as Object Linking and Embedding Compound File (OLECF). AutomaticDestinations can be thought of as containers for different LNK files from which forensic evidence may be recovered. 
+AutomaticDestinations Jump Lists are per-user artifacts introduced in Windows 7 that record application-associated interactions with files, folders, and other shell objects. They are part of the Windows Jump List feature, which allows users to access recently or frequently used items by right-clicking an application in the taskbar or Start menu.
 
-Jumplists are used to store common/recent locations and "tasks" on the taskbar for individual programs. From a forensic perspective they are useful in identifying files and folders that were created or accessed by users. 
+AutomaticDestinations files are essentially containers holding a list of entries and associated shortcut (LNK)-like data. They use the Object Linking and Embedding (OLE) Compound File Binary Format (CFB), also known as OLE Structured Storage.
+
+From a forensic perspective, these artifacts are valuable for identifying files and folders that were accessed through particular applications. They can contain target paths, timestamps, interaction counts, volume information, and network share information. Because they are maintained within individual user profiles, they can also help associate application activity with a particular Windows user profile.
 
 ### Behavioral Indications
- - [x] Behavioral - Execution (TA0002)
- 
+- [x] Behavioral - Execution (TA0002)
+
 ### Analysis Value
  - [x] Execution - First Executed ⚠️
  - [x] Execution - Last Executed ⚠️
@@ -15,43 +17,97 @@ Jumplists are used to store common/recent locations and "tasks" on the taskbar f
  - [x] File - Path
 
 ## Operating System Availability
- - [x] Windows 11
- - [x] Windows 10
- - [x] Windows 8
- - [x] Windows 7
+- [x] Windows 11
+- [x] Windows 10
+- [x] Windows 8
+- [x] Windows 7
 
 ## Artifact Location(s)
- - `%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations`
+- `%USERPROFILE%\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations\`
 
 ## Artifact Parsers
- - JLECmd (Eric Zimmerman)
+- [JLECmd](https://github.com/EricZimmerman/JLECmd) (Eric Zimmerman)
+- [Jump List Explorer](https://ericzimmerman.github.io/)
 
 ## Artifact Interpretation
-The file name for these artifacts are based on the AppID of the program they are related to. For example, an AutomaticDestinations entry for `explorer.exe` will have the prefix `F01B4D95CF55D32A`. Thus, the full file name would be `f01b4d95cf55d32a.automaticDestinations-ms`. A good resource to leverage to translate AppIDs by Eric Zimmerman can be found [here](https://github.com/EricZimmerman/JumpList/blob/master/JumpList/Resources/AppIDs.txt).
+AutomaticDestinations files are named using the Application ID (AppID) associated with the application to which the Jump List belongs. The AppID is typically represented as a 16-character hexadecimal string.
+
+For example, an AutomaticDestinations file associated with Windows Explorer may be named:
+
+`f01b4d95cf55d32a.automaticDestinations-ms`
+
+The AppID can be used to identify the application associated with the Jump List. However, not all AppIDs are documented, and applications may use explicitly assigned application identifiers or identifiers derived from application-specific information.
+
+A useful reference for identifying known AppIDs is Eric Zimmerman's [AppIDs.txt](https://github.com/EricZimmerman/JumpList/blob/master/JumpList/Resources/AppIDs.txt).
+
+### AutomaticDestinations vs. CustomDestinations
+Windows maintains two types of Jump Lists:
+
+- **AutomaticDestinations:** Automatically populated with entries associated with recently or frequently accessed items. These files use the `.automaticDestinations-ms` extension and contain a `DestList` stream along with embedded LNK-like data.
+- **CustomDestinations:** Application-defined Jump Lists that can contain custom tasks and pinned entries. These files use the `.customDestinations-ms` extension and have a different internal structure.
 
 ### Execution - First Executed
-The creation time of each AutomaticDestinations file corresponds to the first known time that an application **opened a file** while being executed. For instance, if a user simply opens Excel, but never opens a file, there will be no AutomaticDestinations file created. If, however, they proceed to open a file (or save a new file), an AutomaticDestinations file will be created with a creation timestamp corresponding to the time the first file was opened (or a new file was saved). 
+The creation timestamp of an AutomaticDestinations file may provide an indication of when an application first began populating its Jump List. However, it should not universally be interpreted as the first time the application was executed or the first time a file was opened.
+
+Jump List creation behavior depends on the application and how it interacts with the Windows Shell. Some applications may not create or populate a Jump List until a file is opened or saved, while others may create or update entries through different interactions.
+
+Consequently, the creation timestamp of the AutomaticDestinations file is best treated as a potential indicator of the first recorded application interaction, rather than definitive evidence of first execution.
+
+The `Created on` timestamp reported for an individual `DestList` entry is a separate value from the filesystem creation timestamp of the AutomaticDestinations file. The entry creation timestamp is not considered universally reliable and should be interpreted cautiously.
 
 ### Execution - Last Executed
-The modification time of each AutomaticDestinations file corresponds to the last known time that an application was executed **and opened a file**. For instance, the modification timestamp will change under the following example set of circumstances:
+The modification timestamp of an AutomaticDestinations file can provide an indication of when the Jump List was last updated.
 
- - A user navigated to a directory using explorer and opened an Excel workbook by double-clicking on it
- - A user went to Excel on the taskbar and opened an Excel workbook listed under the `Recent` list. 
- - A user opened Excel, and then opened a workbook from within Excel.
- - A user opened Excel, and saved a new workbook from within Excel.
+For applications that regularly update their Jump Lists when files are accessed, this timestamp may correspond to the most recent interaction with an item through that application.
 
-The timestamp will not be updated in the case that a user simply opened Excel without opening another file. 
+For example, an AutomaticDestinations file may be updated when:
 
-### Execution - Permissions / Account
-Given that the AutomaticDestinations files are stored in a user's %AppData% directory, this effectively ties execution of an application to a particular user account. For instance, if the AutomaticDestinations file for Excel exists in the following path: `C:\Users\john.doe\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations\b8ab77100df80ab2.automaticDestinations-ms`, this implies that the user `john.doe` executed `Microsoft Office Excel x64`.
+- A user navigates to a directory using Windows Explorer and opens a document with the associated application.
+- A user selects a document from the application's Recent list.
+- A user opens a document from within the application.
+- A user saves a new document from within the application.
 
-### Execution - Evidence of Execution
-The presence of an AutomaticDestinations file for an application implies that the application was executed and was used to open a file or save a new file.
+However, application behavior varies. The modification timestamp should therefore be interpreted as the last time the Jump List file was updated, not automatically as the last time the application was executed.
+
+The `Last modified` timestamp reported for an individual `DestList` entry is also distinct from the filesystem modification timestamp of the AutomaticDestinations file. The entry timestamp is generally updated when that particular item is interacted with.
+
+### Execution - Evidence of Application/File Interaction
+The presence of an AutomaticDestinations entry provides evidence that an item was associated with an application through the Windows Jump List mechanism.
+
+For example, an entry in an Excel AutomaticDestinations file referencing `C:\temp\test.xlsx` indicates that the workbook was associated with Excel through the Jump List.
+
+This is useful evidence of application-related file interaction, but it should not be treated as standalone proof that the application executable was launched at a particular time. Correlate with execution artifacts such as Prefetch, UserAssist, BAM/DAM, Amcache, and SRUM where available.
+
+### Account - Username
+AutomaticDestinations files are stored within the user's `%AppData%` directory. This provides a relationship between the Jump List and the Windows user profile in which it was found.
+
+For example, if an Excel AutomaticDestinations file is located at:
+
+`C:\Users\john.doe\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations\b8ab77100df80ab2.automaticDestinations-ms`
+
+The artifact is associated with the `john.doe` user profile.
+
+This does not independently establish the identity of the individual operating the system, nor does it prove that the account owner personally performed the interaction. Consider the possibility of shared accounts, impersonation, remote sessions, and copied or restored profile data.
 
 ### File - Path
-Within each AutomaticDestinations file is a list of recent files that were accessed, as well as a count of how many times each file was accessed using that specific application. Alongside this is the timestamp corresponding to the last known time each file was accessed by the application. 
+Each AutomaticDestinations file contains a `DestList` stream that maintains metadata about items associated with the application. Entries can include:
 
-For instance, when using JLECmd.exe (Eric Zimmerman) to analyze an AutomaticDestinations file for Excel, the following is seen:
+- Target file or folder path.
+- Most Recently Used (MRU) position.
+- Whether the entry is pinned.
+- Entry creation and last-modified timestamps.
+- Hostname and, when available, MAC address information.
+- Interaction count.
+- Embedded LNK-like information, including target metadata and volume or network share details.
+
+The `Interaction count` indicates how many times the item was interacted with through the Jump List mechanism. It should not necessarily be interpreted as an exact count of successful file opens in every application.
+
+The `MRU` value indicates the item's position in the Most Recently Used list. An `MRU` value of `0` generally identifies the most recently used entry; it is not a timestamp.
+
+The timestamps contained within the embedded LNK data provide additional information about the target file, including its creation, modification, and access timestamps when available. These target timestamps are distinct from the `DestList` entry timestamps.
+
+## Example
+When using [JLECmd](https://github.com/EricZimmerman/JLECmd) to analyze an AutomaticDestinations file associated with Excel, the following output may be observed:
 
 ```
 Processing C:\Users\john.doe\AppData\Roaming\Microsoft\Windows\Recent\AutomaticDestinations\b8ab77100df80ab2.automaticDestinations-ms
@@ -73,20 +129,40 @@ Entry #: 2
 --- Lnk information ---
   Absolute path: My Computer\C:\temp\test.xlsx
 ```
-<sup><sub>This example was produced on Windows 10, Version 10.0.19044 Build 19044</sub></sup>
 
-We can conclude:
- - `Microsoft Office Excel x64` was executed
- - `C:\temp\test.xlsx` existed at some point on the local disk
- - The user `john.doe` executed Excel and accessed `C:\temp\test.xlsx`
- - `C:\temp\test.xlsx` was opened using `Microsoft Office Excel x64`
- - `C:\temp\test.xlsx` was accessed twice using Excel
- - The last known time Excel was used to access `C:\temp\test.xlsx` was at `2023-06-24 17:56:09`
+<sup><sub>This example was produced on Windows 10, Version 10.0.19044 Build 19044.</sub></sup>
 
-We can gather more information given the Creation/Modification timestamps of the AutomaticDestinations file `b8ab77100df80ab2.automaticDestinations-ms` itself:
+From this output, we can establish:
 
- - The creation timestamp of the file `b8ab77100df80ab2.automaticDestinations-ms` is `2022-02-12 15:22:00`, indicating that (given the AutomaticDestinations files were not deleted) Excel was first used to access files at `2022-02-12 15:22:00`
- - The modification timestamp of the file is `2023-06-24 17:56:09`, indicating that this was the last time Excel was used to access a file. As this is the `Last modified` timestamp of the entry for `C:\temp\test.xlsx`, we can conclude this is the last known file that Excel accessed on this system, corroborated by its `MRU` value of 0. 
+- The Jump List is associated with `Microsoft Office Excel x64`, based on the AppID mapping.
+- The entry references `C:\temp\test.xlsx`.
+- The entry is not pinned.
+- The entry has an interaction count of 2.
+- The entry's most recent MRU position is 0.
+- The `DestList` entry's last-modified timestamp is `2023-06-24 17:56:09`.
+- The entry contains a hostname of `HLPC01`.
+
+The interaction count indicates that the item was interacted with twice through the Jump List mechanism. The last-modified timestamp provides a potential last-interaction time for that entry.
+
+The output does not, by itself, establish the first time Excel was executed, the exact number of times the workbook was successfully opened, or the filesystem existence of the workbook at the time of forensic acquisition.
+
+In addition to the timestamps stored within individual `DestList` entries, the AutomaticDestinations file itself has filesystem creation and modification timestamps.
+
+These timestamps can provide useful temporal context:
+
+- **Filesystem creation timestamp:** May indicate when the Jump List file was first created. Depending on application behavior, this may correspond to the first time the application populated its Jump List.
+- **Filesystem modification timestamp:** Indicates when the Jump List file was last modified. Depending on application behavior, this may correspond to a recent interaction with an item associated with the application.
+
+For example, suppose the filesystem timestamps for the Excel AutomaticDestinations file are:
+
+- Created: `2022-02-12 15:22:00`
+- Modified: `2023-06-24 17:56:09`
+
+The creation timestamp may indicate when the Jump List was first created or populated, while the modification timestamp indicates when the file was last updated.
+
+If the most recently modified `DestList` entry also has a last-modified timestamp of `2023-06-24 17:56:09` and an `MRU` value of `0`, this provides additional support that the corresponding file was the most recently interacted-with item recorded in the Jump List.
+
+However, the file's creation timestamp should not automatically be treated as the first time Excel accessed a file. Likewise, the file's modification timestamp should not automatically be treated as the last time Excel was executed. These interpretations depend on application behavior and should be corroborated with other artifacts.
 
 As the AutomaticDestinations file is a collection of LNK files, JLECmd offers an additional option to parse these as well through the `--ld` flag. We can get a lot more information this way, for example, accessing a file (`Y:\Documents\new.xlsx`) on a mapped network share (at `192.168.0.20`):
 
@@ -117,4 +193,13 @@ Flags: CommonNetworkRelativeLinkAndPathSuffix
 ```
 <sup><sub>This example was produced on Windows 10, Version 10.0.19044 Build 19044</sub></sup>
 
-In this case, the file was accessed 4 times, and the most recent time it was accessed using Excel was at `2023-06-24 18:06:38`.
+<sup><sub>This example was produced on Windows 10, Version 10.0.19044 Build 19044.</sub></sup>
+
+From this output, we can establish:
+
+- The Jump List entry references `Y:\Documents\new.xlsx`.
+- The embedded LNK information identifies the network share as `\\192.168.0.20\Documents`.
+- The file was accessed through a mapped network drive (`Y:`).
+- The entry has an interaction count of 4.
+- The entry's last-modified timestamp is `2023-06-24 18:06:38`.
+- The entry is the most recently used item in the list, as indicated by `MRU: 0`.
